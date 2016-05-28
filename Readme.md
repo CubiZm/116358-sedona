@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Анна Карпина](https://up.htmlacademy.ru/adaptive/7/user/116358).
-* Наставник: [Андрей Серёдкин].
+* Наставник: [Андрей Серёдкин](https://htmlacademy.ru/profile/midler).
 
 ---
 
