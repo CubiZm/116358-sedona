@@ -9,34 +9,30 @@
       <div class="page-header__logo">
         <img src="http://placehold.it/150x100" alt="logo">
       </div>
-        <nav class="page-header__menu menu">
-          <button class="menu__toggle" type="button"></button>
-            <ul class="menu__list">
-              <li class="menu__item"><a class="menu__link link" href="">Главная</a></li>
-              <li class="menu__item"><a class="menu__link link" href="">Фото и Видео</li></a>
-              <li class="menu__item"><a class="menu__link link" href="">Форма отзыва</li></a>
-              <li class="menu__item"><a class="menu__link link" href="">Html Academy</li></a>
+        <nav class="page-header__main-menu  main-menu">
+          <button class="main-menu__toggle" type="button">Открыть меню</button>
+            <ul class="main-menu__list">
+              <li class="main-menu__item"><a class="main-menu__link link" href="">Главная</a></li>
+              <li class="main-menu__item"><a class="main-menu__link link" href="photo.html">Фото и Видео</li></a>
+              <li class="main-menu__item"><a class="main-menu__link link" href="form.html">Форма отзыва</li></a>
+              <li class="main-menu__item"><a class="main-menu__link link" href="https://htmlacademy.ru/">Html Academy</li></a>
             </ul>
         </nav>
-      <div class="page-header__pic">
-        <img src="http://placehold.it/150x100" alt="main picture">
-      </div>
     </header>
 
   <main class="page-content">
 
-    <section class="form">
+    <section class="form-fieldset">
 
-    <div class="title">
+    <div class="description">
       <h2 class="title title--h2">Оставьте свой отзыв</h2>
       <p class="text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
     </div>
 
-      <form class="form-feedback" action="/echo" method="post" action="/">
+      <form class="form" action="/echo" method="post" action="/">
 
-        <div class="form-section personality">
-        <fieldset class="form__fieldset">
-        <legend class="form__legend">Представьтесь пожалуйста</legend>
+        <fieldset class="form__fieldset personality">
+        <legend class="form__legend legend">Представьтесь пожалуйста</legend>
             <label class="form__label" for="name">Имя:</label>
             <input class="form__input" type="text" id="name" name="name">
 
@@ -46,22 +42,18 @@
             <label class="form__label" for="patronymic">Отчество:</label>
             <input class="form__input" type="text"id="patronymic" name="patronymic" >
         </fieldset>
-        </div>
 
-        <div class="form-section contact">
-        <fieldset class="form__fieldset">
-        <legend class="form__legend">Контактная информация</legend>
+        <fieldset class="form__fieldset contact">
+        <legend class="form__legend legend">Контактная информация</legend>
             <label class="form__label" for="tel">Контактный телефон:</label>
             <input class="form__input" type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите телефон">
 
             <label class="form__label" for="email">Электронная почта:</label>
             <input class="form__input" type="email" id="email" name="email" placeholder="Введите e-mail">
         </fieldset>
-        </div>
 
-        <div class="form-section opinion">
-        <fieldset class="form__fieldset">
-        <legend class="form__legend">Ваше общее впечатление:</legend>
+        <fieldset class="form__fieldset opinion">
+        <legend class="form__legend legend">Ваше общее впечатление:</legend>
             <input class="form__input" id="radio-1" name="radio" type="radio">
             <label class="form__label" for="radio-1">Скорее положительное</label>
 
@@ -71,11 +63,9 @@
             <input class="form__input" id="radio-3" name="radio" type="radio">
             <label class="form__label" for="radio-3">Затрудняюсь ответить</label>
         </fieldset>
-        </div>
 
-        <div class="form-section accommodation">
-        <fieldset class="form__fieldset">
-        <legend class="form__legend">Посещенные достопримечательности:</legend>
+        <fieldset class="form__fieldset accommodation">
+        <legend class="form__legend legend">Посещенные достопримечательности:</legend>
             <input class="form__input" id="checkbox-1" name="checkbox" type="checkbox">
             <label class="form__label" for="checkbox-1">Мост Дьявола</label>
 
@@ -87,10 +77,9 @@
 
             <input class="form__input" id="checkbox-4" name="checkbox" type="checkbox">
             <label class="form__label" for="checkbox-4">Красные скалы</label>
-          </div>
         </fieldset>
 
-        <div class="form-section detail">
+        <div class="form__section detail">
           <label class="form__label" for="note">Опишите свои эмоции:</label>
           <textarea class="form__textarea" id="note" name="note" rows="10"></textarea>
           <input class="form__input" type="submit" value="Отправить отзыв">
@@ -103,13 +92,13 @@
     <footer class="page-footer">
       <a class="page-footer__link link" href="#visitsedona">#Visitsedona</a>
 
-      <div class="page-footer__social page-footer">
+      <div class="page-footer__social">
         <a class="social-link" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
         <a class="social-link" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
         <a class="social-link" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
       </div>
 
-      <div class="page-footer__copyright page-footer">
+      <div class="page-footer__copyright">
         <p class="text">Разработано:</p>
         <a class="copyright-link link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
