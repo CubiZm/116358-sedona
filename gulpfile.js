@@ -12,6 +12,7 @@ gulp.task("style", function() {
     .pipe(plumber())
     .pipe(postcss([
       precss(),
+      require('postcss-vertical-rhythm')(),
       autoprefixer({browsers: [
         "last 1 version",
         "last 2 Chrome versions",
