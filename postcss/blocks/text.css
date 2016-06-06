@@ -1,0 +1,6 @@
+.text {
+    padding-top: .3vr;
+    padding-bottom: .3vr;
+    @mixin wrap text;
+    line-height: .8vr;
+}

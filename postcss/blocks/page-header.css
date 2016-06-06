@@ -1,0 +1,24 @@
+.page-header__main-menu {
+    background-color: $main-color-blue;
+}
+
+.page-header__logo {
+    height: 55px;
+    background-color: #fff;
+}
+
+.page-header__logo img {
+    display: block;
+    width: 102px;
+    height: 83px;
+    margin: auto;
+}
+
+
+.page-header {
+    position: relative;
+    width: 320px;
+    height: 390px;
+    background-image: url(../img/bg-back-mobile@1x.jpg);
+    background-repeat: no-repeat;
+}

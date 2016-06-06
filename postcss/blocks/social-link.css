@@ -1,0 +1,6 @@
+.social-link {
+	display: inline-block;
+	font-size: 0;
+	padding:24px;
+	background-color: $main-color-blue;
+}

@@ -1,0 +1,32 @@
+    .photo {
+    padding: 20px;
+    border-top: 1px solid rgba(1, 1, 1, 0.2);
+}
+
+.photo__caption {
+    .text {
+        text-transform: none;
+        padding: 0 0 .3vr 0;
+    }
+    .title--h3 {
+        padding: 0;
+    }
+}
+
+.photo__like {
+    font-weight: $font-weight-bold;
+    color: $second-text-color;
+    position: relative;
+    padding-left: 40px;
+    &::before {
+        content: "";
+        background-image: url(/img/icon-like.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 22px;
+        position: absolute;
+        height: 20px;
+        width: 22px;
+        left: 0px;
+    }
+}

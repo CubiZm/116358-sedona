@@ -1,0 +1,35 @@
+.main-menu__list {
+    text-align: center;
+}
+
+.main-menu__item {
+	font-size: $font-size-big;
+    list-style-type: none;
+    color: white;
+    box-shadow: 0 1px rgba(1, 1, 1, 0.2), 0 -1px rgba(255, 255, 255, 0.2);
+}
+
+.main-menu__item:last-child {
+    box-shadow: inset 0 -2px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.main-menu__link {
+    display: block;
+    color: $alternative-text-color;
+    line-height: 2vr;
+}
+
+.main-menu__toggle {
+    cursor: pointer;
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    font-size: 0;
+}
+
+.open {
+    right: 0;
+    margin: 20px;
+    border: none;
+    background: url("../img/icon-menu.svg") no-repeat;
+}

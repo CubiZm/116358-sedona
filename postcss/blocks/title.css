@@ -1,0 +1,19 @@
+.title {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-big;
+    line-height: 1vr;
+    @mixin wrap title;
+
+    &--h1 {
+        padding-bottom: .8vr;
+    }
+	
+	&--h3 {
+        font-size: $font-size-normal;
+    }
+
+    .text {
+    	text-transform: 
+    }
+
+}
