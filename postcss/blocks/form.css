@@ -1,7 +1,9 @@
 .form-box {
 	@mixin wrap form-box;
 	border: none;
+	text-align: justify;
 }
+
 
 .form-box__title {
 	font-weight: $font-weight-bold;
@@ -13,13 +15,20 @@
     padding-bottom: .3vr;
 }
 
-.form-box__label {
+.form__label {
 	font-weight: $font-weight-normal;
     color: $second-text-color;
-    font-size: $font-size-normal;	
+    font-size: $font-size-normal;
+    display: inline-block;	
+    padding: 10px;
 }
-.form-box__input {
+.form__input {
 	font-weight: $font-weight-bold;
     color: $main-text-color;
     font-size: $font-size-normal;	
+    display: inline-block;
+    padding:10px;
+    margin-bottom: 20px;
+    background-color: #f2f2f2;
+    border: none; 
 }
