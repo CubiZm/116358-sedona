@@ -2,97 +2,100 @@
 <html lang="ru">
 
 <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-    <link href="css/style.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HTML Academy: Седона</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page">
+  <div class="wrapper">
     <header class="page-header">
-        <nav class="page-header__main-menu  main-menu">
-            <ul class="main-menu__list">
-                <li class="main-menu__item"><a class="main-menu__link link" href="">Главная</a></li>
-                <li class="main-menu__item"><a class="main-menu__link link" href="photo.html">Фото и Видео</a></li>
-                <li class="main-menu__item"><a class="main-menu__link link" href="form.html">Форма отзыва</a></li>
-                <li class="main-menu__item"><a class="main-menu__link link" href="https://htmlacademy.ru/">Html Academy</a></li>
-            </ul>
-            <button class="main-menu__toggle open" type="button">Открыть меню</button>
-        </nav>
-        <div class="page-header__logo">
-            <img src="img/logo-sedona-mobile.svg" alt="logo" width="102" height="83">
-        </div>
+      <nav class="page-header__main-menu  main-menu">
+        <ul class="main-menu__list">
+          <li class="main-menu__item"><a class="main-menu__link link" href="">Главная</a></li>
+          <li class="main-menu__item"><a class="main-menu__link link" href="photo.html">Фото и Видео</a></li>
+          <li class="main-menu__item"><a class="main-menu__link link" href="form.html">Форма отзыва</a></li>
+          <li class="main-menu__item"><a class="main-menu__link link" href="https://htmlacademy.ru/">Html Academy</a></li>
+        </ul>
+        <button class="main-menu__toggle main-menu__toggle--open" type="button">Открыть меню</button>
+      </nav>
+      <div class="page-header__logo">
+        <img src="img/logo-sedona-mobile.svg" alt="logo" width="102" height="83">
+      </div>
     </header>
     <main class="page-content">
+      <div class="description">
+        <h1 class="title title--h1">Фото и Видео</h1>
+        <p class="text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+      </div>
+      <div class="photo">
+        <a href="#"><img src="img/photo-1-mobile@1x.jpg" alt="photo-1" width="280" height="280" class="photo__img"></a>
+        <div class="photo__caption">
+          <h3 class="title title--h3">Неродные просторы</h3>
+          <p class="photo__caption--text text">Автор фото: Борис</p>
+          <a class="photo__like link" href="">1350</a>
+        </div>
+      </div>
+      <div class="photo">
+        <a href="#"><img src="img/photo-2-mobile@1x.jpg" alt="photo-2" width="280" height="280" class="photo__img"></a>
+        <div class="photo__caption">
+          <h3 class="title title--h3">Местная растительность</h3>
+          <p class="photo__caption--text text">Автор фото: Сергей</p>
+          <a class="photo__like link" href="">143</a>
+        </div>
+      </div>
+      <div class="photo">
+        <a href="#"><img src="img/photo-3-mobile@1x.jpg" alt="photo-3" width="280" height="280" class="photo__img"></a>
+        <div class="photo__caption">
+          <h3 class="title title--h3">Дорога на север</h3>
+          <p class="photo__caption--text text">Автор фото: Петр</p>
+          <a class="photo__like link" href="">96</a>
+        </div>
+      </div>
+      <div class="photo">
+        <a href="#"><img src="img/photo-4-mobile@1x.jpg" alt="photo-4" width="280" height="280" class="photo__img"></a>
+        <div class="photo__caption">
+          <h3 class="title title--h3">Мост Дьявола</h3>
+          <p class="photo__caption--text text">Автор фото: Антон</p>
+          <a class="photo__like link" href="">254</a>
+        </div>
+      </div>
+      <section class="video">
         <div class="description">
-            <h2 class="title title--h1">Фото и Видео</h2>
-            <p class="text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+          <h2 class="title title--h2">Все еще сомневаетесь?</h2>
+          <p class="text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         </div>
-        <div class="photo">
-            <img src="img/photo-1-mobile@1x.jpg" alt="photo-1" width="280" height="280">
-            <div class="photo__caption">
-                <h3 class="title title--h3">Неродные просторы</h3>
-                <p class="text">Автор фото: Борис</p>
-                <a class="photo__like link" href="">1350</a>
-            </div>
-        </div>
-        <div class="photo">
-            <img src="img/photo-2-mobile@1x.jpg" alt="photo-2" width="280" height="280">
-            <div class="photo__caption">
-                <h3 class="title title--h3">Местная растительность</h3>
-                <p class="text">Автор фото: Сергей</p>
-                <a class="photo__like link" href="">143</a>
-            </div>
-        </div>
-        <div class="photo">
-            <img src="img/photo-3-mobile@1x.jpg" alt="photo-3" width="280" height="280">
-            <div class="photo__caption">
-                <h3 class="title title--h3">Дорога на север</h3>
-                <p class="text">Автор фото: Петр</p>
-                <a class="photo__like link" href="">96</a>
-            </div>
-        </div>
-        <div class="photo">
-            <img src="img/photo-4-mobile@1x.jpg" alt="photo-4" width="280" height="280">
-            <div class="photo__caption">
-                <h3 class="title title--h3">Мост Дьявола</h3>
-                <p class="text">Автор фото: Антон</p>
-                <a class="photo__like link" href="">254</a>
-            </div>
-        </div>
-        <section class="video">
-            <div class="description">
-                <h2 class="title title--h2">Все еще сомневаетесь?</h2>
-                <p class="text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-            </div>
-            <div class="video-view">
-                <img src="img/video-mobile@1x.jpg" alt="video" width="320" height="200">
-                <!--<video controls width="660" height="500" preload="metadata" poster="/media/segona.jpg">
+        <div class="video-view">
+          <img src="img/video-mobile@1x.jpg" alt="video" width="320" height="200" class="video-view__img">
+          <!--<video controls width="660" height="500" preload="metadata" poster="/media/segona.jpg">
           <source src="/media/sedona.mp4" type="video/mp4">
           <source src="/media/sedona.webm" type="video/webm">
           <source src="/media/sedona.ogv" type="video/ogg">
         </video>-->
-                <div class="video-controls">
-                    <div class="video-controls__timeline"></div>
-                    <div class="video-controls__control-bar">
-                        <span class="video-icon"></span>
-                        <span class="video-icon"></span>
-                        <span class="video-icon"></span>
-                    </div>
-                </div>
-        </section>
+          <div class="video-controls">
+            <div class="video-controls__timeline"></div>
+            <div class="video-controls__control-bar">
+              <span class="video-icon"></span>
+              <span class="video-icon"></span>
+              <span class="video-icon"></span>
+            </div>
+          </div>
+      </section>
     </main>
     <footer class="page-footer">
-        <a class="page-footer__link link" href="#visitsedona">#Visitsedona</a>
-        <div class="page-footer__social">
-            <a class="social-link" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-            <a class="social-link" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-            <a class="social-link" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
-        </div>
-        <div class="copyright">
-            <p class="copyright__text">Разработано</p>
-            <a class="copyright__link link" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" alt="html-academy" width="27" height="34"></a>
-        </div>
+      <a class="page-footer__link link" href="#visitsedona">#Visitsedona</a>
+      <div class="page-footer__social">
+        <a class="social-link" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+        <a class="social-link" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+        <a class="social-link" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+      </div>
+      <div class="copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link link" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" alt="html-academy" width="27" height="34"></a>
+      </div>
     </footer>
+    </div>
 </body>
 
 </html>

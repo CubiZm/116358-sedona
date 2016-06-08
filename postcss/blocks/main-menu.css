@@ -27,7 +27,7 @@
     font-size: 0;
 }
 
-.open {
+.main-menu__toggle--open {
     right: 0;
     margin: 20px;
     border: none;

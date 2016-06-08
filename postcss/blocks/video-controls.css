@@ -1,7 +1,7 @@
 .video-controls {
-    @mixin wrap video-controls;
     position: relative;
     margin-bottom: 100px;
+    padding: 0 20px;
 }
 
 .video-controls__timeline {
