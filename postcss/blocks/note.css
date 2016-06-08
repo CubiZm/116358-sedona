@@ -1,0 +1,5 @@
+.note__input {
+	background-color: $main-color-blue;
+	color:$alternative-text-color;
+	margin: 36px 20px;
+}

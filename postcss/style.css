@@ -16,6 +16,10 @@
 @import "blocks/label.css";
 @import "blocks/input.css";
 @import "blocks/form-box.css";
+@import "blocks/radio-btn.css";
+@import "blocks/checkbox.css";
+@import "blocks/textarea.css";
+@import "blocks/note.css";
 @import "blocks/main-menu.css";
 @import "blocks/map.css";
 @import "blocks/title.css";
