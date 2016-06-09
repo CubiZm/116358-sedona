@@ -1,6 +1,8 @@
 .textarea {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-big;
+    text-align: left;
     border: none;
     background-color: #f2f2f2;
-    padding: 0 20px;
     display: inline-block;
 }

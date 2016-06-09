@@ -4,6 +4,6 @@
 }
 
 .page {
-    font-family: $font-family;
+    font-family: $font-family-regular;
     text-transform: uppercase;
 }

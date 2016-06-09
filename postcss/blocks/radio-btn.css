@@ -8,11 +8,12 @@
 }
 
 .radio-btn__input {
-    display: none;
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
 }
 
-.radio-btn__label::before {
-    content: "";
+.radio-btn__control-indicator {
     display: inline-block;
     width: 55px;
     height: 55px;
@@ -22,7 +23,7 @@
     border-radius: 50%;
 }
 
-.radio-btn__input:checked + .radio-btn__label::after {
+.radio-btn__input:checked ~ .radio-btn__control-indicator::before {
     position: absolute;
     content: "";
     width: 25px;

@@ -59,16 +59,19 @@
         <fieldset class="form-box opinion">
           <legend class="form-box__title">Ваше общее впечатление:</legend>
           <div class="opinion__radio-btn radio-btn">
-            <input class="input radio-btn__input" id="radio-1" name="radio" type="radio">
-            <label class="label radio-btn__label" for="radio-1">Скорее положительное</label>
+            <label class="label radio-btn__label" for="radio-1">
+              <input class="input radio-btn__input" id="radio-1" name="radio" type="radio">
+              <span class="radio-btn__control-indicator"></span> Скорее положительное</label>
           </div>
           <div class="opinion__radio radio-btn">
-            <input class="input radio-btn__input" id="radio-2" name="radio" type="radio">
-            <label class="label radio-btn__label" for="radio-2">Скорее отрицательное</label>
+            <label class="label radio-btn__label" for="radio-2">
+              <input class="input radio-btn__input" id="radio-2" name="radio" type="radio">
+              <span class="radio-btn__control-indicator"></span> Скорее отрицательное</label>
           </div>
           <div class="opinion__radio radio-btn">
-            <input class="input radio-btn__input" id="radio-3" name="radio" type="radio">
-            <label class="label radio-btn__label" for="radio-3">Затрудняюсь ответить</label>
+            <label class="label radio-btn__label" for="radio-3">
+              <input class="input radio-btn__input" id="radio-3" name="radio" type="radio">
+              <span class="radio-btn__control-indicator"></span>Затрудняюсь ответить</label>
           </div>
         </fieldset>
         <fieldset class="form-box accommodation">
@@ -93,7 +96,7 @@
         <div class="form-box detail">
           <div class="detail__note note">
             <label class="label note__label" for="note">Опишите свои эмоции:</label>
-            <textarea class="textarea note__textarea" id="note" name="note" rows="10"></textarea>
+            <textarea class="textarea note__textarea" id="note" name="note" rows="5" cols="30">Опишите подробно все свои восторги</textarea>
             <input class="input note__input" type="submit" value="Отправить отзыв">
           </div>
         </div>

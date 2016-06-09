@@ -1,7 +1,5 @@
-$font-family: 'PT Sans', 'Arial', sans-serif;
-
-$font-weight-normal: 400;
-$font-weight-bold: 700;
+$font-family-regular: 'PT Sans', Arial, sans-serif;
+$font-family-bold: 'PT Sans Bold', Arial, sans-serif;
 
 $font-size-big: 18px;
 $font-size-normal:14px;

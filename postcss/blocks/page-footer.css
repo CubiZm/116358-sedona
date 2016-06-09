@@ -6,6 +6,6 @@
 .page-footer__link {
     color: $main-text-color;
     font-size: $font-size-big;
-    font-weight: $font-weight-bold;
+    font-family: $font-family-bold;
     line-height: 4vr;
 }
