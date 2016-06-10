@@ -1,19 +1,18 @@
 .title {
-    font-family: $font-family-bold;
-    font-size: $font-size-big;
-    line-height: 1vr;
-
-    &--h1 {
-        padding-bottom: .8vr;
-    }
-	
-	&--h3 {
-        font-size: $font-size-normal;
-        padding: 0;
-    }
-
-    .text {
-    	text-transform: 
-    }
-
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: $font-family-bold;
+  @mixin set-font calc($line * 1.25),
+  calc($line * 1.75);
+  &--h1 {
+    @mixin set-padding calc(0.5 * $line),
+    calc(0.5 * $line);
+  }
+  &--h2 {
+    @mixin set-padding calc(0.5 * $line),
+    calc(0.5 * $line);
+  }
+  &--h3 {
+    @mixin set-font $line,$line;
+  }
 }

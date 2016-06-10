@@ -1,6 +1,31 @@
 .social-link {
-	display: inline-block;
-	font-size: 0;
-	padding:24px;
-	background-color: $main-color-blue;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  padding: 1rem;
+  background-color: $main-color-blue;
+  &--twitter {
+    width: 18px;
+    height: 18px;
+    background-image: url(/img/icon-twitter.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px 15px;
+  }
+  &--facebook {
+    width: 18px;
+    height: 18px;
+    background-image: url(/img/icon-facebook.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px 15px;
+  }
+  &--youtube {
+    width: 18px;
+    height: 18px;
+    background-image: url(/img/icon-youtube.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px 15px;
+  }
 }

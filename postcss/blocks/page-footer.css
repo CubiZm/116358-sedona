@@ -1,11 +1,15 @@
 .page-footer {
-    text-align: center;
-    background-color:#fefefe;
+  text-align: center;
+  background-color: #fefefe;
 }
 
 .page-footer__link {
-    color: $main-text-color;
-    font-size: $font-size-big;
-    font-family: $font-family-bold;
-    line-height: 4vr;
+  color: $main-text-color;
+  font-family: $font-family-bold;
+  @mixin set-font calc($line * 1.5),
+  calc($line * 1.5);
+  @mixin set-padding calc(2.5 * $line),
+  calc(2.5 * $line);
+  display: inline-block;
+  vertical-align: middle;
 }
