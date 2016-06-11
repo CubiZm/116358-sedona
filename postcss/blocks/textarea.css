@@ -1,6 +1,7 @@
 .textarea {
-    font-weight: $font-weight-bold;
-    font-size: $font-size-big;
+   font-family: $font-family-bold;
+  @mixin set-font $line,
+  calc($line * 1.5);
     text-align: left;
     border: none;
     background-color: #f2f2f2;

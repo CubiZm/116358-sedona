@@ -5,7 +5,7 @@
 }
 
 .video-controls__timeline {
-    bottom: 9px;
+    bottom: 5px;
     position: absolute;
     height: 45px;
     width: 280px;
@@ -13,7 +13,7 @@
 }
 
 .video-controls__control-bar {
-    bottom: -46px;
+    bottom: -50px;
     position: absolute;
     height: 55px;
     width: 280px;

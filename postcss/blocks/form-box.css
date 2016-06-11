@@ -1,24 +1,22 @@
 .form-box {
   border: none;
-  text-align: justify;
-  width: 100%;
-  padding: 20px 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .form-box__title {
   font-family: $font-family-bold;
   color: $main-text-color;
-  font-size: $font-size-big;
-  line-height: 1vr;
   text-align: center;
-  padding-top: .3vr;
-  padding-bottom: .3vr;
+  @mixin set-font calc($line * 1.25),
+  calc($line * 1.75);
+  @mixin set-padding $line,
+  $line;
 }
 
+
+/*
 .form-box {
-  border-bottom: 1px solid rgba(1, 1, 1, 0.2);
-  &:first-of-type {
-    border-top: 1px solid rgba(1, 1, 1, 0.2);
-  }
-  ;
+  border-top: 1px solid rgba(1, 1, 1, 0.2);
 }
+*/

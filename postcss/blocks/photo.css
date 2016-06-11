@@ -19,7 +19,9 @@
   margin: 0 auto;
 }
 
-.photo__like {  
+.photo__like {
+  font-family: $font-family-bold;  
+  color:$main-text-color;
   padding-left: 50px;
   background-image: url(/img/icon-like.svg);
   background-repeat: no-repeat;

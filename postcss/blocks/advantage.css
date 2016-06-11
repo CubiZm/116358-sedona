@@ -1,31 +1,31 @@
 .advantage {
-  background-color: $main-color-blue;
-  color: $alternative-text-color;
+    background-color: $main-color-blue;
+    color: $alternative-text-color;
 }
 
 .advantage__img-box {
-  height: 260px;
-  overflow: hidden;
+    height: 260px;
+    overflow: hidden;
 }
 
 .advantage__img {
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
 .advantage__list {
-  background-color: $main-color-grey;
-  color: $main-text-color;
-  @mixin set-padding calc(0.25 * $line),
-  calc(0.25 * $line);
+    background-color: $main-color-grey;
+    color: $main-text-color;
+    @mixin set-padding calc(1.75 * $line),
+    calc(1.75 * $line);
 }
 
 .advantage__item {
-  text-align: center;
-  @mixin set-padding calc(1.75 * $line),
-  calc(1.75 * $line);
-  border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+    text-align: center;
+    @mixin set-padding calc(1.75 * $line),
+    calc(1.75 * $line);
+    border-bottom: 1px solid rgba(1, 1, 1, 0.2);
 }
 
 .advantage__item:last-child {
-  border: none;
+    border: none;
 }

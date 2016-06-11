@@ -3,7 +3,8 @@
 }
 
 .main-menu__item {
-  font-size: $font-size-big;
+  @mixin set-font calc($line * 1.25),
+  calc($line * 1.5);
   list-style-type: none;
   color: white;
   box-shadow: 0 1px rgba(1, 1, 1, 0.2), 0 -1px rgba(255, 255, 255, 0.2);
@@ -16,8 +17,8 @@
 .main-menu__link {
   display: block;
   color: $alternative-text-color;
-  @mixin set-padding $line,
-  $line;
+  @mixin set-padding calc($line * 1.25),
+  calc($line * 1.25);
 }
 
 .main-menu__toggle {
@@ -32,5 +33,6 @@
   right: 0;
   margin: 20px;
   border: none;
-  background: url("../img/icon-menu.svg") no-repeat;
+  padding-top: 255px;
+  background: url(/img/icon-menu.svg) 0 0 no-repeat;
 }
