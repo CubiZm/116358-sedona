@@ -1,0 +1,5 @@
+.description {
+  text-align: center;
+  @mixin set-padding calc(2.5 * $line),
+  calc(2.5 * $line);
+}

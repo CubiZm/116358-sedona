@@ -1,106 +1,120 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body class="page">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HTML Academy: Седона</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="page">
+  <div class="wrapper">
     <header class="page-header">
+      <nav class="page-header__main-menu  main-menu">
+        <ul class="main-menu__list">
+          <li class="main-menu__item"><a class="main-menu__link link" href="">Главная</a></li>
+          <li class="main-menu__item"><a class="main-menu__link link" href="photo.html">Фото и Видео</a></li>
+          <li class="main-menu__item"><a class="main-menu__link link" href="form.html">Форма отзыва</a></li>
+          <li class="main-menu__item"><a class="main-menu__link link" href="https://htmlacademy.ru/">Html Academy</a></li>
+        </ul>
+        <button class="main-menu__toggle main-menu__toggle--open" type="button">Открыть меню</button>
+      </nav>
       <div class="page-header__logo">
-        <img src="http://placehold.it/150x100" alt="logo">
+        <img src="img/logo-sedona-mobile.svg" alt="logo" width="102" height="83">
       </div>
-        <nav class="page-header__main-menu  main-menu">
-          <button class="main-menu__toggle" type="button">Открыть меню</button>
-            <ul class="main-menu__list">
-              <li class="main-menu__item"><a class="main-menu__link link" href="">Главная</a></li>
-              <li class="main-menu__item"><a class="main-menu__link link" href="photo.html">Фото и Видео</a></li>
-              <li class="main-menu__item"><a class="main-menu__link link" href="form.html">Форма отзыва</a></li>
-              <li class="main-menu__item"><a class="main-menu__link link" href="https://htmlacademy.ru/">Html Academy</a></li>
-            </ul>
-        </nav>
     </header>
-
-  <main class="page-content">
-
-    <div class="description">
-      <h2 class="title title--h2">Оставьте свой отзыв</h2>
-      <p class="text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-    </div>
-
+    <main class="page-content">
+      <div class="description">
+        <h1 class="title title--h1">Оставьте свой отзыв</h1>
+        <p class="text text--h1">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      </div>
       <form class="form" action="/echo" method="post" action="/">
-
         <fieldset class="form-box personality">
-        <legend class="form-box__title">Представьтесь пожалуйста</legend>
-            <label class="form__label" for="name">Имя:</label>
-            <input class="form__input" type="text" id="name" name="name">
-
-            <label class="form__label" for="surname">Фамилия:</label>
-            <input class="form__input" type="text" id="surname" name="surname">
-
-            <label class="form__label" for="patronymic">Отчество:</label>
-            <input class="form__input" type="text"id="patronymic" name="patronymic" >
+          <legend class="form-box__title">Представьтесь пожалуйста:</legend>
+          <div class="personality__column column">
+            <label class="label column__label" for="name">Имя:</label>
+            <input class="input column__input" type="text" id="name" name="name">
+          </div>
+          <div class="personality__column column">
+            <label class="label column__label" for="surname">Фамилия:</label>
+            <input class="input column__input" type="text" id="surname" name="surname">
+          </div>
+          <div class="personality__column column">
+            <label class="label column__label" for="patronymic">Отчество:</label>
+            <input class="input column__input" type="text" id="patronymic" name="patronymic">
+          </div>
         </fieldset>
-
         <fieldset class="form-box contact">
-        <legend class="form-box__title">Контактная информация</legend>
-            <label class="form__label" for="tel">Контактный телефон:</label>
-            <input class="form__input" type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите телефон">
-
-            <label class="form__label" for="email">Электронная почта:</label>
-            <input class="form__input" type="email" id="email" name="email" placeholder="Введите e-mail">
+          <legend class="form-box__title">Контактная информация:</legend>
+          <div class="contact__column column">
+            <label class="label column__label" for="tel">Контактный телефон:</label>
+            <input class="input column__input" type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите телефон">
+          </div>
+          <div class="contact__column column">
+            <label class="label column__label" for="email">Электронная почта:</label>
+            <input class="input column__input" type="email" id="email" name="email" placeholder="Введите e-mail">
+          </div>
         </fieldset>
-
         <fieldset class="form-box opinion">
-        <legend class="form-box__title">Ваше общее впечатление:</legend>
-            <input class="form__input" id="radio-1" name="radio" type="radio">
-            <label class="form__label" for="radio-1">Скорее положительное</label>
-
-            <input class="form__input" id="radio-2" name="radio" type="radio">
-            <label class="form__label" for="radio-2">Скорее отрицательное</label>
-
-            <input class="form__input" id="radio-3" name="radio" type="radio">
-            <label class="form__label" for="radio-3">Затрудняюсь ответить</label>
+          <legend class="form-box__title">Ваше общее впечатление:</legend>
+          <div class="opinion__radio-btn radio-btn">
+            <label class="label radio-btn__label" for="radio-1">
+              <input class="input radio-btn__input" id="radio-1" name="radio" type="radio">
+              <span class="radio-btn__control-indicator"></span> Скорее положительное</label>
+          </div>
+          <div class="opinion__radio radio-btn">
+            <label class="label radio-btn__label" for="radio-2">
+              <input class="input radio-btn__input" id="radio-2" name="radio" type="radio">
+              <span class="radio-btn__control-indicator"></span> Скорее отрицательное</label>
+          </div>
+          <div class="opinion__radio radio-btn">
+            <label class="label radio-btn__label" for="radio-3">
+              <input class="input radio-btn__input" id="radio-3" name="radio" type="radio">
+              <span class="radio-btn__control-indicator"></span>Затрудняюсь ответить</label>
+          </div>
         </fieldset>
-
         <fieldset class="form-box accommodation">
-        <legend class="form-box__title">Посещенные достопримечательности:</legend>
-            <input class="form__input" id="checkbox-1" name="checkbox" type="checkbox">
-            <label class="form__label" for="checkbox-1">Мост Дьявола</label>
-
-            <input class="form__input" id="checkbox-2" name="checkbox" type="checkbox">
-            <label class="form__label" for="checkbox-2">Слайд-парк</label>
-
-            <input class="form__input" id="checkbox-3" name="checkbox" type="checkbox">
-            <label class="form__label" for="checkbox-3">Гора-Колокол</label>
-
-            <input class="form__input" id="checkbox-4" name="checkbox" type="checkbox">
-            <label class="form__label" for="checkbox-4">Красные скалы</label>
+          <legend class="form-box__title">Посещенные достопримечательности:</legend>
+          <div class="accommodation__checkbox checkbox">
+            <input class="input checkbox__input" id="checkbox-1" name="checkbox" type="checkbox">
+            <label class="label checkbox__label" for="checkbox-1">Мост Дьявола</label>
+          </div>
+          <div class="accommodation__checkbox checkbox">
+            <input class="input checkbox__input" id="checkbox-2" name="checkbox" type="checkbox">
+            <label class="label checkbox__label" for="checkbox-2">Слайд-парк</label>
+          </div>
+          <div class="accommodation__checkbox checkbox">
+            <input class="input checkbox__input" id="checkbox-3" name="checkbox" type="checkbox">
+            <label class="label checkbox__label" for="checkbox-3">Гора-Колокол</label>
+          </div>
+          <div class="accommodation__checkbox checkbox">
+            <input class="input checkbox__input" id="checkbox-4" name="checkbox" type="checkbox">
+            <label class="label checkbox__label" for="checkbox-4">Красные скалы</label>
+          </div>
         </fieldset>
-
         <div class="form-box detail">
-          <label class="form__label" for="note">Опишите свои эмоции:</label>
-          <textarea class="form__textarea" id="note" name="note" rows="10"></textarea>
-          <input class="form__input" type="submit" value="Отправить отзыв">
+          <div class="detail__note note">
+            <label class="label note__label" for="note">Опишите свои эмоции:</label>
+            <textarea class="textarea note__textarea" id="note" name="note" rows="5" cols="30">Опишите подробно все свои восторги</textarea>
+            <input class="input note__input" type="submit" value="Отправить отзыв">
+          </div>
         </div>
-
       </form>
-
     </main>
-
     <footer class="page-footer">
       <a class="page-footer__link link" href="#visitsedona">#Visitsedona</a>
-
       <div class="page-footer__social">
-        <a class="social-link" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-        <a class="social-link" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-        <a class="social-link" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+        <a class="social-link social-link--twitter" href="№">Мы в Твиттере</a>
+        <a class="social-link social-link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+        <a class="social-link social-link--youtube" href="#">Мы на Youtube</a>
       </div>
-
-      <div class="page-footer__copyright">
-        <p class="text">Разработано:</p>
-        <a class="copyright-link link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <div class="copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link link" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" alt="html-academy" width="27" height="34"></a>
       </div>
     </footer>
+  </div>
+</body>
 
-  </body>
 </html>

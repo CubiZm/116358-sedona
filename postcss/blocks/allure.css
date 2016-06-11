@@ -1,0 +1,19 @@
+.allure {
+  text-align: center;
+  @mixin set-padding calc(2.5 * $line),
+  calc(2.5 * $line);
+
+    &__text {
+    @mixin set-font $line,
+    calc($line * 2);
+    @mixin set-padding calc(1 * $line),
+    calc(0.75 * $line);
+  }
+
+   &__title {
+    @mixin set-padding calc(0.5 * $line),
+    calc(0.5 * $line);
+    @mixin set-font calc($line * 1.5),
+    calc($line * 1.75);
+  }
+}

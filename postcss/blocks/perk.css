@@ -1,0 +1,28 @@
+.perk {
+  padding-left: 20px;
+  padding-right: 20px;
+  @mixin set-padding calc(2.5 * $line),
+  calc(2.5 * $line);
+}
+
+.perk__item {
+  padding-left: 30px;
+  &--house {
+    background-image: url(/img/icon-house.svg);
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+    background-position: 0 0;
+  }
+  &--gift {
+    background-image: url(/img/icon-gift.svg);
+    background-repeat: no-repeat;
+    background-size: 33px 39px;
+    background-position: 0 0;
+  }
+  &--burger {
+    background-image: url(/img/icon-burger.svg);
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+    background-position: 0 0;
+  }
+}

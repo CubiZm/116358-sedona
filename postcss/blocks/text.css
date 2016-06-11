@@ -1,0 +1,22 @@
+.text {
+  padding-left: 20px;
+  padding-right: 20px;
+  @mixin set-font $line,
+  calc($line * 1.5);
+  @mixin set-padding calc(0.25 * $line),
+  calc(0.25 * $line);
+  &--h1 {
+    @mixin set-padding calc(1 * $line),
+    calc(0.75 * $line);
+  }
+  &--number {
+    @mixin set-padding calc(0.25 * $line),
+    calc(0.75 * $line);
+  }
+  &--allure {
+    @mixin set-font $line,
+    calc($line * 2);
+    @mixin set-padding calc(1 * $line),
+    calc(0.75 * $line);
+  }
+}

@@ -1,0 +1,8 @@
+.copyright__text,
+.copyright__link {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+  @mixin set-padding calc(3 * $line),
+  calc(2 * $line);
+}

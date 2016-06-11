@@ -1,0 +1,21 @@
+.video-controls {
+    position: relative;
+    margin-bottom: 100px;
+    padding: 0 20px;
+}
+
+.video-controls__timeline {
+    bottom: 5px;
+    position: absolute;
+    height: 45px;
+    width: 280px;
+    background-color: rgba(1, 1, 1, 0.5);
+}
+
+.video-controls__control-bar {
+    bottom: -50px;
+    position: absolute;
+    height: 55px;
+    width: 280px;
+    background-color: #f2f2f2;
+}

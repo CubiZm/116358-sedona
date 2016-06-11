@@ -1,0 +1,24 @@
+.note__input {
+  background-color: $main-color-blue;
+  color: $alternative-text-color;
+  display: block;
+  @mixin set-padding $line,
+  $line;
+  width: 280px;
+  margin: 20px auto;
+  text-transform: uppercase;
+}
+
+.note__label {
+  color: $main-text-color;
+  text-align: center;
+  @mixin set-padding $line,
+  $line;
+}
+
+.note__input,
+.note__label {
+  font-family: $font-family-bold;
+  @mixin set-font calc($line * 1.25),
+  calc($line * 1.75);
+}

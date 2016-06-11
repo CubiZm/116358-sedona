@@ -1,0 +1,18 @@
+.map {
+  margin-bottom: 10px;
+}
+
+.map__button {
+  background-color: $main-color-blue;
+  color: $alternative-text-color;
+  display: block;
+  @mixin set-padding $line,
+  $line;
+  max-width: 280px;
+  margin: 20px auto;
+}
+
+.map__view {
+  background: url(../img/bg-map-mobile@1x.jpg) no-repeat;
+  height: 350px;
+}
