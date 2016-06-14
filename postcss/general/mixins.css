@@ -9,3 +9,11 @@ $padding-bottom: $line {
   padding-top: $padding-top;
   padding-bottom: $padding-bottom;
 }
+
+@define-mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

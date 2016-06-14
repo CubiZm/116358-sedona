@@ -1,0 +1,6 @@
+@media (min-width: $tablet-width){
+    .contact {
+    float: none;
+    width: 100%;
+  }
+}

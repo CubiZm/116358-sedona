@@ -1,1 +1,6 @@
-
+@media (min-width: $tablet-width){
+    .personality {
+    float: right;
+    width: 50%;
+  }
+}

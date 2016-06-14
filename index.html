@@ -22,39 +22,41 @@
       </nav>
       <div class="page-header__logo">
         <img src="img/logo-sedona-mobile.svg" alt="logo" width="102" height="83">
+      </div>      
+      <div class="page-header__photo page-header__photo--index">
       </div>
     </header>
     <main class="page-content">
-      <div class="description">
+      <div class="description description--main">
         <h1 class="title title--h1">Седона – небольшой городок в Аризоне, заслуживающий большего!</h1>
         <p class="text text--h1">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
       </div>
       <section class="advantage">
-        <div class="description">
+        <div class="description advantage__text advantage__text--left">
           <h2 class="title title--h2">Настоящий городок</h2>
           <p class="text text--number"> - №1 - </p>
           <p class="text">Седона не аттракцион для туристов, там течет своя жизнь</p>
         </div>
         <div class="advantage__img-box">
-          <img src="../img/photo-city@1x.jpg" alt="plus_1" class="advantage__img">
+          <img src="../img/photo-city@1x.jpg" alt="plus_1" class="advantage__img" width = "800" height = "400">
         </div>
       </section>
       <section class="perk">
         <div class="perk__item perk__item--house">
-          <h2 class="title title--h2">Жилье</h2>
-          <p class="text">Рекомендуем пожить в настоящем отеле, все как в кино!</p>
+          <h2 class="title title--h2 perk__title">Жилье</h2>
+          <p class="text perk__text">Рекомендуем пожить в настоящем отеле, все как в кино!</p>
         </div>
         <div class="perk__item perk__item--gift">
-          <h2 class="title title--h2">Сувениры</h2>
-          <p class="text">Не только китайского, но и местного производства!</p>
+          <h2 class="title title--h2 perk__title">Сувениры</h2>
+          <p class="text perk__text">Не только китайского, но и местного производства!</p>
         </div>
         <div class="perk__item perk__item--burger">
-          <h2 class="title title--h2">Еда</h2>
-          <p class="text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          <h2 class="title title--h2 perk__title">Еда</h2>
+          <p class="text perk__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </div>
       </section>
       <section class="advantage">
-        <div class="description">
+        <div class="description advantage__text advantage__text--right">
           <h2 class="title title--h2">Там есть мост дьявола</h2>
           <p class="text text--number"> - №2 - </p>
           <p class="text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -66,19 +68,19 @@
       <section class="advantage">
         <div class="advantage__list">
           <div class="advantage__item">
-            <h2 class="title title--h2">Небольшая площадь</h2>
+            <h2 class="title title--h2 advantage__item-title">Небольшая площадь</h2>
             <p class="text text--number"> - №3 - </p>
-            <p class="text">Все достопримечательности находятся близко</p>
+            <p class="text advantage__item-text">Все достопримечательности находятся близко</p>
           </div>
           <div class="advantage__item">
-            <h2 class="title title--h2">Красивая дорога</h2>
+            <h2 class="title title--h2 advantage__item-title">Красивая дорога</h2>
             <p class="text text--number"> - №4 - </p>
-            <p class="text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <p class="text advantage__item-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
           <div class="advantage__item">
-            <h2 class="title title--h2">Мало туристов</h2>
+            <h2 class="title title--h2 advantage__item-title">Мало туристов</h2>
             <p class="text text--number"> - №5 - </p>
-            <p class="text">Большинство едет в Гранд Каньон и толпиться там</p>
+            <p class="text advantage__item-text">Большинство едет в Гранд Каньон и толпиться там</p>
           </div>
         </div>
       </section>
@@ -88,7 +90,7 @@
           <p class="text allure__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="map__button link" href="#">Найти гостиницу</a>
         </div>
-        <div class="map__view"></div>
+        <div class="map__view"  id="map-canvas"></div>
       </section>
     </main>
     <footer class="page-footer">
@@ -104,6 +106,21 @@
       </div>
     </footer>
   </div>
-</body>
 
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script type="text/javascript">
+    var map;
+    function initialize() {
+    var mapOptions = {
+    zoom: 8,
+    center: new google.maps.LatLng(34.8543784, -111.7951384)
+    };
+    map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+</body>
 </html>

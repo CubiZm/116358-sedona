@@ -30,7 +30,7 @@
 @import "blocks/video-controls.css";
 @import "blocks/video-icon.css";
 @import "blocks/video-view.css";
-@import "blocks/column.css";
+@import "blocks/form-column.css";
 @import "blocks/personality.css";
 @import "blocks/opinion.css";
 @import "blocks/contact.css";
@@ -39,4 +39,5 @@
 @import "blocks/photo.css";
 @import "blocks/social-link.css";
 @import "blocks/copyright.css";
-@import "blocks/allure.css";
+@import "blocks/allure.css"; 
+@import "blocks/photos.css";

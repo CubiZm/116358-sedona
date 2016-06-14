@@ -1,8 +1,13 @@
 .perk {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 20px;
   @mixin set-padding calc(2.5 * $line),
   calc(2.5 * $line);
+
+  &__title,
+  &__text, {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
 }
 
 .perk__item {
@@ -25,4 +30,49 @@
     background-size: 36px 36px;
     background-position: 0 0;
   }
+}
+
+@media (min-width: $tablet-width){
+    .perk {
+         @mixin clearfix;
+         padding-left: 0;
+         padding-right: 0;
+
+        &__text {
+          padding-left: 40px;
+          padding-right: 40px;
+        }
+    }
+    .perk__item {
+      text-align: center;
+        border-bottom:none;
+        width: 33.3%;
+        float:left;
+        padding-left: 0px;
+        padding-top: 80px;
+        vertical-align: top;
+
+    &--house {
+    background-image: url(/img/icon-house.svg);
+    background-repeat: no-repeat;
+    background-size: 75px 72px;
+    background-position: center top;
+  }
+  &--gift {
+    background-image: url(/img/icon-gift.svg);
+    background-repeat: no-repeat;
+    background-size: 67px 75px;
+    background-position: center top;
+  }
+  &--burger {
+    background-image: url(/img/icon-burger.svg);
+    background-repeat: no-repeat;
+    background-size: 77px 68px;
+    background-position: center top;
+  }
+  }
+
+  .perk__item:nth-child(2) {
+      float: right;
+    }
 }

@@ -1,0 +1,6 @@
+@media (min-width: $tablet-width){
+  .video {
+    max-width: 648px;
+    margin: 0 auto;
+  }
+}

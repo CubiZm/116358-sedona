@@ -1,10 +1,14 @@
-.main-menu__list {
-  text-align: center;
+.main-menu {
+  background-color: $main-color-blue;
 }
 
-.main-menu__item {
-  @mixin set-font calc($line * 1.25),
-  calc($line * 1.5);
+.main-menu__list {
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+.main-menu__item {  
   list-style-type: none;
   color: white;
   box-shadow: 0 1px rgba(1, 1, 1, 0.2), 0 -1px rgba(255, 255, 255, 0.2);
@@ -15,6 +19,8 @@
 }
 
 .main-menu__link {
+  @mixin set-font calc($line * 1.25),
+  calc($line * 1.5);
   display: block;
   color: $alternative-text-color;
   @mixin set-padding calc($line * 1.25),
@@ -33,6 +39,46 @@
   right: 0;
   margin: 20px;
   border: none;
-  padding-top: 255px;
-  background: url(/img/icon-menu.svg) 0 0 no-repeat;
+  background:  url(/img/icon-menu.svg) 0 0 no-repeat;
+}
+
+@media (min-width: $tablet-width){
+  .main-menu {
+    background-color: #fff;
+  }
+
+  .main-menu__list {
+    @mixin clearfix;
+  }
+  .main-menu__item {
+    box-shadow: none;
+    display: inline-block;
+    width: 20%;
+    
+  }
+  .main-menu__link {
+    font-family: $font-family-bold;
+    color:$main-text-color;
+    @mixin set-font calc($line * 1),
+    calc($line * 1.25);
+  }
+
+  .main-menu__toggle {
+    display: none;
+  }
+
+  .main-menu__item:last-child {
+  box-shadow: none;
+  }
+
+  .main-menu__item:nth-child(3), 
+  .main-menu__item:nth-child(4) {
+  float: right;
+  }
+
+  .main-menu__item:nth-child(1), 
+  .main-menu__item:nth-child(2) {
+  float: left;
+  }
+
 }

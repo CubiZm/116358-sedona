@@ -6,4 +6,6 @@
 .page {
   font-family: $font-family-regular;
   text-transform: uppercase;
+  max-width: $desktop-width;
+  margin: 0 auto;
 }

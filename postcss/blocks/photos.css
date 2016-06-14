@@ -1,0 +1,11 @@
+@media (min-width: $tablet-width){
+  .photos {
+    margin: 0 60px;
+  }
+}
+
+@media (min-width: $desktop-width){
+  .photos {
+    margin: 0;
+  }
+}

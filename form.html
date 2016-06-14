@@ -23,37 +23,39 @@
       <div class="page-header__logo">
         <img src="img/logo-sedona-mobile.svg" alt="logo" width="102" height="83">
       </div>
+      <div class="page-header__photo page-header__photo--index">
+      </div>
     </header>
     <main class="page-content">
-      <div class="description">
+      <div class="description description--main">
         <h1 class="title title--h1">Оставьте свой отзыв</h1>
         <p class="text text--h1">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </div>
       <form class="form" action="/echo" method="post" action="/">
         <fieldset class="form-box personality">
           <legend class="form-box__title">Представьтесь пожалуйста:</legend>
-          <div class="personality__column column">
-            <label class="label column__label" for="name">Имя:</label>
-            <input class="input column__input" type="text" id="name" name="name">
+          <div class="personality__column form-column">
+            <label class="label form-column__label" for="name">Имя:</label>
+            <input class="input form-column__input" type="text" id="name" name="name">
           </div>
-          <div class="personality__column column">
-            <label class="label column__label" for="surname">Фамилия:</label>
-            <input class="input column__input" type="text" id="surname" name="surname">
+          <div class="personality__column form-column">
+            <label class="label form-column__label" for="surname">Фамилия:</label>
+            <input class="input form-column__input" type="text" id="surname" name="surname">
           </div>
-          <div class="personality__column column">
-            <label class="label column__label" for="patronymic">Отчество:</label>
-            <input class="input column__input" type="text" id="patronymic" name="patronymic">
+          <div class="personality__column form-column">
+            <label class="label form-column__label" for="patronymic">Отчество:</label>
+            <input class="input form-column__input" type="text" id="patronymic" name="patronymic">
           </div>
         </fieldset>
         <fieldset class="form-box contact">
           <legend class="form-box__title">Контактная информация:</legend>
-          <div class="contact__column column">
-            <label class="label column__label" for="tel">Контактный телефон:</label>
-            <input class="input column__input" type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите телефон">
+          <div class="contact__column form-column">
+            <label class="label form-column__label" for="tel">Контактный телефон:</label>
+            <input class="input form-column__input" type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите телефон">
           </div>
-          <div class="contact__column column">
-            <label class="label column__label" for="email">Электронная почта:</label>
-            <input class="input column__input" type="email" id="email" name="email" placeholder="Введите e-mail">
+          <div class="contact__column form-column">
+            <label class="label form-column__label" for="email">Электронная почта:</label>
+            <input class="input form-column__input" type="email" id="email" name="email" placeholder="Введите e-mail">
           </div>
         </fieldset>
         <fieldset class="form-box opinion">
