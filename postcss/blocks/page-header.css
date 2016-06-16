@@ -1,9 +1,10 @@
 .page-header__logo {
-  height: 55px;
+  max-height: 55px;
   background-color: #fff;
+  box-shadow: 0 -1px rgba(1, 1, 1, 0.2);
 }
 
-.page-header__logo img {
+.page-header__logo-img {
   position: relative;
   display: block;
   width: 102px;

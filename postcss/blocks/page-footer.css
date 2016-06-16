@@ -16,21 +16,25 @@
 
 @media (min-width: $tablet-width){
   .page-footer {
-  max-width: 768px;
+  max-width: 768px; @media (min-width: $desktop-width){max-width: 960px;}
   margin: 0 auto;
   @mixin clearfix;
   @mixin set-padding calc(2.5 * $line),
   calc(2.5 * $line);
+  }
 
-  &__link {
+  .page-footer__link {
     float: left;
     width: 33.3%;
     padding-top: 10px;
     padding-bottom: 0px;
   }
-  &__social {
+
+}
+
+@media (min-width: $tablet-width){
+  .page-footer__social {
     float: left;
     width: 33.3%;
-  }
   }
 }

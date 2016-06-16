@@ -1,6 +1,44 @@
-@media (min-width: $tablet-width){
-    .opinion {
-    float: left;
-    width: 50%;
-  }
+.opinion__label {
+  font-family: $font-family-bold;
+  @mixin set-font calc($line * 1.25),
+  calc($line * 1.5);
+  text-align: left;
+  text-transform: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.opinion__input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.opinion__control-indicator {
+  display: inline-block;
+  vertical-align: left;
+  width: 55px;
+  height: 55px;
+  margin-right: 15px;
+  vertical-align: middle;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+.opinion__input:checked ~ .opinion__control-indicator::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: $second-text-color;
+  vertical-align: middle;
+  top: 15px;
+  left: 15px;
+}
+
+
+.opinion {
+  width: 100%; @media (min-width: $tablet-width){width: 50%;}
+  @media (min-width: $tablet-width){order:0;}
 }

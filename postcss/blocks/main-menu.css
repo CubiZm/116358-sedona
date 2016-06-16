@@ -3,19 +3,17 @@
 }
 
 .main-menu__list {
+  padding: 0;
   text-align: center;
   position: relative;
   z-index: 3;
+  margin: 0;
 }
 
 .main-menu__item {  
   list-style-type: none;
   color: white;
   box-shadow: 0 1px rgba(1, 1, 1, 0.2), 0 -1px rgba(255, 255, 255, 0.2);
-}
-
-.main-menu__item:last-child {
-  box-shadow: inset 0 -2px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
 .main-menu__link {

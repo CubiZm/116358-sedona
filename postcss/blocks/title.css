@@ -1,5 +1,6 @@
 .title {
   font-family: $font-family-bold;
+  margin: 0;
   @mixin set-font calc($line * 1.25),
   calc($line * 1.75);
   &--h1 {

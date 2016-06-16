@@ -1,11 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .page {
   font-family: $font-family-regular;
+  @mixin set-font $line, $line; /* размер шрифта - 14px, высота строки - 14px */
   text-transform: uppercase;
   max-width: $desktop-width;
-  margin: 0 auto;
 }

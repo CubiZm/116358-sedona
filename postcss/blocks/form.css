@@ -1,5 +1,8 @@
-@media (min-width: $tablet-width){
-  .form {
-  	@mixin clearfix;
-  }
+.form {
+	display: flex;
+    flex-wrap: wrap;
+	margin: 0 auto;
+	justify-content: space-between;
+    @media (min-width: $tablet-width){max-width: 648px;}
+    @media (min-width: $desktop-width){max-width: 960px;}
 }

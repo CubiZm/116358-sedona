@@ -1,6 +1,29 @@
-@media (min-width: $tablet-width){
-    .contact {
-    float: none;
-    width: 100%;
-  }
+.contact {
+  @media (min-width: $tablet-width){order:2;}
 }
+
+.contact__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+}
+
+.contact__column {	
+  flex-wrap: wrap;
+  width: 100%;@media (min-width: $desktop-width){width:50%;}
+	
+}
+
+.contact__input {
+  width: 100%;@media (min-width: $desktop-width){width:60%;}
+  @media (min-width: $desktop-width){margin-left: 20px;}
+}
+
+.contact__label {
+  width: 100%;@media (min-width: $desktop-width){ width: initial;}
+  margin-left: 20px;@media (min-width: $desktop-width){margin-left: 0;}
+  margin-bottom: 15px;@media (min-width: $desktop-width){margin-bottom: 0;}
+}
+
+.contact__error {display: none;}
+

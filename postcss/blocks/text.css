@@ -3,6 +3,7 @@
   calc($line * 1.5);
   @mixin set-padding calc(0.25 * $line),
   calc(0.25 * $line);
+  margin: 0;
   &--h1 {
     @mixin set-padding calc(1 * $line),
     calc(0.75 * $line);

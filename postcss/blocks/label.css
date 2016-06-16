@@ -1,7 +1,4 @@
 .label {
-  font-weight: $font-weight-normal;
   color: $second-text-color;
-  font-size: $font-size-normal;
-  display: inline-block;
-  padding: 10px 10px 10px 0;
+   &--hidden {@media (min-width: $desktop-width){display:none;}}
 }
