@@ -1,9 +1,14 @@
 .allure {
+
   text-align: center;
-  @mixin set-padding calc(2.5 * $line),
-  calc(2.5 * $line);
+  @mixin set-padding calc(2 * $line),
+  calc(2 * $line);
+  max-width: 500px;
+  margin: auto;
 
     &__text {
+    padding-left: 20px;
+    padding-right: 20px;
     @mixin set-font $line,
     calc($line * 2);
     @mixin set-padding calc(1 * $line),
@@ -16,4 +21,5 @@
     @mixin set-font calc($line * 1.5),
     calc($line * 1.75);
   }
+
 }

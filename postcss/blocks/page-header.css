@@ -1,21 +1,43 @@
-.page-header__main-menu {
-  background-color: $main-color-blue;
-}
-
 .page-header__logo {
-  height: 55px;
+  max-height: 55px;
   background-color: #fff;
+  box-shadow: 0 -1px rgba(1, 1, 1, 0.2);
 }
 
-.page-header__logo img {
+.page-header__logo-img {
+  position: relative;
   display: block;
   width: 102px;
   height: 83px;
-  margin: auto;
+  margin: 0 auto;
+  z-index:1;
 }
 
 .page-header {
   position: relative;
-  height: 390px;
-  background-image: url(../img/bg-back-mobile@1x.jpg);
 }
+
+.page-header__photo--index {  
+  background-image: url(/img/text-sedona-index.svg), url(../img/bg-back-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 400px 230px, cover;
+}
+
+.page-header__photo { 
+  position: relative;
+  z-index:0;
+  height: 390px;
+  width: 100%;
+}
+
+@media (min-width: $tablet-width){
+  .page-header__logo {
+    position: absolute;
+    top:0;
+    width: 100%;
+  }
+  .page-header__logo img {
+    
+  }
+ }

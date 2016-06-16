@@ -1,5 +1,11 @@
 .description {
+  padding: 0 20px;
   text-align: center;
   @mixin set-padding calc(2.5 * $line),
   calc(2.5 * $line);
+
+  &--main {
+	max-width: 490px;
+    margin: auto;
+}
 }

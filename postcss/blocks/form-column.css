@@ -1,7 +1,6 @@
-.note {
+.form-column {
   display: flex;
   align-items:center;
   width: 100%;
-  flex-wrap:wrap;
   margin-bottom: 20px;
 }

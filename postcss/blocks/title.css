@@ -1,7 +1,6 @@
 .title {
-  padding-left: 20px;
-  padding-right: 20px;
   font-family: $font-family-bold;
+  margin: 0;
   @mixin set-font calc($line * 1.25),
   calc($line * 1.75);
   &--h1 {
@@ -13,6 +12,8 @@
     calc(0.5 * $line);
   }
   &--h3 {
+    padding-left: 20px;
+    padding-right: 20px;
     @mixin set-font $line,
     $line;
   }
@@ -22,4 +23,16 @@
     @mixin set-font calc($line * 1.5),
     calc($line * 1.75);
   }
+}
+
+
+@media (min-width: $tablet-width){
+.title {
+  @mixin set-font calc($line * 1.5),
+  calc($line * 1.86);
+  &--h3 {
+    @mixin set-font $line,
+    calc($line * 1.5);
+  }
+}
 }

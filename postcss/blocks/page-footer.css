@@ -1,9 +1,8 @@
 .page-footer {
   text-align: center;
   background-color: #fefefe;
-}
 
-.page-footer__link {
+  &__link {
   color: $main-text-color;
   font-family: $font-family-bold;
   @mixin set-font calc($line * 1.5),
@@ -12,4 +11,30 @@
   calc(2.5 * $line);
   display: inline-block;
   vertical-align: middle;
+  }
+}
+
+@media (min-width: $tablet-width){
+  .page-footer {
+  max-width: 768px; @media (min-width: $desktop-width){max-width: 960px;}
+  margin: 0 auto;
+  @mixin clearfix;
+  @mixin set-padding calc(2.5 * $line),
+  calc(2.5 * $line);
+  }
+
+  .page-footer__link {
+    float: left;
+    width: 33.3%;
+    padding-top: 10px;
+    padding-bottom: 0px;
+  }
+
+}
+
+@media (min-width: $tablet-width){
+  .page-footer__social {
+    float: left;
+    width: 33.3%;
+  }
 }

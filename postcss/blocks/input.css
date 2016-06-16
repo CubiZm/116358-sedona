@@ -1,10 +1,11 @@
 .input {
-    font-weight: $font-weight-bold;
-    color: $main-text-color;
-    font-size: $font-size-normal;
-    display: inline-block;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: #f2f2f2;
-    border: none;
+  color: $main-text-color;
+  padding-left: 20px;
+  background-color: #f2f2f2;
+  border: none;
+  @mixin set-font calc($line * 1.25),
+  calc($line * 1.25);
+  @mixin set-padding calc($line * 1.25),
+  calc($line * 1.25);
+  font-family: $font-family-bold;
 }

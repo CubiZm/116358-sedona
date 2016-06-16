@@ -13,7 +13,7 @@
     <header class="page-header">
       <nav class="page-header__main-menu  main-menu">
         <ul class="main-menu__list">
-          <li class="main-menu__item"><a class="main-menu__link link" href="">Главная</a></li>
+          <li class="main-menu__item"><a class="main-menu__link link" href="/">Главная</a></li>
           <li class="main-menu__item"><a class="main-menu__link link" href="photo.html">Фото и Видео</a></li>
           <li class="main-menu__item"><a class="main-menu__link link" href="form.html">Форма отзыва</a></li>
           <li class="main-menu__item"><a class="main-menu__link link" href="https://htmlacademy.ru/">Html Academy</a></li>
@@ -21,83 +21,90 @@
         <button class="main-menu__toggle main-menu__toggle--open" type="button">Открыть меню</button>
       </nav>
       <div class="page-header__logo">
-        <img src="img/logo-sedona-mobile.svg" alt="logo" width="102" height="83">
+        <img class="page-header__logo-img" src="img/logo-sedona-mobile.svg" alt="logo" width="102" height="83">
+      </div>
+      <div class="page-header__photo page-header__photo--index">
       </div>
     </header>
     <main class="page-content">
-      <div class="description">
+      <div class="description description--main">
         <h1 class="title title--h1">Оставьте свой отзыв</h1>
         <p class="text text--h1">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </div>
       <form class="form" action="/echo" method="post" action="/">
         <fieldset class="form-box personality">
-          <legend class="form-box__title">Представьтесь пожалуйста:</legend>
-          <div class="personality__column column">
-            <label class="label column__label" for="name">Имя:</label>
-            <input class="input column__input" type="text" id="name" name="name">
+          <legend class="form-box__title form-box__title--left">Представьтесь<span class="form-box__title form-box__title--hidden"> пожалуйста</span>:</legend>
+          <div class="personality__column form-column">
+            <label class="label personality__label" for="name">Имя:</label>
+            <input class="input personality__input" type="text" id="name" name="name">
           </div>
-          <div class="personality__column column">
-            <label class="label column__label" for="surname">Фамилия:</label>
-            <input class="input column__input" type="text" id="surname" name="surname">
+          <div class="personality__column form-column">
+            <label class="label personality__label" for="surname">Фамилия:</label>
+            <input class="input personality__input" type="text" id="surname" name="surname">
           </div>
-          <div class="personality__column column">
-            <label class="label column__label" for="patronymic">Отчество:</label>
-            <input class="input column__input" type="text" id="patronymic" name="patronymic">
+          <div class="personality__column form-column">
+            <label class="label personality__label" for="patronymic">Отчество:</label>
+            <input class="input personality__input" type="text" id="patronymic" name="patronymic">
           </div>
         </fieldset>
         <fieldset class="form-box contact">
           <legend class="form-box__title">Контактная информация:</legend>
-          <div class="contact__column column">
-            <label class="label column__label" for="tel">Контактный телефон:</label>
-            <input class="input column__input" type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите телефон">
-          </div>
-          <div class="contact__column column">
-            <label class="label column__label" for="email">Электронная почта:</label>
-            <input class="input column__input" type="email" id="email" name="email" placeholder="Введите e-mail">
+          <div class="contact__wrapper">
+            <div class="contact__column form-column">
+              <label class="label contact__label" for="tel"><span class="label label--hidden">Контактный </span>телефон:</label>
+              <input class="input contact__input" type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите телефон">
+              <span class="contact__error">Ошибка, перепроверьте номер</span>
+            </div>
+            <div class="contact__column form-column">
+              <label class="label contact__label" for="email">Электронная почта:</label>
+              <input class="input contact__input" type="email" id="email" name="email" placeholder="Введите e-mail">
+            </div>
           </div>
         </fieldset>
         <fieldset class="form-box opinion">
-          <legend class="form-box__title">Ваше общее впечатление:</legend>
+          <legend class="form-box__title form-box__title--left">Ваше общее впечатление:</legend>
           <div class="opinion__radio-btn radio-btn">
-            <label class="label radio-btn__label" for="radio-1">
-              <input class="input radio-btn__input" id="radio-1" name="radio" type="radio">
-              <span class="radio-btn__control-indicator"></span> Скорее положительное</label>
+            <label class="label opinion__label" for="radio-1">
+              <input class="input opinion__input" id="radio-1" name="radio" type="radio">
+              <span class="opinion__control-indicator"></span> Скорее положительное</label>
           </div>
           <div class="opinion__radio radio-btn">
-            <label class="label radio-btn__label" for="radio-2">
-              <input class="input radio-btn__input" id="radio-2" name="radio" type="radio">
-              <span class="radio-btn__control-indicator"></span> Скорее отрицательное</label>
+            <label class="label opinion__label" for="radio-2">
+              <input class="input opinion__input" id="radio-2" name="radio" type="radio">
+              <span class="opinion__control-indicator"></span> Скорее отрицательное</label>
           </div>
           <div class="opinion__radio radio-btn">
-            <label class="label radio-btn__label" for="radio-3">
-              <input class="input radio-btn__input" id="radio-3" name="radio" type="radio">
-              <span class="radio-btn__control-indicator"></span>Затрудняюсь ответить</label>
+            <label class="label opinion__label" for="radio-3">
+              <input class="input opinion__input" id="radio-3" name="radio" type="radio">
+              <span class="opinion__control-indicator"></span>Затрудняюсь ответить</label>
           </div>
         </fieldset>
         <fieldset class="form-box accommodation">
           <legend class="form-box__title">Посещенные достопримечательности:</legend>
-          <div class="accommodation__checkbox checkbox">
-            <input class="input checkbox__input" id="checkbox-1" name="checkbox" type="checkbox">
-            <label class="label checkbox__label" for="checkbox-1">Мост Дьявола</label>
-          </div>
-          <div class="accommodation__checkbox checkbox">
-            <input class="input checkbox__input" id="checkbox-2" name="checkbox" type="checkbox">
-            <label class="label checkbox__label" for="checkbox-2">Слайд-парк</label>
-          </div>
-          <div class="accommodation__checkbox checkbox">
-            <input class="input checkbox__input" id="checkbox-3" name="checkbox" type="checkbox">
-            <label class="label checkbox__label" for="checkbox-3">Гора-Колокол</label>
-          </div>
-          <div class="accommodation__checkbox checkbox">
-            <input class="input checkbox__input" id="checkbox-4" name="checkbox" type="checkbox">
-            <label class="label checkbox__label" for="checkbox-4">Красные скалы</label>
-          </div>
+          <div class="accommodation__wrapper">
+            <div class="accommodation__checkbox checkbox">
+              <input class="input accommodation__input" id="checkbox-1" name="checkbox" type="checkbox">
+              <label class="label accommodation__label" for="checkbox-1">Мост Дьявола</label>
+            </div>
+            <div class="accommodation__checkbox checkbox">
+              <input class="input accommodation__input" id="checkbox-2" name="checkbox" type="checkbox">
+              <label class="label accommodation__label" for="checkbox-2">Слайд-парк</label>
+            </div>
+            <div class="accommodation__checkbox checkbox">
+              <input class="input accommodation__input" id="checkbox-3" name="checkbox" type="checkbox">
+              <label class="label accommodation__label" for="checkbox-3">Гора-Колокол</label>
+            </div>
+            <div class="accommodation__checkbox checkbox">
+              <input class="input accommodation__input" id="checkbox-4" name="checkbox" type="checkbox">
+              <label class="label accommodation__label" for="checkbox-4">Красные скалы</label>
+            </div>
+        </div>
         </fieldset>
         <div class="form-box detail">
           <div class="detail__note note">
-            <label class="label note__label" for="note">Опишите свои эмоции:</label>
-            <textarea class="textarea note__textarea" id="note" name="note" rows="5" cols="30">Опишите подробно все свои восторги</textarea>
-            <input class="input note__input" type="submit" value="Отправить отзыв">
+            <label class="label detail__label" for="note">Опишите свои эмоции:</label>
+            <textarea class="textarea detail__textarea" id="note" name="note" rows="5" cols="30">Опишите подробно все свои восторги</textarea>
+            <input class="input detail__input" type="submit" value="Отправить отзыв"><label class="detail__necessarily">* - Обязательные поля</label>
           </div>
         </div>
       </form>

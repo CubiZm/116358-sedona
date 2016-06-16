@@ -1,0 +1,45 @@
+.detail__input {
+  background-color: $main-color-blue;
+  color: $alternative-text-color;
+  padding-left: 0;
+  @mixin set-font calc($line * 1.5),
+  calc($line * 1.75);
+  margin: 20px auto;
+  text-transform: uppercase;
+}
+.detail {
+  @media (min-width: $tablet-width){order:4;}
+  display:flex;
+}
+
+.detail__label,
+.detail__textarea {
+  width: 100%;
+}
+
+.detail__label {
+  font-family: $font-family-bold;
+  color: $main-text-color;
+  text-align: center;
+  padding: 20px;
+  @mixin set-font calc($line * 1.25),
+  calc($line * 1.75);@media (min-width: $tablet-width){@mixin set-font calc($line * 1.50),
+  calc($line * 1.86);} 
+}
+
+.detail__input { 
+  @mixin set-padding $line, $line;
+  width: 100%;@media (min-width: $tablet-width){width:50%} 
+}
+
+.detail__textarea {
+  @mixin set-font calc($line * 1.25),
+  calc($line * 1.75);
+  padding: 20px;
+}
+
+.detail__necessarily {
+  text-align: right;
+  display: none; @media (min-width: $tablet-width){display:block;} 
+  @media (min-width: $tablet-width){width:50%} 
+}

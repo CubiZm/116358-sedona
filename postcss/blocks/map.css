@@ -16,3 +16,9 @@
   background: url(../img/bg-map-mobile@1x.jpg) no-repeat;
   height: 350px;
 }
+
+@media (min-width: $tablet-width){
+  .map__button {
+    max-width: 458px;
+  }
+}
