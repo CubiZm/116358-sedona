@@ -2,5 +2,4 @@
   font-family: $font-family-regular;
   @mixin set-font $line, $line; /* размер шрифта - 14px, высота строки - 14px */
   text-transform: uppercase;
-  max-width: $desktop-width;
 }

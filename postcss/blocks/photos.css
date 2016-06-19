@@ -1,10 +1,20 @@
-@media (min-width: $tablet-width){
-  .photos {
-    margin: 0 60px;
+.photos {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
   }
 }
 
-@media (min-width: $desktop-width){
+@media (min-width: $tablet-width) {
+  .photos {
+    margin: 0 60px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: $desktop-width) {
   .photos {
     margin: 0;
   }

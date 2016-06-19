@@ -1,25 +1,32 @@
 .allure {
-
+  max-width: 440px;
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
-  @mixin set-padding calc(2 * $line),
-  calc(2 * $line);
-  max-width: 500px;
+  @mixin set-padding calc(2.5 * $line),
+  calc(2.5 * $line);
   margin: auto;
+}
 
-    &__text {
-    padding-left: 20px;
-    padding-right: 20px;
-    @mixin set-font $line,
-    calc($line * 2);
-    @mixin set-padding calc(1 * $line),
-    calc(0.75 * $line);
+.allure__text {
+  padding-left: 20px;
+  padding-right: 20px;
+  @mixin set-font $line,
+  calc($line * 2);
+  @mixin set-padding calc(1 * $line),
+  calc(0.75 * $line);
+}
+
+.allure__title {
+  @mixin set-font calc($line * 1.5),
+  calc($line * 1.75);
+  @media (min-width: $tablet-width) {
+    @mixin set-font calc(2.15 * $line), calc($line * 1.75);
   }
-
-   &__title {
-    @mixin set-padding calc(0.5 * $line),
-    calc(0.5 * $line);
-    @mixin set-font calc($line * 1.5),
-    calc($line * 1.75);
+  @mixin set-padding calc(0.5 * $line),
+  calc(0.5 * $line);
+  @media (min-width: $tablet-width) {
+    @mixin set-padding calc(1.5 * $line),
+    calc($line * 1.5);
   }
-
 }

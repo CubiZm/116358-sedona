@@ -1,4 +1,5 @@
 .title {
+  width: 100%;
   font-family: $font-family-bold;
   margin: 0;
   @mixin set-font calc($line * 1.25),
@@ -12,27 +13,25 @@
     calc(0.5 * $line);
   }
   &--h3 {
-    padding-left: 20px;
-    padding-right: 20px;
     @mixin set-font $line,
-    $line;
+    calc(1.75 * $line);
   }
   &--allure {
     @mixin set-padding calc(0.5 * $line),
     calc(0.5 * $line);
-    @mixin set-font calc($line * 1.5),
-    calc($line * 1.75);
+    @mixin set-font calc(1.5 * $line),
+    calc(1.75 * $line); 
   }
 }
 
 
 @media (min-width: $tablet-width){
 .title {
-  @mixin set-font calc($line * 1.5),
-  calc($line * 1.86);
+  @mixin set-font calc(1.5 * $line),
+  calc(1.86 * $line);
   &--h3 {
     @mixin set-font $line,
-    calc($line * 1.5);
+    calc(1.5 * $line);
   }
 }
 }

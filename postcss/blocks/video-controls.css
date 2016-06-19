@@ -1,38 +1,81 @@
-.video-controls {
-  position: relative;
-  margin-bottom: 100px;
-  padding: 0 20px;
-}
+.video-view {
+  @media (min-width: $tablet-width) {
+    margin-bottom:-50px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom:-10px;
+  }
+} 
 
-.video-controls__timeline {
-  bottom: 4px;
-  position: absolute;
-  height: 45px;
-  width: 280px;
+.video-controls {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap; @media (min-width: $tablet-width) {
+    flex-wrap: nowrap;
+  }
+  top: -45px; @media (min-width: $tablet-width) { top: -80px; }
+  margin: 0 20px; @media (min-width: $tablet-width) { margin: 0; padding:10px 0;}
   background-color: rgba(1, 1, 1, 0.5);
 }
 
-.video-controls__control-bar {
-  bottom: -50px;
-  position: absolute;
-  height: 55px;
-  width: 280px;
-  background-color: #f2f2f2;
+.video-controls__timeline {
+  position: relative;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  margin: 22px 20px;
+  @media (min-width: $tablet-width) {
+    margin: 27px 20px;
+    order:2;
+  }
 }
 
-@media (min-width: $tablet-width){
-  .video-controls {
-    padding: 0px;
-    width: 100%;
-    margin-bottom: 0px;
+.video-controls__mark {
+  position: absolute;
+  top: -3px;
+  left: 50px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.video-controls__replay {
+  background-image: url(/img/icon-video-replay.svg);
+  background-repeat: no-repeat;
+  height: 20px;
+  background-size: 16px 20px;
+  background-position: 25px 0px;
+  flex-grow: 3;
+  margin: 20px 10px;
+  @media (min-width: $tablet-width) {
+    width:10%;
+    order:1;
   }
+}
 
-  .video-controls__control-bar {
-    display: none;
-    }
+.video-controls__subtitles {
+  background-image: url(/img/icon-video-subtitles.svg);
+  background-repeat: no-repeat;
+  height: 20px;
+  background-size: 32px 20px;
+  flex-grow: 1;
+  margin: 20px 10px;
+  @media (min-width: $tablet-width) {
+    width:10%;
+    order:3;
+  }
+}
 
-  .video-controls__timeline {
-    height: 93px;
-    width: 100%;
+.video-controls__fullscreen {
+  background-image: url(/img/icon-video-fullscreen.svg);
+  background-repeat: no-repeat;
+  height: 20px;
+  background-size: 32px 20px;
+  flex-grow: 1;
+  margin: 20px 10px;
+  @media (min-width: $tablet-width) {
+    width:10%;
+    order:4;
   }
 }

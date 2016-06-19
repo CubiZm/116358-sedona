@@ -4,10 +4,9 @@
   font-size: 0;
   padding: 1rem;
   width: 18px;
-  height: 18px;
+  height: 20px;
   background-color: $main-color-blue;
   &--twitter {
-    
     background-image: url(/img/icon-twitter.svg);
     background-repeat: no-repeat;
     background-position: center;

@@ -1,78 +1,98 @@
 .perk {
-  padding: 0 20px;
-  @mixin set-padding calc(2.5 * $line),
-  calc(2.5 * $line);
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+  @mixin set-padding $line,
+  $line;
+}
 
-  &__title,
-  &__text, {
-          padding-left: 20px;
-          padding-right: 20px;
-        }
+.perk__title {
+  font-family: $font-family-bold;
+  margin: 0;
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+  }
+  @mixin set-font calc($line * 1.25),
+  calc($line * 1.75);
+  @media (min-width: $tablet-width) {
+    @mixin set-font calc($line * 1.5),
+    calc($line * 1.86);
+  }
+  @mixin set-padding calc(0.5 * $line),
+  calc(0.5 * $line);
+  @media (min-width: $tablet-width) {
+    @mixin set-padding $line,
+    $line;
+  }
 }
 
 .perk__item {
-  padding-left: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 20px;
+  @media (min-width: $tablet-width) {
+    margin: 40px 40px;
+  }
+  @media (min-width: $desktop-width) {
+    margin: 50px 60px 60px 60px;
+  }
+  padding-left: 50px;
+  @media (min-width: $tablet-width) {
+    padding-left: 0px;
+  }
   &--house {
     background-image: url(/img/icon-house.svg);
     background-repeat: no-repeat;
-    background-size: 36px 36px;
+    background-size: 37px 39px;
+    @media (min-width: $tablet-width) {
+      background-size: 75px 72px;
+    }
     background-position: 0 0;
+    @media (min-width: $tablet-width) {
+      background-position: center top;
+    }
+    order:1;
   }
   &--gift {
     background-image: url(/img/icon-gift.svg);
     background-repeat: no-repeat;
-    background-size: 33px 39px;
+    background-size: 32px 38px;
+    @media (min-width: $tablet-width) {
+      background-size: 64px 75px;
+    }
     background-position: 0 0;
+    @media (min-width: $tablet-width) {
+      background-position: center top;
+    }
+    order:2;
+    @media (min-width: $tablet-width) {
+      order: 3;
+    }
   }
   &--burger {
     background-image: url(/img/icon-burger.svg);
     background-repeat: no-repeat;
     background-size: 36px 36px;
+    @media (min-width: $tablet-width) {
+      background-size: 76px 68px;
+    }
     background-position: 0 0;
+    @media (min-width: $tablet-width) {
+      background-position: center top;
+    }
+    order:3;
+    @media (min-width: $tablet-width) {
+      order: 2;
+    }
   }
 }
 
-@media (min-width: $tablet-width){
-    .perk {
-         @mixin clearfix;
-         padding-left: 0;
-         padding-right: 0;
-
-        &__text {
-          padding-left: 40px;
-          padding-right: 40px;
-        }
-    }
-    .perk__item {
-      text-align: center;
-        border-bottom:none;
-        width: 33.3%;
-        float:left;
-        padding-left: 0px;
-        padding-top: 80px;
-        vertical-align: top;
-
-    &--house {
-    background-image: url(/img/icon-house.svg);
-    background-repeat: no-repeat;
-    background-size: 75px 72px;
-    background-position: center top;
+@media (min-width: $tablet-width) {
+  .perk__item {
+    text-align: center;
+    padding-top: 80px;
+    width: 33.3%;
   }
-  &--gift {
-    background-image: url(/img/icon-gift.svg);
-    background-repeat: no-repeat;
-    background-size: 67px 75px;
-    background-position: center top;
-  }
-  &--burger {
-    background-image: url(/img/icon-burger.svg);
-    background-repeat: no-repeat;
-    background-size: 77px 68px;
-    background-position: center top;
-  }
-  }
-
-  .perk__item:nth-child(2) {
-      float: right;
-    }
 }

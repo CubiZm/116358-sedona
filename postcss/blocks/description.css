@@ -1,11 +1,16 @@
 .description {
-  padding: 0 20px;
+  max-height: 260px;
   text-align: center;
-  @mixin set-padding calc(2.5 * $line),
-  calc(2.5 * $line);
-
+  padding: 40px 20px;
+  box-sizing: border-box;
+  @media (min-width: $tablet-width) {
+    padding: 40px;
+  }
+  @media (min-width: $desktop-width) {
+    padding: 60px;
+  }
   &--main {
-	max-width: 490px;
+    max-width: 550px;
     margin: auto;
-}
+  }
 }

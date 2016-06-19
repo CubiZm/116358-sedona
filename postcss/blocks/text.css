@@ -1,4 +1,5 @@
 .text {
+  width: 100%;
   @mixin set-font $line,
   calc($line * 1.5);
   @mixin set-padding calc(0.25 * $line),

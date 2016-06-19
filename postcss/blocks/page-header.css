@@ -1,7 +1,6 @@
 .page-header__logo {
   max-height: 55px;
-  background-color: #fff;
-  box-shadow: 0 -1px rgba(1, 1, 1, 0.2);
+  background-color: #fff; 
 }
 
 .page-header__logo-img {
@@ -30,14 +29,3 @@
   height: 390px;
   width: 100%;
 }
-
-@media (min-width: $tablet-width){
-  .page-header__logo {
-    position: absolute;
-    top:0;
-    width: 100%;
-  }
-  .page-header__logo img {
-    
-  }
- }
