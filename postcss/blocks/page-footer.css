@@ -24,7 +24,7 @@
 .page-footer__link,
 .page-footer__social,
 .page-footer__copyright {
-  padding: 15px;
+  padding: 20px;
   text-align: center;
   @media (min-width: $tablet-width) {
     width: 33%;

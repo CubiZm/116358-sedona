@@ -5,4 +5,36 @@
   cursor: pointer;
   position: relative;
   margin-bottom: 20px;
+  width:100%;@media (min-width: $tablet-width){width:40%;} @media (min-width: $desktop-width){width:25%;}
 }
+
+.checkbox__label {
+  text-align: left;
+}
+
+.checkbox__label::before {
+  content: "";
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  margin-right: 15px;
+  vertical-align: middle;
+  background-color: #f2f2f2;
+  border-radius: 10%;
+}
+
+.checkbox__input {
+  display: none;
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  top: 20px;
+  left: 15px;
+  background: url(/img/icon-tick.svg) no-repeat;
+}
+

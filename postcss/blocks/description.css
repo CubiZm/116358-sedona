@@ -1,5 +1,5 @@
 .description {
-  max-height: 260px;
+  min-width: 256px;
   text-align: center;
   padding: 40px 20px;
   box-sizing: border-box;
@@ -10,7 +10,7 @@
     padding: 60px;
   }
   &--main {
-    max-width: 550px;
+    max-width: 570px;
     margin: auto;
   }
 }

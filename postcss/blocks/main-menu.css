@@ -23,8 +23,6 @@
   box-shadow: 0 1px rgba(1, 1, 1, 0.2), 0 -1px rgba(255, 255, 255, 0.2);
   @media (min-width: $tablet-width) {
     box-shadow: none;
-  }
-  @media (min-width: $tablet-width) {
     width: 20%;
   }
 }
@@ -32,10 +30,9 @@
 .main-menu__link {
   display: block;
   @mixin set-font calc($line * 1.25),
-  calc($line * 1.5);
+  calc($line * 2);
   color: $alternative-text-color;
-  @mixin set-padding calc(1.25 * $line),
-  calc(1.25 * $line);
+  padding: 14px 0;
 }
 
 .main-menu__toggle {
@@ -78,7 +75,7 @@
     font-family: $font-family-bold;
     color: $main-text-color;
     @mixin set-font calc($line * 1),
-    calc($line * 1.5);
+    calc($line * 2);
   }
   .main-menu__toggle {
     display: none;
@@ -99,8 +96,4 @@
     order: 3;
   }
 }
-
-input:checked ~ .main-menu__item:not(:last-child) {
-  display: none;
-  }
     

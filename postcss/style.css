@@ -1,43 +1,47 @@
 @import "general/fonts.css";
-
 @import "general/normalize.css";
 @import "general/variables.css";
 @import "general/mixins.css";
 
-@import "blocks/page.css";
 @import "blocks/wrapper.css";
+@import "blocks/page.css";
 @import "blocks/page-header.css";
+@import "blocks/main-menu.css";
 @import "blocks/page-footer.css";
 @import "blocks/page-content.css";
+
+@import "blocks/description.css";
+@import "blocks/title.css";
+@import "blocks/text.css";
+@import "blocks/link.css";
+@import "blocks/social-link.css";
+@import "blocks/copyright.css";
+@import "blocks/allure.css";
+
 @import "blocks/advantage.css";
 @import "blocks/perk.css";
-@import "blocks/link.css";
+@import "blocks/map.css";
+
+@import "blocks/photos.css";
+@import "blocks/photo.css";
+
+@import "blocks/video.css";
+@import "blocks/video-view.css";
+@import "blocks/video-controls.css";
+
 @import "blocks/form.css";
+@import "blocks/form-box.css";
+@import "blocks/form-column.css";
 @import "blocks/label.css";
 @import "blocks/input.css";
-@import "blocks/form-box.css";
+
 @import "blocks/radio-btn.css";
 @import "blocks/checkbox.css";
 @import "blocks/textarea.css";
 @import "blocks/note.css";
-@import "blocks/main-menu.css";
-@import "blocks/map.css";
-@import "blocks/title.css";
-@import "blocks/text.css";
-@import "blocks/description.css";
-@import "blocks/video.css";
-@import "blocks/video-view.css";
-@import "blocks/video-controls.css";
-@import "blocks/video-icon.css";
-@import "blocks/video-view.css";
-@import "blocks/form-column.css";
+
 @import "blocks/personality.css";
 @import "blocks/opinion.css";
 @import "blocks/contact.css";
 @import "blocks/accomodation.css";
 @import "blocks/detail.css";
-@import "blocks/photo.css";
-@import "blocks/social-link.css";
-@import "blocks/copyright.css";
-@import "blocks/allure.css"; 
-@import "blocks/photos.css";

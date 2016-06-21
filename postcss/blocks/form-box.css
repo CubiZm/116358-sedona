@@ -1,8 +1,12 @@
 .form-box {
-  border: none; 
-  padding-left: 20px; @media (min-width: $tablet-width){padding-left: 0;}
-  padding-right: 20px; @media (min-width: $tablet-width){padding-right: 0;}
+  border: none;
+  padding: 0 20px;
+  margin: 20px 0;
   width: 100%;
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .form-box__title {
@@ -10,18 +14,25 @@
   color: $main-text-color;
   text-align: center;
   @mixin set-font calc($line * 1.25),
-  calc($line * 1.75); @media (min-width: $tablet-width){@mixin set-font calc($line * 1.50),
-  calc($line * 1.86);}
-  @mixin set-padding $line,
-  $line;
-  @media (min-width: $tablet-width){max-width: 280px;}
-    &--left {@media (min-width: $tablet-width){text-align: left;}}
-    &--hidden {@media (min-width: $tablet-width){display:none;}}
-   @media (min-width: $tablet-width){padding-bottom: 50px;}
+  calc($line * 1.75);
+  @media (min-width: $tablet-width) {
+    @mixin set-font calc($line * 1.50), calc($line * 1.86);
+  }
+  margin-bottom:14px;
+  @media (min-width: $tablet-width) {
+    max-width: 280px;
+  }
+  &--left {
+    @media (min-width: $tablet-width) {
+      text-align: left;
+    }
+  }
+  &--hidden {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+  }
 }
-
-/*
-.form-box {
-  border-top: 1px solid rgba(1, 1, 1, 0.2);
-}
-*/

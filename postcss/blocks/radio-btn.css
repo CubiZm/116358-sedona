@@ -9,3 +9,42 @@
   width: 100%;
   margin-bottom: 20px;
 }
+
+.radio-btn__label {
+  font-family: $font-family-bold;
+  @mixin set-font calc($line * 1.25),
+  calc($line * 1.5);
+  text-align: left;
+  text-transform: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.radio-btn__input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.radio-btn__control-indicator {
+  display: inline-block;
+  vertical-align: left;
+  width: 55px;
+  height: 55px;
+  margin-right: 15px;
+  vertical-align: middle;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+.radio-btn__input:checked ~ .radio-btn__control-indicator::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: $second-text-color;
+  vertical-align: middle;
+  top: 15px;
+  left: 15px;
+}

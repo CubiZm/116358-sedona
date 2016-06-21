@@ -4,27 +4,24 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
   }
-  @mixin set-padding $line,
-  $line;
+  margin:26px 0;
+  @media (min-width: $tablet-width) {
+    margin: 14px 0;
+  }
 }
 
 .perk__title {
   font-family: $font-family-bold;
   margin: 0;
+  margin-bottom:14px;
   @media (min-width: $tablet-width) {
-    margin: 0 auto;
+    margin: 26px auto;
   }
   @mixin set-font calc($line * 1.25),
   calc($line * 1.75);
   @media (min-width: $tablet-width) {
     @mixin set-font calc($line * 1.5),
     calc($line * 1.86);
-  }
-  @mixin set-padding calc(0.5 * $line),
-  calc(0.5 * $line);
-  @media (min-width: $tablet-width) {
-    @mixin set-padding $line,
-    $line;
   }
 }
 
@@ -42,6 +39,7 @@
   @media (min-width: $tablet-width) {
     padding-left: 0px;
   }
+
   &--house {
     background-image: url(/img/icon-house.svg);
     background-repeat: no-repeat;
@@ -92,7 +90,7 @@
 @media (min-width: $tablet-width) {
   .perk__item {
     text-align: center;
-    padding-top: 80px;
+    padding-top: 70px;
     width: 33.3%;
   }
 }
