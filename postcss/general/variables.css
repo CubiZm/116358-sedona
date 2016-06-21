@@ -12,5 +12,5 @@ $alternative-text-color:#ffffff;
 
 $line:1rem;
 
-$tablet-width: 768px;
-$desktop-width: 1200px;
+$tablet: (min-width:768px);
+$desktop: (min-width:1200px);

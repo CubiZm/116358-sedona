@@ -1,78 +1,83 @@
 .perk {
-  padding: 0 20px;
-  @mixin set-padding calc(2.5 * $line),
-  calc(2.5 * $line);
+  display: flex;
+  flex-direction: column;
+  margin:26px 0;
 
-  &__title,
-  &__text, {
-          padding-left: 20px;
-          padding-right: 20px;
-        }
+  @media($tablet){
+    flex-direction: row;
+    margin: 14px 0;
+  }
+}
+
+.perk__title {
+  @mixin set-font calc($line * 1.25),
+  calc($line * 1.75);
+
+  margin: 0;
+  margin-bottom:14px;
+  font-family: $font-family-bold;
+
+  @media($tablet){
+    @mixin set-font calc($line * 1.5),
+    calc($line * 1.86);
+
+    margin: 26px auto;
+  }
 }
 
 .perk__item {
-  padding-left: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 20px;
+  padding-left: 50px;
+
+  @media($tablet){
+    margin: 40px 40px;
+    padding-top: 70px;
+    padding-left: 0px;
+    width: 33.3%;
+    text-align: center;
+  }
+  @media($desktop){
+    margin: 50px 60px 60px 60px;
+  }
+
   &--house {
+    order:1;
     background-image: url(/img/icon-house.svg);
-    background-repeat: no-repeat;
-    background-size: 36px 36px;
     background-position: 0 0;
+    background-size: 37px 39px;
+    background-repeat: no-repeat;
+
+    @media($tablet){
+      background-position: center top;
+      background-size: 75px 72px;
+    }
   }
   &--gift {
+    order:2;
     background-image: url(/img/icon-gift.svg);
-    background-repeat: no-repeat;
-    background-size: 33px 39px;
     background-position: 0 0;
+    background-size: 32px 38px;
+    background-repeat: no-repeat;
+
+    @media($tablet){
+      order: 3;
+      background-position: center top;
+      background-size: 64px 75px;
+    }
   }
   &--burger {
+    order:3;
     background-image: url(/img/icon-burger.svg);
-    background-repeat: no-repeat;
+    background-position: 0 0;
     background-size: 36px 36px;
-    background-position: 0 0;
-  }
-}
+    background-repeat: no-repeat;
 
-@media (min-width: $tablet-width){
-    .perk {
-         @mixin clearfix;
-         padding-left: 0;
-         padding-right: 0;
-
-        &__text {
-          padding-left: 40px;
-          padding-right: 40px;
-        }
+    @media($tablet){
+      order:2;
+      background-position: center top;
+      background-size: 76px 68px;
     }
-    .perk__item {
-      text-align: center;
-        border-bottom:none;
-        width: 33.3%;
-        float:left;
-        padding-left: 0px;
-        padding-top: 80px;
-        vertical-align: top;
-
-    &--house {
-    background-image: url(/img/icon-house.svg);
-    background-repeat: no-repeat;
-    background-size: 75px 72px;
-    background-position: center top;
   }
-  &--gift {
-    background-image: url(/img/icon-gift.svg);
-    background-repeat: no-repeat;
-    background-size: 67px 75px;
-    background-position: center top;
-  }
-  &--burger {
-    background-image: url(/img/icon-burger.svg);
-    background-repeat: no-repeat;
-    background-size: 77px 68px;
-    background-position: center top;
-  }
-  }
-
-  .perk__item:nth-child(2) {
-      float: right;
-    }
 }

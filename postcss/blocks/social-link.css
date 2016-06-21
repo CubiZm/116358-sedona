@@ -1,28 +1,28 @@
 .social-link {
   display: inline-block;
-  vertical-align: middle;
-  font-size: 0;
   padding: 1rem;
   width: 18px;
-  height: 18px;
+  height: 20px;
   background-color: $main-color-blue;
+  vertical-align: middle;
+  font-size: 0;
+
   &--twitter {
-    
     background-image: url(/img/icon-twitter.svg);
-    background-repeat: no-repeat;
     background-position: center;
     background-size: 18px 15px;
+    background-repeat: no-repeat;
   }
   &--facebook {
     background-image: url(/img/icon-facebook.svg);
-    background-repeat: no-repeat;
     background-position: center;
     background-size: 18px 15px;
+    background-repeat: no-repeat;
   }
   &--youtube {
     background-image: url(/img/icon-youtube.svg);
-    background-repeat: no-repeat;
     background-position: center;
     background-size: 18px 15px;
+    background-repeat: no-repeat;
   }
 }

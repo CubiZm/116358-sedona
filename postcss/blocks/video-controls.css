@@ -1,38 +1,90 @@
+.video-view {
+  @media($tablet) {
+    margin-bottom: -50px;
+  }
+  @media($desktop) {
+    margin-bottom: -10px;
+  }
+}
+
 .video-controls {
   position: relative;
-  margin-bottom: 100px;
-  padding: 0 20px;
+  top: -45px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 20px;
+  background-color: rgba(1, 1, 1, 0.5);
+
+  @media($tablet) {
+    top: -80px;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 10px 0;
+  }
 }
 
 .video-controls__timeline {
-  bottom: 4px;
-  position: absolute;
-  height: 45px;
-  width: 280px;
-  background-color: rgba(1, 1, 1, 0.5);
-}
+  position: relative;
+  margin: 22px 20px;
+  width: 100%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
 
-.video-controls__control-bar {
-  bottom: -50px;
-  position: absolute;
-  height: 55px;
-  width: 280px;
-  background-color: #f2f2f2;
-}
-
-@media (min-width: $tablet-width){
-  .video-controls {
-    padding: 0px;
-    width: 100%;
-    margin-bottom: 0px;
+  @media($tablet) {
+    order: 2;
+    margin: 27px 20px;
   }
+}
 
-  .video-controls__control-bar {
-    display: none;
-    }
+.video-controls__mark {
+  position: absolute;
+  top: -3px;
+  left: 50px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background: #fff;
+}
 
-  .video-controls__timeline {
-    height: 93px;
-    width: 100%;
+.video-controls__replay {
+  flex-grow: 3;
+  margin: 20px 10px;
+  height: 20px;
+  background-image: url(/img/icon-video-replay.svg);
+  background-position: 25px 0px;
+  background-size: 16px 20px;
+  background-repeat: no-repeat;
+
+  @media($tablet) {
+    order: 1;
+    width: 10%;
+  }
+}
+
+.video-controls__subtitles {
+  flex-grow: 1;
+  margin: 20px 10px;
+  height: 20px;
+  background-image: url(/img/icon-video-subtitles.svg);
+  background-size: 32px 20px;
+  background-repeat: no-repeat;
+
+  @media($tablet) {
+    order: 3;
+    width: 10%;
+  }
+}
+
+.video-controls__fullscreen {
+  flex-grow: 1;
+  margin: 20px 10px;
+  height: 20px;
+  background-image: url(/img/icon-video-fullscreen.svg);
+  background-size: 32px 20px;
+  background-repeat: no-repeat;
+
+  @media($tablet) {
+    order: 4;
+    width: 10%;
   }
 }

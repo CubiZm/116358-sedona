@@ -1,21 +1,7 @@
 .text {
-  @mixin set-font $line,
-  calc($line * 1.5);
-  @mixin set-padding calc(0.25 * $line),
-  calc(0.25 * $line);
   margin: 0;
-  &--h1 {
-    @mixin set-padding calc(1 * $line),
-    calc(0.75 * $line);
-  }
-  &--number {
-    @mixin set-padding calc(0.25 * $line),
-    calc(0.75 * $line);
-  }
-  &--allure {
-    @mixin set-font $line,
-    calc($line * 2);
-    @mixin set-padding calc(1 * $line),
-    calc(0.75 * $line);
-  }
+  margin-bottom: 12px;
+  width: 100%;
+
+  &:last-of-type{margin-bottom:0;};
 }

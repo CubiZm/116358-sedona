@@ -3,22 +3,23 @@
 }
 
 .map__button {
+  @mixin set-font calc(1.5 * $line),
+  calc(2.15 * $line);
+
+  margin: 20px auto;
+  padding: 14px 0;
+  max-width: 280px;
+  width: 100%;
   background-color: $main-color-blue;
   color: $alternative-text-color;
-  display: block;
-  @mixin set-padding $line,
-  $line;
-  max-width: 280px;
-  margin: 20px auto;
-}
 
-.map__view {
-  background: url(../img/bg-map-mobile@1x.jpg) no-repeat;
-  height: 350px;
-}
-
-@media (min-width: $tablet-width){
-  .map__button {
+  @media($tablet){
     max-width: 458px;
   }
 }
+
+.map__view {
+  height: 350px;
+  background: url(../img/bg-map-mobile@1x.jpg) no-repeat;
+}
+

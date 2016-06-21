@@ -17,13 +17,14 @@
           <li class="main-menu__item"><a class="main-menu__link link" href="photo.html">Фото и Видео</a></li>
           <li class="main-menu__item"><a class="main-menu__link link" href="form.html">Форма отзыва</a></li>
           <li class="main-menu__item"><a class="main-menu__link link" href="https://htmlacademy.ru/">Html Academy</a></li>
+          <li class="main-menu__item page-header__logo"><img class="page-header__logo-img" src="img/logo-sedona-mobile.svg" alt="logo" width="102" height="83"></li>
         </ul>
-        <button class="main-menu__toggle main-menu__toggle--open" type="button">Открыть меню</button>
+        <button class="main-menu__toggle main-menu__toggle--open" type="button" onclick="this.className = (this.className == 'main-menu__toggle main-menu__toggle--open' ? 'main-menu__toggle main-menu__toggle--close' : 'main-menu__toggle main-menu__toggle--open')">Открыть меню</button>
       </nav>
-      <div class="page-header__logo">
-        <img class="page-header__logo-img" src="img/logo-sedona-mobile.svg" alt="logo" width="102" height="83">
-      </div>      
-      <div class="page-header__photo page-header__photo--index">
+      <div class="page-header__photo page-header__photo--main">
+        <div class="page-header__photo-text page-header__photo-text--main">
+          <img class="page-header__photo-img" src="img/text-sedona-index.svg" width="460" height="350" alt="Пейзаж Седоны">
+        </div>
       </div>
     </header>
     <main class="page-content">
@@ -34,31 +35,31 @@
       <section class="advantage">
         <div class="description advantage__text advantage__text--left">
           <h2 class="title title--h2">Настоящий городок</h2>
-          <p class="text text--number"> - №1 - </p>
+          <p class="text"> - №1 - </p>
           <p class="text">Седона не аттракцион для туристов, там течет своя жизнь</p>
         </div>
         <div class="advantage__img-box">
-          <img src="../img/photo-city@1x.jpg" alt="plus_1" class="advantage__img" width = "800" height = "400">
+          <img src="../img/photo-city@1x.jpg" alt="plus_1" class="advantage__img" width="800" height="400">
         </div>
       </section>
       <section class="perk">
         <div class="perk__item perk__item--house">
-          <h2 class="title title--h2 perk__title">Жилье</h2>
-          <p class="text perk__text">Рекомендуем пожить в настоящем отеле, все как в кино!</p>
+          <h2 class="perk__title">Жилье</h2>
+          <p class="text perk__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </div>
         <div class="perk__item perk__item--gift">
-          <h2 class="title title--h2 perk__title">Сувениры</h2>
+          <h2 class="perk__title">Сувениры</h2>
           <p class="text perk__text">Не только китайского, но и местного производства!</p>
         </div>
         <div class="perk__item perk__item--burger">
-          <h2 class="title title--h2 perk__title">Еда</h2>
+          <h2 class="perk__title">Еда</h2>
           <p class="text perk__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </div>
       </section>
       <section class="advantage">
         <div class="description advantage__text advantage__text--right">
           <h2 class="title title--h2">Там есть мост дьявола</h2>
-          <p class="text text--number"> - №2 - </p>
+          <p class="text"> - №2 - </p>
           <p class="text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </div>
         <div class="advantage__img-box">
@@ -69,28 +70,28 @@
         <div class="advantage__list">
           <div class="advantage__item">
             <h2 class="title title--h2 advantage__item-title">Небольшая площадь</h2>
-            <p class="text text--number"> - №3 - </p>
-            <p class="text advantage__item-text">Все достопримечательности находятся близко</p>
+            <p class="text"> - №3 - </p>
+            <p class="text advantage__item-text">Все достопримеча&shy;тельности находятся близко</p>
           </div>
           <div class="advantage__item">
             <h2 class="title title--h2 advantage__item-title">Красивая дорога</h2>
-            <p class="text text--number"> - №4 - </p>
+            <p class="text"> - №4 - </p>
             <p class="text advantage__item-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
           <div class="advantage__item">
             <h2 class="title title--h2 advantage__item-title">Мало туристов</h2>
-            <p class="text text--number"> - №5 - </p>
+            <p class="text"> - №5 - </p>
             <p class="text advantage__item-text">Большинство едет в Гранд Каньон и толпиться там</p>
           </div>
         </div>
       </section>
       <section class="map">
         <div class="allure">
-          <h2 class="title allure__title">Заинтересовались?</h2>
-          <p class="text allure__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <h1 class="title allure__title allure__title--h1">Заинтересовались?</h1>
+          <p class="allure__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="map__button link" href="#">Найти гостиницу</a>
         </div>
-        <div class="map__view"  id="map-canvas"></div>
+        <div class="map__view" id="map-canvas"></div>
       </section>
     </main>
     <footer class="page-footer">
@@ -100,27 +101,29 @@
         <a class="social-link social-link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
         <a class="social-link social-link--youtube" href="#">Мы на Youtube</a>
       </div>
-      <div class="copyright">
+      <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link link" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" alt="html-academy" width="27" height="34"></a>
       </div>
     </footer>
   </div>
-
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-    <script type="text/javascript">
-    var map;
-    function initialize() {
+  <script type="text/javascript">
+  var map;
+
+  function initialize() {
     var mapOptions = {
-    zoom: 8,
-    center: new google.maps.LatLng(34.8543784, -111.7951384)
+      zoom: 8,
+      center: new google.maps.LatLng(34.8543784, -111.7951384)
     };
     map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
-    }
+  }
 
-    google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+  google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+
 
 </body>
+
 </html>

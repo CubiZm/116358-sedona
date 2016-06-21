@@ -17,13 +17,14 @@
           <li class="main-menu__item"><a class="main-menu__link link" href="photo.html">Фото и Видео</a></li>
           <li class="main-menu__item"><a class="main-menu__link link" href="form.html">Форма отзыва</a></li>
           <li class="main-menu__item"><a class="main-menu__link link" href="https://htmlacademy.ru/">Html Academy</a></li>
+          <li class="main-menu__item page-header__logo"><img class="page-header__logo-img" src="img/logo-sedona-mobile.svg" alt="logo" width="102" height="83"></li>
         </ul>
         <button class="main-menu__toggle main-menu__toggle--open" type="button">Открыть меню</button>
       </nav>
-      <div class="page-header__logo">
-        <img class="page-header__logo-img" src="img/logo-sedona-mobile.svg" alt="logo" width="102" height="83">
-      </div>
-      <div class="page-header__photo page-header__photo--index">
+      <div class="page-header__photo page-header__photo--secondary">
+        <div class="page-header__photo-text page-header__photo-text--secondary">
+          <img class="page-header__photo-img" src="img/text-sedona.svg" width="461" height="80" alt="Пейзаж Седоны">
+        </div>
       </div>
     </header>
     <main class="page-content">
@@ -63,48 +64,49 @@
         </fieldset>
         <fieldset class="form-box opinion">
           <legend class="form-box__title form-box__title--left">Ваше общее впечатление:</legend>
-          <div class="opinion__radio-btn radio-btn">
-            <label class="label opinion__label" for="radio-1">
-              <input class="input opinion__input" id="radio-1" name="radio" type="radio">
-              <span class="opinion__control-indicator"></span> Скорее положительное</label>
+          <div class="radio-btn">
+            <label class="label radio-btn__label" for="radio-1">
+              <input class="input radio-btn__input" id="radio-1" name="radio" type="radio">
+              <span class="radio-btn__control-indicator"></span> Скорее положительное</label>
           </div>
-          <div class="opinion__radio radio-btn">
-            <label class="label opinion__label" for="radio-2">
-              <input class="input opinion__input" id="radio-2" name="radio" type="radio">
-              <span class="opinion__control-indicator"></span> Скорее отрицательное</label>
+          <div class="radio-btn">
+            <label class="label radio-btn__label" for="radio-2">
+              <input class="input radio-btn__input" id="radio-2" name="radio" type="radio">
+              <span class="radio-btn__control-indicator"></span> Скорее отрицательное</label>
           </div>
-          <div class="opinion__radio radio-btn">
-            <label class="label opinion__label" for="radio-3">
-              <input class="input opinion__input" id="radio-3" name="radio" type="radio">
-              <span class="opinion__control-indicator"></span>Затрудняюсь ответить</label>
+          <div class="radio-btn">
+            <label class="label radio-btn__label" for="radio-3">
+              <input class="input radio-btn__input" id="radio-3" name="radio" type="radio">
+              <span class="radio-btn__control-indicator"></span>Затрудняюсь ответить</label>
           </div>
         </fieldset>
         <fieldset class="form-box accommodation">
           <legend class="form-box__title">Посещенные достопримечательности:</legend>
           <div class="accommodation__wrapper">
-            <div class="accommodation__checkbox checkbox">
-              <input class="input accommodation__input" id="checkbox-1" name="checkbox" type="checkbox">
-              <label class="label accommodation__label" for="checkbox-1">Мост Дьявола</label>
+            <div class="checkbox">
+              <input class="input checkbox__input" id="checkbox-1" name="checkbox" type="checkbox">
+              <label class="label checkbox__label" for="checkbox-1">Мост Дьявола</label>
             </div>
-            <div class="accommodation__checkbox checkbox">
-              <input class="input accommodation__input" id="checkbox-2" name="checkbox" type="checkbox">
-              <label class="label accommodation__label" for="checkbox-2">Слайд-парк</label>
+            <div class="checkbox">
+              <input class="input checkbox__input" id="checkbox-2" name="checkbox" type="checkbox">
+              <label class="label checkbox__label" for="checkbox-2">Слайд-парк</label>
             </div>
-            <div class="accommodation__checkbox checkbox">
-              <input class="input accommodation__input" id="checkbox-3" name="checkbox" type="checkbox">
-              <label class="label accommodation__label" for="checkbox-3">Гора-Колокол</label>
+            <div class="checkbox">
+              <input class="input checkbox__input" id="checkbox-3" name="checkbox" type="checkbox">
+              <label class="label checkbox__label" for="checkbox-3">Гора-Колокол</label>
             </div>
-            <div class="accommodation__checkbox checkbox">
-              <input class="input accommodation__input" id="checkbox-4" name="checkbox" type="checkbox">
-              <label class="label accommodation__label" for="checkbox-4">Красные скалы</label>
+            <div class="checkbox">
+              <input class="input checkbox__input" id="checkbox-4" name="checkbox" type="checkbox">
+              <label class="label checkbox__label" for="checkbox-4">Красные скалы</label>
             </div>
-        </div>
+          </div>
         </fieldset>
         <div class="form-box detail">
           <div class="detail__note note">
             <label class="label detail__label" for="note">Опишите свои эмоции:</label>
             <textarea class="textarea detail__textarea" id="note" name="note" rows="5" cols="30">Опишите подробно все свои восторги</textarea>
-            <input class="input detail__input" type="submit" value="Отправить отзыв"><label class="detail__necessarily">* - Обязательные поля</label>
+            <input class="input detail__input" type="submit" value="Отправить отзыв">
+            <span class="detail__necessarily">* - Обязательные поля</span>
           </div>
         </div>
       </form>
@@ -116,7 +118,7 @@
         <a class="social-link social-link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
         <a class="social-link social-link--youtube" href="#">Мы на Youtube</a>
       </div>
-      <div class="copyright">
+      <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link link" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" alt="html-academy" width="27" height="34"></a>
       </div>

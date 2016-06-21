@@ -1,40 +1,41 @@
 .page-footer {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px auto;
+  padding: 20px 40px;
   background-color: #fefefe;
 
-  &__link {
-  color: $main-text-color;
-  font-family: $font-family-bold;
+  @media($tablet){
+    flex-direction: row;
+  }
+  @media($tablet){
+    margin: -10px auto;
+  }
+}
+
+.page-footer__link {
   @mixin set-font calc($line * 1.5),
   calc($line * 1.5);
-  @mixin set-padding calc(2.5 * $line),
-  calc(2.5 * $line);
-  display: inline-block;
-  vertical-align: middle;
+
+  color: $main-text-color;
+  font-family: $font-family-bold;
+}
+
+.page-footer__link,
+.page-footer__social,
+.page-footer__copyright {
+  padding: 20px;
+  text-align: center;
+
+  @media($tablet){
+    width: 33%;
   }
 }
 
-@media (min-width: $tablet-width){
-  .page-footer {
-  max-width: 768px; @media (min-width: $desktop-width){max-width: 960px;}
-  margin: 0 auto;
-  @mixin clearfix;
-  @mixin set-padding calc(2.5 * $line),
-  calc(2.5 * $line);
-  }
-
-  .page-footer__link {
-    float: left;
-    width: 33.3%;
-    padding-top: 10px;
-    padding-bottom: 0px;
-  }
-
-}
-
-@media (min-width: $tablet-width){
-  .page-footer__social {
-    float: left;
-    width: 33.3%;
+.page-footer__copyright {
+  @media($desktop){
+    text-align: right;
   }
 }

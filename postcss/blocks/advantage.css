@@ -1,78 +1,80 @@
+.advantage {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media($tablet) {
+    flex-wrap: nowrap;
+  }
+}
+
 .advantage__text {
+  width: 100%;
   background-color: $main-color-blue;
   color: $alternative-text-color;
+
+  @media($tablet) {
+    width: 33.3%;
+  }
+}
+
+@media($tablet) {
+  .advantage__text--left {
+    order: 1;
+  }
+  .advantage__text--right {
+    order: 3;
+  }
 }
 
 .advantage__img-box {
-  height: 260px;
   overflow: hidden;
+  max-height: 260px;
+
+  @media($tablet) {
+    order: 2;
+    width: 66.6%;
+  }
 }
 
 .advantage__img {
-  margin: 0 auto;
   width: auto;
 }
 
 .advantage__list {
-  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
   background-color: $main-color-grey;
   color: $main-text-color;
+
+  @media($tablet) {
+    flex-wrap: nowrap;
+  }
 }
 
 .advantage__item {
-  text-align: center;
-  @mixin set-padding calc(1.75 * $line),
-  calc(1.75 * $line);
+  margin: 0 20px;
+  padding: 26px;
+  width: 100%;
   border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+  text-align: center;
+
+  @media($tablet) {
+    margin: 0;
+  }
+  @media($tablet) {
+    padding: 40px;
+  }
+  @media($desktop) {
+    padding: 50px 60px 60px 60px;
+  }
+  @media($tablet) {
+    width: 33%;
+  }
+  @media($tablet) {
+    border-bottom: none;
+  }
 }
 
 .advantage__item:last-child {
- border: none;
-}
-
-@media (min-width: $tablet-width){
-  .advantage {
-      @mixin clearfix;
-    }
-  .advantage__text{
-      width: 256px;
-      height: 256px;
-      box-sizing: border-box;
-    }
-
-    .advantage__text--left {
-      float: left;
-    }
-    .advantage__text--right {
-      float: right;
-    }
-    .advantage__img-box {
-      float: none;
-      height: 256px;
-    }
-    .advantage__img-box img {
-      height: auto;
-    }
-    .advantage__list {
-      @mixin clearfix;
-      padding: 40px 0;
-    }
-    .advantage__item {
-      border-bottom:none;
-      width: 33.3%;
-      float:left;
-
-    }
-    .advantage__item-title,
-    .advantage__item-text {
-        padding: 0 40px;
-    }
-}
-
-@media (min-width: $desktop-width){
-.advantage__text{
-    width: 400px;
-    padding-top: 60px;
-    padding-bottom: 55px;
-}
+  border: none;
 }

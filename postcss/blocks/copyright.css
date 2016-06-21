@@ -1,21 +1,6 @@
 .copyright__text,
 .copyright__link {
   display: inline-block;
+  padding: 0 5px;
   vertical-align: middle;
-  padding-right: 10px;
-  @mixin set-padding calc(3 * $line),
-  calc(2 * $line);
-}
-
-
-@media (min-width: $tablet-width){
-  .copyright {
-    float: left;
-    width: 33.3%;
-    
-  }
-  .copyright__text,
-  .copyright__link {
-  	padding: 5px;
-  }
 }
