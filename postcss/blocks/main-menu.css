@@ -1,47 +1,59 @@
 .main-menu {
   background-color: $main-color-blue;
-  @media (min-width: $tablet-width) {
+
+  @media($tablet){
     background-color: #fff;
   }
 }
 
 .main-menu__list {
+  position: relative;
   display: flex;
   flex-direction: column;
-  @media (min-width: $tablet-width) {
-    flex-direction: row;
-  }
+  margin: 0;
   padding: 0;
   text-align: center;
-  position: relative;
-  margin: 0;
+
+  @media($tablet){
+    flex-direction: row;
+  }
 }
 
 .main-menu__item {
-  list-style-type: none;
-  color: white;
   box-shadow: 0 1px rgba(1, 1, 1, 0.2), 0 -1px rgba(255, 255, 255, 0.2);
-  @media (min-width: $tablet-width) {
-    box-shadow: none;
+  color: white;
+  list-style-type: none;
+
+  @media($tablet){
     width: 20%;
+    box-shadow: none;
   }
 }
 
 .main-menu__link {
-  display: block;
   @mixin set-font calc($line * 1.25),
   calc($line * 2);
-  color: $alternative-text-color;
+
+  display: block;
   padding: 14px 0;
+  color: $alternative-text-color;
+
+  @media($tablet){
+    @mixin set-font calc($line * 1),
+    calc($line * 2);
+
+    color: $main-text-color;
+    font-family: $font-family-bold;}
 }
 
 .main-menu__toggle {
-  cursor: pointer;
   position: absolute;
+  top: 0px;
   width: 23px;
   height: 23px;
   font-size: 0;
-  top: 0px;
+  cursor: pointer;
+
   &--open {
     right: 0;
     margin: 20px;
@@ -49,14 +61,14 @@
     background: url(/img/icon-cross.svg) 0 0 no-repeat;
   }
   &--open::after {
-    content: "";
     position: absolute;
     top:220px;
     left: 0;
     width: 23px;
     height: 23px;
     border: none;
-    background: url(/img/icon-menu.svg) 0 0 no-repeat; 
+    background: url(/img/icon-menu.svg) 0 0 no-repeat;
+    content: ""; 
   }
   &--close {
     right: 0;
@@ -70,13 +82,7 @@
   box-shadow: 0 -1px rgba(1, 1, 1, 0.2);
 }
 
-@media (min-width: $tablet-width) {
-  .main-menu__link {
-    font-family: $font-family-bold;
-    color: $main-text-color;
-    @mixin set-font calc($line * 1),
-    calc($line * 2);
-  }
+@media($tablet){
   .main-menu__toggle {
     display: none;
   }

@@ -1,38 +1,39 @@
 .form-box {
-  border: none;
-  padding: 0 20px;
   margin: 20px 0;
+  padding: 0 20px;
   width: 100%;
-  @media (min-width: $tablet-width) {
-    padding-left: 0;
+  border: none;
+
+  @media($tablet){
     padding-right: 0;
+    padding-left: 0;
   }
 }
 
 .form-box__title {
-  font-family: $font-family-bold;
-  color: $main-text-color;
-  text-align: center;
   @mixin set-font calc($line * 1.25),
   calc($line * 1.75);
-  @media (min-width: $tablet-width) {
-    @mixin set-font calc($line * 1.50), calc($line * 1.86);
-  }
+
   margin-bottom:14px;
-  @media (min-width: $tablet-width) {
+  color: $main-text-color;
+  text-align: center;
+  font-family: $font-family-bold;
+
+  @media($tablet){
+    @mixin set-font calc($line * 1.50), calc($line * 1.86);
+
+    margin-bottom: 50px;
     max-width: 280px;
   }
+
   &--left {
-    @media (min-width: $tablet-width) {
+    @media($tablet){
       text-align: left;
     }
   }
   &--hidden {
-    @media (min-width: $tablet-width) {
+    @media($tablet){
       display: none;
     }
-  }
-  @media (min-width: $tablet-width) {
-    margin-bottom: 50px;
   }
 }

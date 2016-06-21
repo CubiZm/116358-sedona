@@ -1,5 +1,5 @@
 .accommodation { 
-  @media (min-width: $tablet-width){order:3;}
+  @media($tablet){order:3;}
 }
 
 .accommodation__wrapper {

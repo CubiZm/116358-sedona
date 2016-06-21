@@ -9,27 +9,31 @@
 
 .page-header__logo-img {
   position: relative;
+  z-index:1;
   display: block;
+  margin: 0 auto;
   width: 102px;
   height: 83px;
-  margin: 0 auto;
-  z-index:1;
 }
 
 .page-header__photo {
   display: flex;
   background-image: url(../img/bg-back-mobile@1x.jpg);
-  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .page-header__photo--main {
-  min-height: 390px;  @media (min-width: $tablet-width) { min-height: 518px; }
+  min-height: 390px;
+
+  @media($tablet){min-height: 518px;}
 }
 
 .page-header__photo--secondary {
-  min-height: 150px;  @media (min-width: $tablet-width) { min-height: 300px; }
+  min-height: 150px;
+
+  @media($tablet){ min-height: 300px;}
 }
 
 .page-header__photo-text {

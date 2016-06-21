@@ -1,20 +1,21 @@
 .photos {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-  @media (min-width: $tablet-width) {
+  justify-content: space-between;
+
+  @media($tablet) {
     flex-direction: row;
   }
 }
 
-@media (min-width: $tablet-width) {
+@media($tablet) {
   .photos {
-    margin: 0 60px;
     flex-wrap: wrap;
+    margin: 0 60px;
   }
 }
 
-@media (min-width: $desktop-width) {
+@media($desktop) {
   .photos {
     margin: 0;
   }

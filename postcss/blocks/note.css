@@ -1,7 +1,7 @@
 .note {
   display: flex;
-  align-items:center;
-  width: 100%;
   flex-wrap:wrap;
+  align-items:center;
   margin-bottom: 20px;
+  width: 100%;
 }

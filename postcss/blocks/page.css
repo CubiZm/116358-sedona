@@ -1,5 +1,6 @@
 .page {
-  font-family: $font-family-regular;
   @mixin set-font $line, calc($line * 1.5); /* размер шрифта - 14px, высота строки - 21px */
+
   text-transform: uppercase;
+  font-family: $font-family-regular;
 }

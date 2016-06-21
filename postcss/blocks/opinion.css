@@ -1,4 +1,7 @@
 .opinion {
-  width: 100%; @media (min-width: $tablet-width){width: 50%;}
-  @media (min-width: $tablet-width){order:0;}
+  width: 100%;
+  @media($tablet) {
+    order: 0;
+    width: 50%;
+  }
 }

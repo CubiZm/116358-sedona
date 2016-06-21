@@ -1,27 +1,27 @@
 .perk {
   display: flex;
   flex-direction: column;
-  @media (min-width: $tablet-width) {
-    flex-direction: row;
-  }
   margin:26px 0;
-  @media (min-width: $tablet-width) {
+
+  @media($tablet){
+    flex-direction: row;
     margin: 14px 0;
   }
 }
 
 .perk__title {
-  font-family: $font-family-bold;
-  margin: 0;
-  margin-bottom:14px;
-  @media (min-width: $tablet-width) {
-    margin: 26px auto;
-  }
   @mixin set-font calc($line * 1.25),
   calc($line * 1.75);
-  @media (min-width: $tablet-width) {
+
+  margin: 0;
+  margin-bottom:14px;
+  font-family: $font-family-bold;
+
+  @media($tablet){
     @mixin set-font calc($line * 1.5),
     calc($line * 1.86);
+
+    margin: 26px auto;
   }
 }
 
@@ -29,68 +29,55 @@
   display: flex;
   flex-wrap: wrap;
   margin: 10px 20px;
-  @media (min-width: $tablet-width) {
-    margin: 40px 40px;
-  }
-  @media (min-width: $desktop-width) {
-    margin: 50px 60px 60px 60px;
-  }
   padding-left: 50px;
-  @media (min-width: $tablet-width) {
+
+  @media($tablet){
+    margin: 40px 40px;
+    padding-top: 70px;
     padding-left: 0px;
+    width: 33.3%;
+    text-align: center;
+  }
+  @media($desktop){
+    margin: 50px 60px 60px 60px;
   }
 
   &--house {
+    order:1;
     background-image: url(/img/icon-house.svg);
-    background-repeat: no-repeat;
+    background-position: 0 0;
     background-size: 37px 39px;
-    @media (min-width: $tablet-width) {
+    background-repeat: no-repeat;
+
+    @media($tablet){
+      background-position: center top;
       background-size: 75px 72px;
     }
-    background-position: 0 0;
-    @media (min-width: $tablet-width) {
-      background-position: center top;
-    }
-    order:1;
   }
   &--gift {
-    background-image: url(/img/icon-gift.svg);
-    background-repeat: no-repeat;
-    background-size: 32px 38px;
-    @media (min-width: $tablet-width) {
-      background-size: 64px 75px;
-    }
-    background-position: 0 0;
-    @media (min-width: $tablet-width) {
-      background-position: center top;
-    }
     order:2;
-    @media (min-width: $tablet-width) {
+    background-image: url(/img/icon-gift.svg);
+    background-position: 0 0;
+    background-size: 32px 38px;
+    background-repeat: no-repeat;
+
+    @media($tablet){
       order: 3;
+      background-position: center top;
+      background-size: 64px 75px;
     }
   }
   &--burger {
+    order:3;
     background-image: url(/img/icon-burger.svg);
-    background-repeat: no-repeat;
+    background-position: 0 0;
     background-size: 36px 36px;
-    @media (min-width: $tablet-width) {
+    background-repeat: no-repeat;
+
+    @media($tablet){
+      order:2;
+      background-position: center top;
       background-size: 76px 68px;
     }
-    background-position: 0 0;
-    @media (min-width: $tablet-width) {
-      background-position: center top;
-    }
-    order:3;
-    @media (min-width: $tablet-width) {
-      order: 2;
-    }
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .perk__item {
-    text-align: center;
-    padding-top: 70px;
-    width: 33.3%;
   }
 }

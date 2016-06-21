@@ -1,24 +1,26 @@
 .page-footer {
   display: flex;
   flex-direction: column;
-  @media (min-width: $tablet-width) {
-    flex-direction: row;
-  }
   align-items: center;
   justify-content: space-between;
-  background-color: #fefefe;
   margin: 0px auto;
-  @media (min-width: $tablet-width) {
+  padding: 20px 40px;
+  background-color: #fefefe;
+
+  @media($tablet){
+    flex-direction: row;
+  }
+  @media($tablet){
     margin: -10px auto;
   }
-  padding: 20px 40px;
 }
 
 .page-footer__link {
-  color: $main-text-color;
-  font-family: $font-family-bold;
   @mixin set-font calc($line * 1.5),
   calc($line * 1.5);
+
+  color: $main-text-color;
+  font-family: $font-family-bold;
 }
 
 .page-footer__link,
@@ -26,13 +28,14 @@
 .page-footer__copyright {
   padding: 20px;
   text-align: center;
-  @media (min-width: $tablet-width) {
+
+  @media($tablet){
     width: 33%;
   }
 }
 
 .page-footer__copyright {
-  @media (min-width: $desktop-width) {
+  @media($desktop){
     text-align: right;
   }
 }

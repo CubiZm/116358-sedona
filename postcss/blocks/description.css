@@ -1,16 +1,18 @@
 .description {
+  box-sizing: border-box;
+  padding: 40px 20px;
   min-width: 256px;
   text-align: center;
-  padding: 40px 20px;
-  box-sizing: border-box;
-  @media (min-width: $tablet-width) {
+
+  @media($tablet){
     padding: 40px;
   }
-  @media (min-width: $desktop-width) {
+  @media($desktop){
     padding: 60px;
   }
+
   &--main {
-    max-width: 570px;
     margin: auto;
+    max-width: 570px;
   }
 }

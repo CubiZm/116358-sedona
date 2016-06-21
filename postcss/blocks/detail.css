@@ -1,21 +1,24 @@
 .detail {
-  @media (min-width: $tablet-width) {
+  display:flex;
+
+  @media($tablet){
     order: 4;
   }
-  display:flex;
 }
 
 .detail__input {
-  background-color: $main-color-blue;
-  color: $alternative-text-color;
-  padding-left: 0;
   @mixin set-font calc(1.5 * $line),
   calc(2.15 * $line);
+
   margin: 20px auto;
-  text-transform: uppercase;
   padding: 14px 0;
+  padding-left: 0;
   width: 100%;
-  @media (min-width: $tablet-width) {
+  background-color: $main-color-blue;
+  color: $alternative-text-color;
+  text-transform: uppercase;
+
+  @media($tablet){
     width: 50%
   }
 }
@@ -26,13 +29,15 @@
 }
 
 .detail__label {
-  font-family: $font-family-bold;
-  color: $main-text-color;
-  text-align: center;
-  padding: 20px;
   @mixin set-font calc($line * 1.25),
   calc($line * 1.75);
-  @media (min-width: $tablet-width) {
+
+  padding: 20px;
+  color: $main-text-color;
+  text-align: center;
+  font-family: $font-family-bold;
+
+  @media($tablet){
     @mixin set-font calc($line * 1.50), calc($line * 1.86);
   }
 }
@@ -40,16 +45,16 @@
 .detail__textarea {
   @mixin set-font calc($line * 1.25),
   calc($line * 1.75);
+
   padding: 20px;
 }
 
 .detail__necessarily {
-  text-align: right;
   display: none;
-  @media (min-width: $tablet-width) {
+  text-align: right;
+
+  @media($tablet){
     display: block;
-  }
-  @media (min-width: $tablet-width) {
-    width: 50%
+    width: 50%;
   }
 }

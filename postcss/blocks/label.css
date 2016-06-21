@@ -1,4 +1,5 @@
 .label {
   color: $second-text-color;
-   &--hidden {@media (min-width: $desktop-width){display:none;}}
+
+   &--hidden {@media($desktop){display:none;}}
 }
