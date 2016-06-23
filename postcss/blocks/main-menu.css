@@ -49,32 +49,31 @@
 .main-menu__toggle {
   position: absolute;
   top: 0px;
-  width: 23px;
-  height: 23px;
   font-size: 0;
   cursor: pointer;
 
   &--open {
     right: 0;
-    margin: 20px;
+    margin: 15px 10px;
     border: none;
-    background: url(/img/icon-cross.svg) 0 0 no-repeat;
+    background: none;
   }
   &--open::after {
     position: absolute;
-    top:220px;
-    left: 0;
+    top:225px;
+    left: 7px;
     width: 23px;
-    height: 23px;
+    height: 21px;
     border: none;
-    background: url(/img/icon-menu.svg) 0 0 no-repeat;
+    background: url(/img/icons/icon-menu.svg) 0 0 no-repeat;
+    background-size: contain;
     content: ""; 
   }
   &--close {
     right: 0;
-    margin: 20px;
+    margin: 15px 10px;
     border: none;
-    background: url(/img/icon-menu.svg) 0 0 no-repeat;
+    background: url(/img/icons/icon-menu.svg) 0 0 no-repeat;
   }
 }
 
