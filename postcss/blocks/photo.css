@@ -6,6 +6,7 @@
     padding-bottom: 0;
     width: 50%;
     border-top: none;
+    border-bottom: none;
 
     &:first-of-type {
       width: 100%;
@@ -18,13 +19,11 @@
     &:first-of-type .photo__img-box {
       max-height: 400px;
     }
-  }
-    @media($tablet) {
     &:first-of-type .photo__like {
       right: 20px;
     }
   }
-    @media($desktop) {
+  @media($desktop) {
     position: relative;
     flex-grow: 1;
     width: 33.3%;
@@ -65,12 +64,12 @@
     background-color: #f2f2f2;
   }
   @media($desktop) {
-      position: absolute;
-      bottom: 0px;
-      display: block;
-      width: 100%;
-      background-color: rgba(1, 1, 1, 0.2);
-      color: $alternative-text-color;
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    width: 100%;
+    background-color: rgba(1, 1, 1, 0.2);
+    color: $alternative-text-color;
   }
 }
 
@@ -82,12 +81,8 @@
   @mixin set-font $line,
   calc($line * 2);
 
+  display: flex;
   padding-top: 5px;
-  padding-left: 35px;
-  background-image: url(/img/icon-like.svg);
-  background-position: 0px 5px;
-  background-size: 23px 21px;
-  background-repeat: no-repeat;
   color: $main-text-color;
   font-family: $font-family-bold;
 
@@ -97,6 +92,10 @@
     right: 40px;
   }
   @media($desktop) {
-      color: $alternative-text-color;
+    color: $alternative-text-color;
   }
+}
+
+.photo__like-count {
+  padding-left: 10px;
 }

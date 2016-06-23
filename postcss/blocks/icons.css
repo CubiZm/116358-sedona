@@ -1,0 +1,31 @@
+.icon {
+}
+
+.icon-social {
+  fill: #ffffff;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.logo {
+	fill: #000000;
+  &:hover {
+    fill: #81b3d2;
+  }
+  ;
+}
+
+.icon-video-controls {
+	fill: #333333;
+	@media($tablet) {
+		fill:#ffffff;
+	}
+}
+
+.icon-like {
+	fill: #b2b2b2;
+	@media($desktop) {
+		fill:#ffffff;
+	}
+}

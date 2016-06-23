@@ -25,7 +25,8 @@
   "scripts": {
     "test": "editorconfig-tools check *",
     "build": "gulp style",
-    "start": "gulp serve"
+    "start": "gulp serve",
+    "sprite": "gulp symbols"
   },
   "engines": {
     "node": "5.11"

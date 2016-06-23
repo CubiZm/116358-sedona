@@ -15,13 +15,14 @@
   @media($tablet) {
     width: 33.3%;
   }
+
 }
 
 @media($tablet) {
-  .advantage__text--left {
+  .advantage__text--first {
     order: 1;
   }
-  .advantage__text--right {
+  .advantage__text--second {
     order: 3;
   }
 }
