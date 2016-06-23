@@ -9,6 +9,7 @@
 }
 
 .contact__column {  
+  position: relative;
   flex-wrap: wrap;
   width: 100%;@media($desktop){width:50%;}
   

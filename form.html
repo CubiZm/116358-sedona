@@ -27,7 +27,7 @@
         </ul>
         <button class="main-menu__toggle main-menu__toggle--open" type="button">Открыть меню
           <svg width="23" height="22">
-            <use xlink:href="/img/symbols.svg#icon-cross" />
+            <use xlink:href="/img/symbols.svg#icon-cross" class="icon-cross" />
           </svg>
         </button>
       </nav>
@@ -64,11 +64,17 @@
             <div class="contact__column form-column">
               <label class="label contact__label" for="tel"><span class="label label--hidden">Контактный </span>телефон:</label>
               <input class="input contact__input" type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите телефон">
+              <svg class="icon-phone" width="18" height="18">
+                <use xlink:href="/img/symbols.svg#icon-phone" />
+              </svg>
               <span class="contact__error">Ошибка, перепроверьте номер</span>
             </div>
             <div class="contact__column form-column">
               <label class="label contact__label" for="email">Электронная почта:</label>
               <input class="input contact__input" type="email" id="email" name="email" placeholder="Введите e-mail">
+              <svg class="icon-mail" width="16" height="16">
+                <use xlink:href="/img/symbols.svg#icon-mail" />
+              </svg>
             </div>
           </div>
         </fieldset>
@@ -145,7 +151,7 @@
         <a class="copyright__link link" href="https://htmlacademy.ru/intensive/adaptive">
           <svg class="logo" width="27" height="34">
             <use xlink:href="/img/symbols.svg#logo-htmlacademy" />
-          <svg>
+            <svg>
         </a>
       </div>
     </footer>
