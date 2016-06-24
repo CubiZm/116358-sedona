@@ -1,7 +1,15 @@
 .personality {
-  width: 100%;@media($tablet){width: 40%;}
-  @media($tablet){order:1;}
+  width: 100%;
+
+  @media($tablet) {
+    width: 40%;
+  }
+  @media($tablet) {
+    order: 1;
+    text-align: left;
+  }
 }
+
 .personality__column {
   width: 100%;
 }
@@ -10,5 +18,3 @@
   margin-left: 20px;
   width: 100%;
 }
-
-

@@ -6,6 +6,7 @@
 }
 
 .contact__wrapper {
+  text-align: left;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

@@ -1,13 +1,14 @@
 .form-box {
-  margin: 20px 0 0 0;
   padding: 0 20px 5px 20px;
   width: 100%;
   border: none;
+  text-align: center;
+  box-shadow: 0px -1px 0px 0px #e5e5e5;
 
-  /*box-shadow: 1px 1px #e5e5e5;*/
   @media($tablet){
     padding-right: 0;
     padding-left: 0;
+    box-shadow: none;
   }
 }
 
@@ -15,9 +16,10 @@
   @mixin set-font calc($line * 1.25),
   calc($line * 1.75);
 
+  display: inline-block;
+  margin-top: 20px;
   margin-bottom:14px;
   color: $main-text-color;
-  text-align: center;
   font-family: $font-family-bold;
 
   @media($tablet){
@@ -33,6 +35,8 @@
     }
   }
   &--hidden {
+    margin: 0;
+
     @media($tablet){
       display: none;
     }

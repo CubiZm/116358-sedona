@@ -16,4 +16,10 @@
     margin: auto;
     max-width: 570px;
   }
+
+  &--secondary {
+    margin: auto;
+    max-width: 530px;
+    padding: 40px 20px 20px 20px;
+  }
 }
