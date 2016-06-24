@@ -16,14 +16,35 @@
     width: 33.3%;
   }
 
+  &--triangle {
+    margin-top: -35px;
+    padding-top: 70px;
+
+    @media ($tablet) {
+      margin-top: 0;
+      padding: 45px;
+      background-image: none;
+    }
+
+    @media ($desktop) {
+      padding: 65px;
+    }
+  }
 }
 
 @media($tablet) {
-  .advantage__text--first {
-    order: 1;
-  }
   .advantage__text--second {
     order: 3;
+  }
+}
+
+.advantage__triangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @media ($tablet) {
+    display: none;
   }
 }
 

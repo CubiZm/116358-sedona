@@ -10,6 +10,8 @@ $main-text-color:#000000;
 $second-text-color:#333333;
 $alternative-text-color:#ffffff;
 
+$error-color:#ff5c5c;
+
 $line:1rem;
 
 $tablet: (min-width:768px);

@@ -42,7 +42,7 @@
   left: 15px;
   width: 25px;
   height: 25px;
-  background: url(/img/icon-tick.svg) no-repeat;
+  background: url(/img/icons/icon-tick.svg) no-repeat;
   content: "";
   vertical-align: middle;
 }

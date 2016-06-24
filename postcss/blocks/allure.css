@@ -29,7 +29,7 @@
   @mixin set-font calc($line * 1.5), calc($line * 1.75);
 
   @media($tablet) {
-    @mixin set-font calc(2.15 * $line), calc($line * 1.75);
+    @mixin set-font calc(2.15 * $line), $line;
   }
 }
 

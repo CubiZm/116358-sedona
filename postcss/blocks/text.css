@@ -1,7 +1,15 @@
-.text {
+  .text {
   margin: 0;
   margin-bottom: 12px;
   width: 100%;
 
-  &:last-of-type{margin-bottom:0;};
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &--number {
+    @media($tablet) {
+    	margin-bottom: 20px;
+    }
+  }
 }
