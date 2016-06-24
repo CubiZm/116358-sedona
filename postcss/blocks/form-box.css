@@ -41,6 +41,10 @@
     @media($tablet){
       display: none;
     }
+
+    @media($desktop){
+      display:inline-block;
+    }
   }
 
   &--contact {

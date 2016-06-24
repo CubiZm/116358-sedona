@@ -25,7 +25,7 @@
             </picture>
           </li>
         </ul>
-        <button class="main-menu__toggle main-menu__toggle--open" type="button">Открыть меню
+        <button class="main-menu__toggle main-menu__toggle--open" type="button" id="menu-button" onclick="menu()">Открыть меню
           <svg width="23" height="22">
             <use xlink:href="/img/symbols.svg#icon-cross" class="icon-cross" />
           </svg>
@@ -104,7 +104,7 @@
           <p class="allure__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="map__button link" href="#">Найти гостиницу</a>
         </div>
-        <div class="map__view" id="map-canvas"></div>
+        <div class="map__view" id="map"></div>
       </section>
     </main>
     <footer class="page-footer">
@@ -153,6 +153,30 @@
   google.maps.event.addDomListener(window, 'load', initialize);
   </script>
   -->
+  <script>
+  // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+  // Australia.
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 8,
+      center: {
+        lat: 34.8543784,
+        lng: -111.7951384
+      }
+    });
+
+    var image = '../img/icons/icon-map-marker.svg';
+    var beachMarker = new google.maps.Marker({
+      position: {
+        lat: 34.8543784,
+        lng: -111.7951384
+      },
+      map: map,
+      icon: image
+    });
+  }
+  </script>
+
 </body>
 
 </html>
