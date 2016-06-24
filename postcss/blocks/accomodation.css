@@ -8,3 +8,11 @@
   justify-content: space-around;
   text-align: left;
 }
+
+.accommodation__title {
+    @media($tablet) {
+    display: table;
+    padding:0 80px;
+    background-color: #ffffff;
+  }
+}

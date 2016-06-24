@@ -3,6 +3,7 @@
 
   @media($tablet) {
     width: 40%;
+    box-shadow: none;
   }
   @media($tablet) {
     order: 1;

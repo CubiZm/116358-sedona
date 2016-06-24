@@ -39,6 +39,7 @@
 
   @media($tablet){
     @mixin set-font calc($line * 1.50), calc($line * 1.86);
+    background-color: #ffffff;
   }
 }
 

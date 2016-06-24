@@ -1,15 +1,16 @@
 .contact {
   margin-bottom: 0;
+
   @media($tablet) {
     order: 2;
   }
 }
 
 .contact__wrapper {
-  text-align: left;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  text-align: left;
 }
 
 .contact__column {
@@ -17,13 +18,27 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+
   @media($desktop) {
     width: 50%;
   }
 }
 
+.contact__title {
+    @media($tablet) {
+    display: table;
+    margin-bottom: 20px;
+    padding:0 80px;
+    background-color: #ffffff;
+  }
+    @media($desktop) {
+      margin-bottom: 50px;
+    }
+}
+
 .contact__input {
   width: 100%;
+
   @media($desktop) {
     margin-left: 20px;
     width: 60%;
@@ -34,6 +49,7 @@
   margin-bottom: 7px;
   margin-left: 20px;
   width: 100%;
+
   @media($desktop) {
     margin-bottom: 0;
     margin-left: 0;
@@ -45,6 +61,7 @@
   margin: 10px 20px;
   color: $error-color;
   text-transform: none;
+
   @media($tablet) {
     position: absolute;
     top: -7px;

@@ -2,13 +2,13 @@
   padding: 0 20px 5px 20px;
   width: 100%;
   border: none;
-  text-align: center;
   box-shadow: 0px -1px 0px 0px #e5e5e5;
+  text-align: center;
 
   @media($tablet){
+    margin-bottom: 30px;
     padding-right: 0;
     padding-left: 0;
-    box-shadow: none;
   }
 }
 
@@ -27,6 +27,7 @@
 
     margin-bottom: 50px;
     max-width: 280px;
+    background-color: #ffffff;
   }
 
   &--left {
@@ -40,5 +41,12 @@
     @media($tablet){
       display: none;
     }
+  }
+
+  &--contact {
+    display: table;
+    padding:0 80px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
   }
 }
