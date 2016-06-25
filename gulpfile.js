@@ -6,6 +6,9 @@ var postcss = require("gulp-postcss");
 var precss = require("precss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync");
+var svgstore = require("gulp-svgstore");
+var svgmin = require("gulp-svgmin");
+var rename = require("gulp-rename");
 
 gulp.task("style", function() {
   gulp.src("postcss/style.css")
@@ -34,4 +37,14 @@ gulp.task("serve", ["style"], function() {
 
   gulp.watch("postcss/**/*.css", ["style"]);
   gulp.watch("*.html").on("change", server.reload);
+});
+
+gulp.task("symbols", function() {
+  return gulp.src("img/icons/*.svg")
+    .pipe(svgmin())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("symbols.svg"))
+    .pipe(gulp.dest("img"));
 });

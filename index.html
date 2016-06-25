@@ -25,7 +25,7 @@
             </picture>
           </li>
         </ul>
-        <button class="main-menu__toggle main-menu__toggle--open" type="button" id="menu-button" onclick="menu()">Открыть меню
+        <button class="main-menu__toggle main-menu__toggle--open" type="button" id="menu-button">Открыть меню
           <svg width="23" height="22">
             <use xlink:href="/img/symbols.svg#icon-cross" class="icon-cross" />
           </svg>
@@ -176,7 +176,15 @@
     });
   }
   </script>
-
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMaV3LGFfVsc950igEtC7sFFkpQRO4ru8&signed_in=true&callback=initMap"></script>
+  <script>
+  function menu() {
+  var cross = document.querySelector("#menu-button");
+    cross.classList.toggle("main-menu__toggle--open");
+    cross.classList.toggle("main-menu__toggle--close");
+    console.log(elem.classList);
+  }
+  </script>
 </body>
 
 </html>

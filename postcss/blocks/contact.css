@@ -64,7 +64,7 @@
 
   @media($tablet) {
     position: absolute;
-    top: -7px;
+    top: 0;
     right: 0;
     margin: 0;
   }
