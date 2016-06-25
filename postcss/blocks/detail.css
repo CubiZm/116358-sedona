@@ -1,20 +1,11 @@
 .detail {
-  display: flex;
   @media($tablet) {
     order: 4;
   }
 }
 
 .detail__title {
-  @media($tablet) {
-    display: table;
-    margin-bottom: 20px;
-    padding: 0 90px;
-    background-color: #ffffff;
-  }
-  @media($desktop) {
-    margin-bottom: 50px;
-  }
+
 }
 
 .detail__input {

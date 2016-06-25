@@ -31,6 +31,9 @@
 
   &:last-of-type {
     border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+    @media($tablet) {
+      border-bottom: none; 
+    }
   }
 }
 

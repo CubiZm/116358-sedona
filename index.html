@@ -33,7 +33,7 @@
       </nav>
       <div class="page-header__photo page-header__photo--main">
         <div class="page-header__photo-wrapper page-header__photo-wrapper--main">
-          <img class="page-header__photo-img" src="img/text-sedona-index.svg" width="460" height="350" alt="Добро пожаловать в Седону">
+          <img class="page-header__photo-img" src="img/text-sedona-index.svg" width="282" height="214" alt="Добро пожаловать в Седону">
         </div>
       </div>
     </header>
@@ -42,20 +42,18 @@
         <h1 class="title title--h1">Седона – небольшой городок в Аризоне, заслуживающий большего!</h1>
         <p class="text text--h1">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
       </div>
-      <section class="advantage">
-        <div class="description advantage__text advantage__text--triangle">
-          <object type="image/svg+xml" data="img/bg-triangle.svg" class="advantage__triangle">
-            triangle
-          </object>
+      <div class="advantage">
+        <div class="advantage__triangle"></div>
+        <div class="description advantage__text advantage__text--first">
           <h2 class="title title--h2">Настоящий городок</h2>
           <p class="text text--number"> - &#8470;1 - </p>
           <p class="text">Седона не аттракцион для туристов, там течет своя жизнь</p>
         </div>
         <div class="advantage__img-box">
-          <img src="img/photo-city@1x.jpg" srcset="img/photo-city@2x.jpg 2x" alt="Преимущество 1" class="advantage__img" width="800" height="400">
+          <img src="img/photo-city@1x.jpg" srcset="img/photo-city@2x.jpg 2x" class="advantage__img" width="800" height="400" alt="Преимущество 1">
         </div>
-      </section>
-      <section class="perk">
+      </div>
+      <div class="perk">
         <div class="perk__item perk__item--house">
           <h2 class="perk__title">Жилье</h2>
           <p class="text perk__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
@@ -68,18 +66,18 @@
           <h2 class="perk__title">Еда</h2>
           <p class="text perk__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </div>
-      </section>
-      <section class="advantage">
+      </div>
+      <div class="advantage">
         <div class="description advantage__text advantage__text--second">
           <h2 class="title title--h2">Там есть мост дьявола</h2>
           <p class="text text--number"> - &#8470;2 - </p>
           <p class="text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </div>
         <div class="advantage__img-box">
-          <img src="img/photo-bridge@1x.jpg" srcset="img/photo-bridge@2x.jpg 2x" alt="Преимущество 2" class="advantage__img" width="800" height="400">
+          <img src="img/photo-bridge@1x.jpg" srcset="img/photo-bridge@2x.jpg 2x" class="advantage__img" width="800" height="400" alt="Преимущество 2">
         </div>
-      </section>
-      <section class="advantage">
+      </div>
+      <div class="advantage">
         <div class="advantage__list">
           <div class="advantage__item">
             <h2 class="title title--h2 advantage__item-title">Небольшая площадь</h2>
@@ -97,15 +95,15 @@
             <p class="text advantage__item-text">Большинство едет в Гранд Каньон и толпиться там</p>
           </div>
         </div>
-      </section>
-      <section class="map">
+      </div>
+      <div class="map">
         <div class="allure">
           <h1 class="title allure__title allure__title--h1">Заинтересовались?</h1>
           <p class="allure__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="map__button link" href="#">Найти гостиницу</a>
         </div>
         <div class="map__view" id="map"></div>
-      </section>
+      </div>
     </main>
     <footer class="page-footer">
       <a class="page-footer__link link" href="#visitsedona">#Visitsedona</a>
@@ -174,15 +172,6 @@
       map: map,
       icon: image
     });
-  }
-  </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMaV3LGFfVsc950igEtC7sFFkpQRO4ru8&signed_in=true&callback=initMap"></script>
-  <script>
-  function menu() {
-  var cross = document.querySelector("#menu-button");
-    cross.classList.toggle("main-menu__toggle--open");
-    cross.classList.toggle("main-menu__toggle--close");
-    console.log(elem.classList);
   }
   </script>
 </body>

@@ -1,4 +1,5 @@
 .advantage {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
 
@@ -8,26 +9,45 @@
 }
 
 .advantage__text {
+  position: relative;
+  flex-grow: 1;
+  margin: 0;
   width: 100%;
   background-color: $main-color-blue;
   color: $alternative-text-color;
 
   @media($tablet) {
+    padding-right: 40px;
+    padding-left: 40px;
     width: 33.3%;
+    background-image: none;
+  }
+  @media($desktop) {
+    padding: 65px;
   }
 
-  &--triangle {
-    margin-top: -35px;
-    padding-top: 70px;
+  &--first {
+    padding-top: 57px;
+    padding-bottom: 40px;
 
-    @media ($tablet) {
-      margin-top: 0;
-      padding: 45px;
-      background-image: none;
+    @media($tablet) {
+      padding-top: 40px;
+      padding-bottom: 40px;
     }
+  }
+  &--second {
+    padding-top: 40px;
+    padding-bottom: 40px;
 
-    @media ($desktop) {
-      padding: 65px;
+    @media($tablet) {
+      order: 3;
+    }
+  }
+  &--first,
+  &--second {
+    @media($desktop) {
+      padding-top: 65px;
+      padding-bottom: 65px;
     }
   }
 }
@@ -39,9 +59,19 @@
 }
 
 .advantage__triangle {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
+  z-index: 1;
+  z-index: 1;
+  display: inline-block;
+  margin-bottom: -17px;
+  margin-bottom: -17px;
+  width: 0;
+  height: 0;
+  border-width: 17px 50vw 0 50vw;
+  border-style: solid;
+  border-color: #ffffff transparent transparent transparent;
 
   @media ($tablet) {
     display: none;
@@ -49,11 +79,13 @@
 }
 
 .advantage__img-box {
+  flex-grow: 1;
   overflow: hidden;
   max-height: 260px;
 
   @media($tablet) {
     order: 2;
+    max-height: 256px;
     width: 66.6%;
   }
 }
@@ -70,18 +102,19 @@
 
   @media($tablet) {
     flex-wrap: nowrap;
+    min-height: 256px;
   }
 }
 
 .advantage__item {
   margin: 0 20px;
-  padding: 26px;
+  padding: 28px 26px;
   width: 100%;
   border-bottom: 1px solid rgba(1, 1, 1, 0.2);
   text-align: center;
 
   @media($tablet) {
-    margin: 0;
+    margin: auto;
   }
   @media($tablet) {
     padding: 40px;

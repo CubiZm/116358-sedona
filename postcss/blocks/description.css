@@ -1,29 +1,23 @@
 .description {
   position: relative;
   box-sizing: border-box;
-  padding: 40px 20px;
+  margin: auto;
   min-width: 256px;
   text-align: center;
-
-  @media($tablet){
-    padding: 45px;
-  }
-  @media($desktop){
-    padding: 65px;
-  }
+  padding-left: 20px;
+  padding-right: 20px;
 
   &--main {
-    margin: auto;
-    max-width: 570px;
-  }
-
-  &--secondary {
-    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 20px;
     max-width: 530px;
-    padding: 40px 20px 20px 20px;
 
-    @media($tablet){
-    padding: 40px 20px;
-  }
+    @media($tablet) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    @media($desktop) {
+      padding: 65px;
+    }
   }
 }

@@ -2,12 +2,17 @@
   width: 100%;
 
   @media($tablet) {
+    order: 1;
     width: 40%;
     box-shadow: none;
-  }
-  @media($tablet) {
-    order: 1;
     text-align: left;
+  }
+
+}
+
+.personality__title {
+  @media($tablet) {
+    margin-bottom: 60px;
   }
 }
 
@@ -16,6 +21,10 @@
 }
 
 .personality__input {
-  margin-left: 20px;
   width: 100%;
 }
+
+.personality__label {
+  margin-right: 20px;
+}
+

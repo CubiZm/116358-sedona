@@ -6,7 +6,10 @@
     text-align: left;
     box-shadow: 21px 0px 0px -20px #e5e5e5;
   }
-  @media ($desktop) {
+}
 
+.opinion__title {
+  @media($tablet) {
+    margin-bottom: 60px;
   }
 }
