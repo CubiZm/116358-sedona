@@ -26,6 +26,9 @@
   @media($tablet) {
     margin-bottom: 20px;
   }
+  @media($desktop) {
+    margin-bottom: 40px;
+  }
 }
 
 .contact__input {
@@ -48,6 +51,7 @@
 }
 
 .contact__error {
+  order:1;
   margin: 10px 20px;
   color: $error-color;
   text-transform: none;
@@ -61,10 +65,4 @@
     top: -30px;
     left: 104px;
   }
-}
-
-.contact__icon-wrapper {
-  position: relative;
-  display: inline-flex;
-  width: 100%;
 }

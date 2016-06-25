@@ -65,7 +65,7 @@
     width: 23px;
     height: 21px;
     border: none;
-    background: url(/img/icons/icon-menu.svg) 0 0 no-repeat;
+    background: url(../img/icons/icon-menu.svg) 0 0 no-repeat;
     background-size: contain;
     content: ""; 
   }
@@ -73,7 +73,7 @@
     right: 0;
     margin: 15px 10px;
     border: none;
-    background: url(/img/icons/icon-menu.svg) 0 0 no-repeat;
+    background: url(../img/icons/icon-menu.svg) 0 0 no-repeat;
   }
 }
 
