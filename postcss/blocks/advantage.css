@@ -23,7 +23,7 @@
     background-image: none;
   }
   @media($desktop) {
-    padding: 65px;
+    padding: 65px 40px;
   }
 
   &--first {

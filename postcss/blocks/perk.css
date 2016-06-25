@@ -51,7 +51,7 @@
 
   &--house {
     order:1;
-    background-image: url(/img/icon-house.svg);
+    background-image: url(../img/icon-house.svg);
     background-position: 0 0;
     background-size: 37px 39px;
     background-repeat: no-repeat;
@@ -63,7 +63,7 @@
   }
   &--gift {
     order:2;
-    background-image: url(/img/icon-gift.svg);
+    background-image: url(../img/icon-gift.svg);
     background-position: 0 0;
     background-size: 32px 38px;
     background-repeat: no-repeat;
@@ -76,7 +76,7 @@
   }
   &--burger {
     order:3;
-    background-image: url(/img/icon-burger.svg);
+    background-image: url(../img/icon-burger.svg);
     background-position: 0 0;
     background-size: 36px 36px;
     background-repeat: no-repeat;
