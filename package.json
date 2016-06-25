@@ -20,10 +20,7 @@
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.1.1",
     "postcss-vertical-rhythm": "^1.1.5",
-    "precss": "1.4.0",
-    "rename": "^1.0.3",
-    "svgmin": "^0.1.0",
-    "svgstore": "^1.0.0"
+    "precss": "1.4.0"
   },
   "scripts": {
     "test": "editorconfig-tools check *",
