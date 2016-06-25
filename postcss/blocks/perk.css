@@ -1,11 +1,14 @@
 .perk {
   display: flex;
   flex-direction: column;
-  margin:26px 0;
+  margin-top: 24px;
+  margin-bottom:14px;
 
   @media($tablet){
     flex-direction: row;
-    margin: 14px 0;
+    margin: 0;
+    margin-top: 25px;
+    margin-bottom:26px;
   }
 }
 
@@ -13,7 +16,7 @@
   @mixin set-font calc($line * 1.25),
   calc($line * 1.75);
 
-  margin: 0;
+  margin-top: 10px;
   margin-bottom:14px;
   font-family: $font-family-bold;
 
@@ -21,14 +24,18 @@
     @mixin set-font calc($line * 1.5),
     calc($line * 1.86);
 
-    margin: 26px auto;
+    margin: 30px auto 30px auto;
   }
+}
+
+.perk__text {
+  padding-bottom: 20px; @media($tablet){padding-bottom: 0;}
 }
 
 .perk__item {
   display: flex;
   flex-wrap: wrap;
-  margin: 10px 20px;
+  margin: 0px 20px;
   padding-left: 50px;
 
   @media($tablet){
@@ -44,7 +51,7 @@
 
   &--house {
     order:1;
-    background-image: url(/img/icon-house.svg);
+    background-image: url(../img/icon-house.svg);
     background-position: 0 0;
     background-size: 37px 39px;
     background-repeat: no-repeat;
@@ -56,7 +63,7 @@
   }
   &--gift {
     order:2;
-    background-image: url(/img/icon-gift.svg);
+    background-image: url(../img/icon-gift.svg);
     background-position: 0 0;
     background-size: 32px 38px;
     background-repeat: no-repeat;
@@ -69,7 +76,7 @@
   }
   &--burger {
     order:3;
-    background-image: url(/img/icon-burger.svg);
+    background-image: url(../img/icon-burger.svg);
     background-position: 0 0;
     background-size: 36px 36px;
     background-repeat: no-repeat;

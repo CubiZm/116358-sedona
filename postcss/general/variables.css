@@ -10,7 +10,11 @@ $main-text-color:#000000;
 $second-text-color:#333333;
 $alternative-text-color:#ffffff;
 
+$error-color:#ff5c5c;
+
 $line:1rem;
 
 $tablet: (min-width:768px);
 $desktop: (min-width:1200px);
+
+$retina: (min-resolution:144dpi) and (min-resolution:1.5dppx);

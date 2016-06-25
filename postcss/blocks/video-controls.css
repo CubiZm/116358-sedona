@@ -16,7 +16,7 @@
   background-color: rgba(1, 1, 1, 0.5);
 
   @media($tablet) {
-    top: -80px;
+    top: -92px;
     flex-wrap: nowrap;
     margin: 0;
     padding: 10px 0;
@@ -32,7 +32,7 @@
 
   @media($tablet) {
     order: 2;
-    margin: 27px 20px;
+    margin: 30px 20px;
   }
 }
 
@@ -48,26 +48,17 @@
 
 .video-controls__replay {
   flex-grow: 3;
-  margin: 20px 10px;
-  height: 20px;
-  background-image: url(/img/icon-video-replay.svg);
-  background-position: 25px 0px;
-  background-size: 16px 20px;
-  background-repeat: no-repeat;
+  margin: auto 20px;
 
   @media($tablet) {
     order: 1;
-    width: 10%;
+    margin: auto 35px;
   }
 }
 
 .video-controls__subtitles {
   flex-grow: 1;
-  margin: 20px 10px;
-  height: 20px;
-  background-image: url(/img/icon-video-subtitles.svg);
-  background-size: 32px 20px;
-  background-repeat: no-repeat;
+  margin: auto 20px;
 
   @media($tablet) {
     order: 3;
@@ -78,10 +69,6 @@
 .video-controls__fullscreen {
   flex-grow: 1;
   margin: 20px 10px;
-  height: 20px;
-  background-image: url(/img/icon-video-fullscreen.svg);
-  background-size: 32px 20px;
-  background-repeat: no-repeat;
 
   @media($tablet) {
     order: 4;

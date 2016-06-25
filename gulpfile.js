@@ -31,7 +31,6 @@ gulp.task("serve", ["style"], function() {
     open: true,
     ui: false
   });
-
   gulp.watch("postcss/**/*.css", ["style"]);
   gulp.watch("*.html").on("change", server.reload);
 });

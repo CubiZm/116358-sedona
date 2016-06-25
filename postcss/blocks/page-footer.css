@@ -3,15 +3,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin: 0px auto;
-  padding: 20px 40px;
+  padding-top: 10px;
   background-color: #fefefe;
 
-  @media($tablet){
+  @media($tablet) {
     flex-direction: row;
-  }
-  @media($tablet){
-    margin: -10px auto;
+    margin-top: -10px;
   }
 }
 
@@ -26,16 +23,19 @@
 .page-footer__link,
 .page-footer__social,
 .page-footer__copyright {
-  padding: 20px;
+  flex-grow: 1;
+  margin: 19px 0;
   text-align: center;
 
-  @media($tablet){
+  @media($tablet) {
     width: 33%;
+    margin: 31px 0;
   }
 }
 
 .page-footer__copyright {
-  @media($desktop){
-    text-align: right;
+  @media($desktop) {
+    position: relative;
+    left: 80px;
   }
 }
