@@ -12,7 +12,7 @@
   <div class="wrapper">
     <header class="page-header">
       <nav class="page-header__main-menu  main-menu">
-        <ul class="main-menu__list">
+        <ul class="main-menu__list" id="menu">
           <li class="main-menu__item"><a class="main-menu__link link" href="/">Главная</a></li>
           <li class="main-menu__item"><a class="main-menu__link link" href="photo.html">Фото и Видео</a></li>
           <li class="main-menu__item"><a class="main-menu__link link" href="form.html">Форма отзыва</a></li>
@@ -25,9 +25,9 @@
             </picture>
           </li>
         </ul>
-        <button class="main-menu__toggle main-menu__toggle--open" type="button">Открыть меню
+        <button class="main-menu__toggle main-menu__toggle--open" type="button" id="burger">Открыть меню
           <svg width="23" height="22">
-            <use xlink:href="img/symbols.svg#icon-cross" class="icon-cross"/>
+            <use xlink:href="img/symbols.svg#icon-menu" />
           </svg>
         </button>
       </nav>
@@ -55,7 +55,7 @@
             <p class="photo__caption-text text">Автор фото: Борис</p>
             <a class="photo__like link" href="">
               <svg width="23" height="22">
-                <use xlink:href="img/symbols.svg#icon-like" class="icon-like"/>
+                <use xlink:href="img/symbols.svg#icon-like" class="icon-like" />
               </svg><span class="photo__like-count">1350</span>
             </a>
           </div>
@@ -73,7 +73,7 @@
             <p class="photo__caption-text text">Автор фото: Сергей</p>
             <a class="photo__like link" href="">
               <svg width="23" height="22">
-                <use xlink:href="img/symbols.svg#icon-like" class="icon-like"/>
+                <use xlink:href="img/symbols.svg#icon-like" class="icon-like" />
               </svg><span class="photo__like-count">143</span>
             </a>
           </div>
@@ -91,7 +91,7 @@
             <p class="photo__caption-text text">Автор фото: Петр</p>
             <a class="photo__like link" href="">
               <svg width="23" height="22">
-                <use xlink:href="img/symbols.svg#icon-like" class="icon-like"/>
+                <use xlink:href="img/symbols.svg#icon-like" class="icon-like" />
               </svg><span class="photo__like-count">96</span>
             </a>
           </div>
@@ -109,7 +109,7 @@
             <p class="photo__caption-text text">Автор фото: Антон</p>
             <a class="photo__like link" href="">
               <svg width="23" height="22">
-                <use xlink:href="img/symbols.svg#icon-like" class="icon-like"/>
+                <use xlink:href="img/symbols.svg#icon-like" class="icon-like" />
               </svg><span class="photo__like-count">254</span>
             </a>
           </div>
@@ -132,17 +132,17 @@
             </div>
             <div class="video-controls__replay">
               <svg width="16" height="20">
-                <use xlink:href="img/symbols.svg#icon-video-replay" class="icon-video-controls"/>
+                <use xlink:href="img/symbols.svg#icon-video-replay" class="icon-video-controls" />
               </svg>
             </div>
             <div class="video-controls__subtitles">
               <svg width="32" height="20">
-                <use xlink:href="img/symbols.svg#icon-video-subtitles" class="icon-video-controls"/>
+                <use xlink:href="img/symbols.svg#icon-video-subtitles" class="icon-video-controls" />
               </svg>
             </div>
             <div class="video-controls__fullscreen">
               <svg width="20" height="20">
-                <use xlink:href="img/symbols.svg#icon-video-fullscreen" class="icon-video-controls"/>
+                <use xlink:href="img/symbols.svg#icon-video-fullscreen" class="icon-video-controls" />
               </svg>
             </div>
           </div>
@@ -173,11 +173,12 @@
         <a class="copyright__link link" href="https://htmlacademy.ru/intensive/adaptive">
           <svg class="logo" width="27" height="34">
             <use xlink:href="img/symbols.svg#logo-htmlacademy" />
-            <svg>
+          </svg>
         </a>
       </div>
     </footer>
   </div>
+  <script type="text/javascript" src="../js/menu.js"></script>
 </body>
 
 </html>

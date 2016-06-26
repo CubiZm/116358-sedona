@@ -1,7 +1,8 @@
 .main-menu {
+  position: relative;
   background-color: $main-color-blue;
 
-  @media($tablet){
+  @media($tablet) {
     background-color: #fff;
   }
 }
@@ -14,7 +15,7 @@
   padding: 0;
   text-align: center;
 
-  @media($tablet){
+  @media($tablet) {
     flex-direction: row;
   }
 }
@@ -24,7 +25,7 @@
   color: white;
   list-style-type: none;
 
-  @media($tablet){
+  @media($tablet) {
     width: 20%;
     box-shadow: none;
   }
@@ -38,42 +39,39 @@
   padding: 14px 0;
   color: $alternative-text-color;
 
-  @media($tablet){
+  @media($tablet) {
     @mixin set-font calc($line * 1),
     calc($line * 2);
 
     color: $main-text-color;
-    font-family: $font-family-bold;}
+    font-family: $font-family-bold;
+  }
 }
 
 .main-menu__toggle {
   position: absolute;
-  top: 0px;
+  top: 240px;
+  right: 20px;
+  padding: 0;
+  width: 27px;
+  height: 27px;
   font-size: 0;
   cursor: pointer;
 
-  &--open {
-    right: 0;
-    margin: 15px 10px;
-    border: none;
-    background: none;
-  }
   &--open::after {
     position: absolute;
-    top:227px;
-    left: 7px;
+    top:-225px;
+    left: 0px;
     width: 23px;
     height: 21px;
     border: none;
-    background: url(../img/icons/icon-menu.svg) 0 0 no-repeat;
+    background: url(../img/icon-cross.svg) 0 0 no-repeat;
     background-size: contain;
     content: ""; 
   }
+
   &--close {
-    right: 0;
-    margin: 15px 10px;
-    border: none;
-    background: url(../img/icons/icon-menu.svg) 0 0 no-repeat;
+    top: 15px;
   }
 }
 
@@ -81,7 +79,7 @@
   box-shadow: 0 -1px rgba(1, 1, 1, 0.2);
 }
 
-@media($tablet){
+@media($tablet) {
   .main-menu__toggle {
     display: none;
   }
@@ -101,4 +99,3 @@
     order: 3;
   }
 }
-    
