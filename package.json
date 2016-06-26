@@ -23,11 +23,11 @@
     "gulp-imagemin": "^3.0.1",
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.1.1",
+    "gulp-svgmin": "^1.2.2",
+    "gulp-svgstore": "^6.0.0",
     "precss": "1.4.0",
     "rename": "^1.0.3",
-    "run-sequence": "^1.2.1",
-    "svgmin": "^0.1.0",
-    "svgstore": "^1.0.0"
+    "run-sequence": "^1.2.1"
   },
   "scripts": {
     "test": "editorconfig-tools check *",
