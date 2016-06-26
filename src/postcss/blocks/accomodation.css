@@ -1,0 +1,10 @@
+.accommodation { 
+  @media($tablet){order:3;}
+}
+
+.accommodation__wrapper {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: space-around;
+  text-align: left;
+}

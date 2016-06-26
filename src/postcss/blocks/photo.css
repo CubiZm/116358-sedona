@@ -1,0 +1,106 @@
+.photo {
+  padding-bottom: 15px;
+  border-top: 1px solid rgba(1, 1, 1, 0.2);
+
+  @media($tablet) {
+    padding-bottom: 0;
+    width: 50%;
+    border-top: none;
+    border-bottom: none;
+
+    &:first-of-type {
+      width: 100%;
+    }
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+  @media($tablet) {
+    &:first-of-type .photo__img-box {
+      max-height: 400px;
+    }
+    &:first-of-type .photo__like {
+      right: 20px;
+    }
+  }
+  @media($desktop) {
+    position: relative;
+    flex-grow: 1;
+    width: 33.3%;
+  }
+
+  &:last-of-type {
+    border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+    @media($tablet) {
+      border-bottom: none; 
+    }
+  }
+}
+
+.photo__img-box {
+  display: block;
+  overflow: hidden;
+  padding: 20px;
+  font-size: 0;
+  line-height: 0;
+
+  @media($tablet) {
+    padding: 0px;
+    max-height: 267px;
+  }
+}
+
+.photo__img {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+.photo__caption {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0 20px;
+
+  @media($tablet) {
+    align-items: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+  }
+  @media($desktop) {
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    width: 100%;
+    background-color: rgba(1, 1, 1, 0.2);
+    color: $alternative-text-color;
+  }
+}
+
+.photo__caption-text {
+  text-transform: none;
+}
+
+.photo__like {
+  @mixin set-font $line,
+  calc($line * 2);
+
+  display: flex;
+  padding-top: 5px;
+  color: $main-text-color;
+  font-family: $font-family-bold;
+
+  @media($tablet) {
+    position: absolute;
+    top: 30%;
+    right: 40px;
+  }
+  @media($desktop) {
+    color: $alternative-text-color;
+  }
+}
+
+.photo__like-count {
+  padding-left: 10px;
+}

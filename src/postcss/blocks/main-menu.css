@@ -1,0 +1,101 @@
+.main-menu {
+  position: relative;
+  background-color: $main-color-blue;
+
+  @media($tablet) {
+    background-color: #fff;
+  }
+}
+
+.main-menu__list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  @media($tablet) {
+    flex-direction: row;
+  }
+}
+
+.main-menu__item {
+  box-shadow: 0 1px rgba(1, 1, 1, 0.2), 0 -1px rgba(255, 255, 255, 0.2);
+  color: white;
+  list-style-type: none;
+
+  @media($tablet) {
+    width: 20%;
+    box-shadow: none;
+  }
+}
+
+.main-menu__link {
+  @mixin set-font calc($line * 1.25),
+  calc($line * 2);
+
+  display: block;
+  padding: 14px 0;
+  color: $alternative-text-color;
+
+  @media($tablet) {
+    @mixin set-font calc($line * 1),
+    calc($line * 2);
+
+    color: $main-text-color;
+    font-family: $font-family-bold;
+  }
+}
+
+.main-menu__toggle {
+  position: absolute;
+  top: 240px;
+  right: 20px;
+  padding: 0;
+  width: 27px;
+  height: 27px;
+  font-size: 0;
+  cursor: pointer;
+
+  &--open::after {
+    position: absolute;
+    top:-225px;
+    left: 0px;
+    width: 23px;
+    height: 21px;
+    border: none;
+    background: url(../img/icon-cross.svg) 0 0 no-repeat;
+    background-size: contain;
+    content: ""; 
+  }
+
+  &--close {
+    top: 15px;
+  }
+}
+
+.main-menu__item:nth-child(5) {
+  box-shadow: 0 -1px rgba(1, 1, 1, 0.2);
+}
+
+@media($tablet) {
+  .main-menu__toggle {
+    display: none;
+  }
+  .main-menu__item:nth-child(1) {
+    order: 1;
+  }
+  .main-menu__item:nth-child(2) {
+    order: 2;
+  }
+  .main-menu__item:nth-child(3) {
+    order: 4;
+  }
+  .main-menu__item:nth-child(4) {
+    order: 5;
+  }
+  .main-menu__item:nth-child(5) {
+    order: 3;
+  }
+}

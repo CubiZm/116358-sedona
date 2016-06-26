@@ -1,0 +1,37 @@
+.map {
+  margin-bottom: 10px;
+}
+
+.map__button {
+  @mixin set-font calc(1.5 * $line),
+  calc(2.15 * $line);
+
+  margin: 20px auto;
+  padding: 14px 0;
+  max-width: 280px;
+  width: 100%;
+  background-color: $main-color-blue;
+  color: $alternative-text-color;
+
+  @media($tablet){
+    max-width: 458px;
+  }
+}
+
+.map__view {
+  height: 350px;
+  width: 320px;
+  margin: 0 auto;
+  background-image: url(../img/bg-map-mobile@1x.jpg);
+  background-repeat:no-repeat;
+
+  @media($tablet) {
+    min-width: 768px;
+    background-image: url(../img/bg-map-tablet@1x.jpg);
+  }
+  @media($desktop) {
+    min-width: 1200px;
+    background-image: url(../img/bg-map-desktop@1x.jpg);
+  } 
+}
+

@@ -17,61 +17,58 @@ var del = require("del");
 var flatten = require('gulp-flatten');
 
 var config = {
-    dest: 'build/',
-    src: 'src/'
+  dest: 'build/',
+  src: 'src/'
 };
 
 var path = {
-    build: {
-        html: config.dest,
-        img: config.dest + "img/",
-        css: config.dest + "css/",
-        js: config.dest + "js/",
-        icons: config.dest + "icons/"
-
-    },
-    src: {
-        html: config.src + "markup/*.html",
-        img: config.src + "img/**/*.*",
-        css: config.src + "postcss/style.css",
-        js: config.src + "js/*.js",
-        icons: config.src + "icons/*.svg",
-        fonts: config.src + "fonts/**/*.{woff,woff2}"
-    }
+  build: {
+    html: config.dest,
+    img: config.dest + "img/",
+    css: config.dest + "css/",
+    js: config.dest + "js/",
+    icons: config.dest + "icons/"
+  },
+  src: {
+    html: config.src + "markup/*.html",
+    img: config.src + "img/**/*.*",
+    css: config.src + "postcss/style.css",
+    js: config.src + "js/*.js",
+    icons: config.src + "icons/*.svg",
+    fonts: config.src + "fonts/**/*.{woff,woff2}"
+  }
 };
 
 gulp.task("style", function() {
-    gulp.src(path.src.css)
-        .pipe(plumber())
-        .pipe(postcss([
-            precss(),
-            autoprefixer({
-                browsers: [
-                    "last 1 version",
-                    "last 2 Chrome versions",
-                    "last 2 Firefox versions",
-                    "last 2 Opera versions",
-                    "last 2 Edge versions"
-                ]
-            }),
-            mqpacker({
-                sort: true
-            })
-        ]))
-        .pipe(gulp.dest(path.build.css))
-        .pipe(minify())
-        .pipe(rename("style.min.css"))
-        .pipe(gulp.dest(path.build.css))
-        .pipe(server.reload({ stream: true }));
+  gulp.src(path.src.css)
+    .pipe(plumber())
+    .pipe(postcss([
+      browsers: [
+        "last 1 version",
+        "last 2 Chrome versions",
+        "last 2 Firefox versions",
+        "last 2 Opera versions",
+        "last 2 Edge versions"
+      ]
+    }),
+      mqpacker({
+          sort: true
+      })
+    ]))
+    .pipe(gulp.dest(path.build.css))
+    .pipe(minify())
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest(path.build.css))
+    .pipe(server.reload({ stream: true }));
 });
 
 gulp.task("images-min", function() {
-    return gulp.src(path.build.img + "**/*.{png,jpg,gif}")
-        .pipe(imagemin([
-            imagemin.optipng({ optimizationLevel: 3 }),
-            imagemin.jpegtran({ progressive: true })
-        ]))
-        .pipe(gulp.dest(path.build.img));
+  return gulp.src(path.build.img + "**/*.{png,jpg,gif}")
+      .pipe(imagemin([
+        imagemin.optipng({ optimizationLevel: 3 }),
+        imagemin.jpegtran({ progressive: true })
+      ]))
+      .pipe(gulp.dest(path.build.img));
 });
 
 gulp.task("symbols", function() {
@@ -103,7 +100,7 @@ gulp.task("copy", function() {
         ], {
             base: "."
         })
-        .pipe(flatten({ includeParents: -1} ))
+        .pipe(flatten({ includeParents: -1 }))
         .pipe(gulp.dest(config.dest));
 });
 

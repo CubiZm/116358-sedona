@@ -1,0 +1,11 @@
+.social-link {
+  display: inline-block;
+  position: relative;
+  min-width: 46px;
+  height: 48px;
+  background-color: $main-color-blue;
+  vertical-align: middle;
+  font-size: 0;
+  margin-left: 3px;
+}
+

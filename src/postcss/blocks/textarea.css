@@ -1,0 +1,10 @@
+.textarea {
+  @mixin set-font $line,
+  calc($line * 1.5);
+
+  display: inline-block;
+  border: none;
+  background-color: #f2f2f2;
+  text-align: left;
+  font-family: $font-family-bold;
+}

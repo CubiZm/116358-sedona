@@ -1,0 +1,7 @@
+.note {
+  display: flex;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-bottom: 20px;
+  width: 100%;
+}
