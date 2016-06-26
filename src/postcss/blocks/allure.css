@@ -1,0 +1,51 @@
+.allure {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px auto;
+  max-width: 460px;
+  text-align: center;
+
+  @media($tablet) {
+    margin: 60px auto 40px auto;
+  }
+}
+
+.allure__text {
+  @mixin set-font $line,
+  calc($line * 1.75);
+
+  margin: 0;
+  margin-bottom: 18px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.allure__title {
+  margin-bottom: 26px;
+
+  @media($tablet) {
+    margin-bottom: 40px;
+  }
+}
+
+.allure__title--h1 {
+  @mixin set-font calc($line * 1.5),
+  calc($line * 1.75);
+
+  @media($tablet) {
+    @mixin set-font calc(2.15 * $line),
+    $line;
+  }
+}
+
+.allure__title--h2 {
+  @mixin set-font calc($line * 1.25),
+  calc($line * 1.75);
+
+  @media($tablet) {
+    @mixin set-font calc(2.15 * $line),
+    calc($line * 1.75);
+
+    margin-bottom: 14px;
+  }
+}
