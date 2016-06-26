@@ -11,8 +11,11 @@
 }
 
 .allure__text {
+  @mixin set-font $line,
+  calc($line * 1.75);
+
   margin: 0;
-  margin-bottom: 21px;
+  margin-bottom: 18px;
   padding-right: 20px;
   padding-left: 20px;
 }
@@ -26,18 +29,22 @@
 }
 
 .allure__title--h1 {
-  @mixin set-font calc($line * 1.5), calc($line * 1.75);
+  @mixin set-font calc($line * 1.5),
+  calc($line * 1.75);
 
   @media($tablet) {
-    @mixin set-font calc(2.15 * $line), $line;
+    @mixin set-font calc(2.15 * $line),
+    $line;
   }
 }
 
 .allure__title--h2 {
-  @mixin set-font calc($line * 1.25), calc($line * 1.75);
+  @mixin set-font calc($line * 1.25),
+  calc($line * 1.75);
 
   @media($tablet) {
-    @mixin set-font calc(2.15 * $line), calc($line * 1.75);
+    @mixin set-font calc(2.15 * $line),
+    calc($line * 1.75);
 
     margin-bottom: 14px;
   }

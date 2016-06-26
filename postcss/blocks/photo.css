@@ -41,6 +41,8 @@
   display: block;
   overflow: hidden;
   padding: 20px;
+  font-size: 0;
+  line-height: 0;
 
   @media($tablet) {
     padding: 0px;

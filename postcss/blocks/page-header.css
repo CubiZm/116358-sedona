@@ -67,7 +67,7 @@
 }
 
 .page-header__photo--secondary {
-  min-height: 150px;
+  min-height: 160px;
 
   @media($tablet) {
     min-height: 300px;

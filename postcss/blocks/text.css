@@ -6,10 +6,12 @@
   &:last-of-type {
     margin-bottom: 0;
   }
-
+  &--h1 {
+    @mixin set-font $line, calc($line * 1.75);
+  }
   &--number {
     @media($tablet) {
-    	margin-bottom: 21px;
+      margin-bottom: 21px;
     }
   }
 }
