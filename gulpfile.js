@@ -41,34 +41,36 @@ var path = {
 
 gulp.task("style", function() {
   gulp.src(path.src.css)
-    .pipe(plumber())
-    .pipe(postcss([
-      browsers: [
-        "last 1 version",
-        "last 2 Chrome versions",
-        "last 2 Firefox versions",
-        "last 2 Opera versions",
-        "last 2 Edge versions"
-      ]
-    }),
-      mqpacker({
-          sort: true
-      })
-    ]))
-    .pipe(gulp.dest(path.build.css))
-    .pipe(minify())
-    .pipe(rename("style.min.css"))
-    .pipe(gulp.dest(path.build.css))
-    .pipe(server.reload({ stream: true }));
+      .pipe(plumber())
+      .pipe(postcss([
+          precss(),
+            autoprefixer({
+                browsers: [
+                    "last 1 version",
+                    "last 2 Chrome versions",
+                    "last 2 Firefox versions",
+                    "last 2 Opera versions",
+                    "last 2 Edge versions"
+                ]
+            }),
+            mqpacker({
+                sort: true
+            })
+        ]))
+        .pipe(gulp.dest(path.build.css))
+        .pipe(minify())
+        .pipe(rename("style.min.css"))
+        .pipe(gulp.dest(path.build.css))
+        .pipe(server.reload({ stream: true }));
 });
 
 gulp.task("images-min", function() {
-  return gulp.src(path.build.img + "**/*.{png,jpg,gif}")
-      .pipe(imagemin([
-        imagemin.optipng({ optimizationLevel: 3 }),
-        imagemin.jpegtran({ progressive: true })
-      ]))
-      .pipe(gulp.dest(path.build.img));
+    return gulp.src(path.build.img + "**/*.{png,jpg,gif}")
+        .pipe(imagemin([
+            imagemin.optipng({ optimizationLevel: 3 }),
+            imagemin.jpegtran({ progressive: true })
+        ]))
+        .pipe(gulp.dest(path.build.img));
 });
 
 gulp.task("symbols", function() {
