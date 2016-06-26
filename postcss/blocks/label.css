@@ -1,9 +1,0 @@
-.label {
-  color: $second-text-color;
-
-  &--hidden {
-    @media($desktop) {
-      display: none;
-    }
-  }
-}

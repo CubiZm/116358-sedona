@@ -14,77 +14,114 @@ var svgstore = require("gulp-svgstore");
 var svgmin = require("gulp-svgmin");
 var run = require("run-sequence");
 var del = require("del");
+var flatten = require('gulp-flatten');
+
+var config = {
+    dest: 'build/',
+    src: 'src/'
+};
+
+var path = {
+    build: {
+        html: config.dest,
+        img: config.dest + "img/",
+        css: config.dest + "css/",
+        js: config.dest + "js/",
+        icons: config.dest + "icons/"
+
+    },
+    src: {
+        html: config.src + "markup/*.html",
+        img: config.src + "img/**/*.*",
+        css: config.src + "postcss/style.css",
+        js: config.src + "js/*.js",
+        icons: config.src + "icons/*.svg",
+        fonts: config.src + "fonts/**/*.{woff,woff2}"
+    }
+};
 
 gulp.task("style", function() {
-  gulp.src("postcss/style.css")
-    .pipe(plumber())
-    .pipe(postcss([
-      precss(),
-      autoprefixer({browsers: [
-        "last 1 version",
-        "last 2 Chrome versions",
-        "last 2 Firefox versions",
-        "last 2 Opera versions",
-        "last 2 Edge versions"
-      ]}),
-      mqpacker({
-        sort: true
-      })
-    ]))
-    .pipe(gulp.dest("build/css"))
-    .pipe(minify())
-    .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"))
-    .pipe(server.reload({stream: true}));
+    gulp.src(path.src.css)
+        .pipe(plumber())
+        .pipe(postcss([
+            precss(),
+            autoprefixer({
+                browsers: [
+                    "last 1 version",
+                    "last 2 Chrome versions",
+                    "last 2 Firefox versions",
+                    "last 2 Opera versions",
+                    "last 2 Edge versions"
+                ]
+            }),
+            mqpacker({
+                sort: true
+            })
+        ]))
+        .pipe(gulp.dest(path.build.css))
+        .pipe(minify())
+        .pipe(rename("style.min.css"))
+        .pipe(gulp.dest(path.build.css))
+        .pipe(server.reload({ stream: true }));
 });
 
 gulp.task("images-min", function() {
-  return gulp.src("build/img/**/*.{png,jpg,gif}")
-  .pipe(imagemin([
-  imagemin.optipng({optimizationLevel: 3}),
-  imagemin.jpegtran({progressive: true})
-   ]))
-  .pipe(gulp.dest("build/img"));
+    return gulp.src(path.build.img + "**/*.{png,jpg,gif}")
+        .pipe(imagemin([
+            imagemin.optipng({ optimizationLevel: 3 }),
+            imagemin.jpegtran({ progressive: true })
+        ]))
+        .pipe(gulp.dest(path.build.img));
 });
 
 gulp.task("symbols", function() {
-  return gulp.src("build/img/icons/*.svg")
-    .pipe(svgmin())
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename("symbols.svg"))
-    .pipe(gulp.dest("build/ img"));
+    return gulp.src(path.build.icons + "*.svg")
+        .pipe(svgmin())
+        .pipe(svgstore({
+            inlineSvg: true
+        }))
+        .pipe(rename("symbols.svg"))
+        .pipe(gulp.dest(path.build.img));
 });
 
 gulp.task("serve", function() {
-  server.init({
-    server: "build",
-    notify: false,
-    open: true,
-    ui: false
-  });
-  gulp.watch("postcss/**/*.css", ["style"]);
-  gulp.watch("*.html").on("change", server.reload);
+    server.init({
+        server: "build",
+        notify: false,
+        open: true,
+        ui: false
+    });
+    gulp.watch(path.src.css + "**/*.css", ["style"]);
+    gulp.watch(path.src.html).on("change", server.reload);
 });
 
 gulp.task("copy", function() {
-return gulp.src([
-"fonts/**/*.{woff,woff2}",
-"img/**",
-"js/**",
-"*.html"
-], {
-base: "."
-})
-.pipe(gulp.dest("build"));
+    return gulp.src([
+            path.src.fonts,
+            path.src.img,
+            path.src.js
+        ], {
+            base: "."
+        })
+        .pipe(flatten({ includeParents: -1} ))
+        .pipe(gulp.dest(config.dest));
 });
 
-var del = require("del");
+gulp.task("copy-html", function() {
+    return gulp.src([
+            path.src.html
+        ], {
+            base: "."
+        })
+        .pipe(flatten())
+        .pipe(gulp.dest(config.dest));
+});
+
+
 gulp.task("clean", function() {
-return del("build");
+    return del(config.dest);
 });
 
 gulp.task("build", function(fn) {
-  run("clean", "copy", "style", "images-min", "symbols", fn);
+    run("clean", "copy", "copy-html", "style", "images-min", "symbols", fn);
 });

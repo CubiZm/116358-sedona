@@ -1,6 +1,0 @@
-.wrapper {
-margin: 0 auto;
-
-  @media($desktop){min-width: 728px;}
-  @media($desktop){width: 1200px;}
-}
