@@ -32,7 +32,7 @@ var path = {
   src: {
     html: config.src + "markup/*.html",
     img: config.src + "img/**/*.*",
-    styles: config.src + "postcss/style.css",
+    styles: config.src + "postcss/*.css",
     js: config.src + "js/*.js",
     icons: config.src + "icons/*.svg",
     fonts: config.src + "fonts/**/*.{woff,woff2}"
