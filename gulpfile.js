@@ -33,6 +33,7 @@ var path = {
     html: config.src + "markup/*.html",
     img: config.src + "img/**/*.*",
     styles: config.src + "postcss/**/*.css",
+    precss: config.src + "postcss/style.css",
     js: config.src + "js/*.js",
     icons: config.src + "icons/*.svg",
     fonts: config.src + "fonts/**/*.{woff,woff2}"
@@ -40,7 +41,7 @@ var path = {
 };
 
 gulp.task("style", function() {
-  gulp.src(path.src.styles)
+  gulp.src(path.src.precss)
     .pipe(plumber())
     .pipe(postcss([
       precss(),
@@ -65,7 +66,7 @@ gulp.task("style", function() {
 });
 
 gulp.task("images-min", function() {
-  return gulp.src(path.build.img + "**/*.{png,jpg,gif}")
+  return gulp.src(path.build.img + "*.{png,jpg,gif}")
     .pipe(imagemin([
       imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.jpegtran({ progressive: true })
