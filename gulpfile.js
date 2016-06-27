@@ -32,6 +32,7 @@ var path = {
   src: {
     html: config.src + "markup/*.html",
     img: config.src + "img/**/*.*",
+    postcss: config.src + "postcss/",
     css: config.src + "postcss/style.css",
     js: config.src + "js/*.js",
     icons: config.src + "icons/*.svg",
@@ -41,86 +42,87 @@ var path = {
 
 gulp.task("style", function() {
   gulp.src(path.src.css)
-      .pipe(plumber())
-      .pipe(postcss([
-          precss(),
-            autoprefixer({
-                browsers: [
-                    "last 1 version",
-                    "last 2 Chrome versions",
-                    "last 2 Firefox versions",
-                    "last 2 Opera versions",
-                    "last 2 Edge versions"
-                ]
-            }),
-            mqpacker({
-                sort: true
-            })
-        ]))
-        .pipe(gulp.dest(path.build.css))
-        .pipe(minify())
-        .pipe(rename("style.min.css"))
-        .pipe(gulp.dest(path.build.css))
-        .pipe(server.reload({ stream: true }));
+    .pipe(plumber())
+    .pipe(postcss([
+      precss(),
+      autoprefixer({
+        browsers: [
+          "last 1 version",
+          "last 2 Chrome versions",
+          "last 2 Firefox versions",
+          "last 2 Opera versions",
+          "last 2 Edge versions"
+        ]
+      }),
+      mqpacker({
+        sort: true
+      })
+    ]))
+    .pipe(gulp.dest(path.build.css))
+    .pipe(minify())
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest(path.build.css))
+    .pipe(server.reload({ stream: true }));
 });
 
 gulp.task("images-min", function() {
-    return gulp.src(path.build.img + "**/*.{png,jpg,gif}")
-        .pipe(imagemin([
-            imagemin.optipng({ optimizationLevel: 3 }),
-            imagemin.jpegtran({ progressive: true })
-        ]))
-        .pipe(gulp.dest(path.build.img));
+  return gulp.src(path.build.img + "**/*.{png,jpg,gif}")
+    .pipe(imagemin([
+      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.jpegtran({ progressive: true })
+    ]))
+    .pipe(gulp.dest(path.build.img));
 });
 
 gulp.task("symbols", function() {
-    return gulp.src(path.build.icons + "*.svg")
-        .pipe(svgmin())
-        .pipe(svgstore({
-            inlineSvg: true
-        }))
-        .pipe(rename("symbols.svg"))
-        .pipe(gulp.dest(path.build.img));
+  return gulp.src(path.build.icons + "*.svg")
+    .pipe(svgmin())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("symbols.svg"))
+    .pipe(gulp.dest(path.build.img));
 });
 
 gulp.task("serve", function() {
-    server.init({
-        server: "build",
-        notify: false,
-        open: true,
-        ui: false
-    });
-    gulp.watch(path.src.css + "**/*.css", ["style"]);
-    gulp.watch(path.src.html).on("change", server.reload);
+  server.init({
+    server: "build",
+    notify: false,
+    open: true,
+    ui: false
+  });
+  gulp.watch(path.src.postcss + "**/*.css", ["style"]);
+  gulp.watch(path.src.html, ["copy-html"]);
+  gulp.watch(path.src.html).on("change", server.reload);
 });
 
 gulp.task("copy", function() {
-    return gulp.src([
-            path.src.fonts,
-            path.src.img,
-            path.src.js
-        ], {
-            base: "."
-        })
-        .pipe(flatten({ includeParents: -1 }))
-        .pipe(gulp.dest(config.dest));
+  return gulp.src([
+      path.src.fonts,
+      path.src.img,
+      path.src.js
+    ], {
+      base: "."
+    })
+    .pipe(flatten({ includeParents: -1 }))
+    .pipe(gulp.dest(config.dest));
 });
 
 gulp.task("copy-html", function() {
-    return gulp.src([
-            path.src.html
-        ], {
-            base: "."
-        })
-        .pipe(flatten())
-        .pipe(gulp.dest(config.dest));
+  return gulp.src([
+      path.src.html
+    ], {
+      base: "."
+    })
+    .pipe(flatten())
+    .pipe(gulp.dest(config.dest));
 });
 
 
 gulp.task("clean", function() {
-    return del(config.dest);
+  return del(config.dest);
 });
 
 gulp.task("build", function(fn) {
-    run("clean", "copy", "copy-html", "style", "images-min", "symbols", fn);
+  run("clean", "copy", "copy-html", "style", "images-min", "symbols", fn);
 });

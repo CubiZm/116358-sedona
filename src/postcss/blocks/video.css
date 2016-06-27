@@ -1,6 +1,9 @@
-@media($tablet){
-  .video {
+.video {
+	@media($tablet){
     margin: 0 auto;
     max-width: 648px;
   }
-}
+  	@media($tablet){
+  		max-width: 800px;
+  	}
+}	

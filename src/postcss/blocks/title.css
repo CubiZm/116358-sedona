@@ -6,24 +6,30 @@
   width: 100%;
   font-family: $font-family-bold;
 
-  &--h1 {
+  @media($tablet) {
+    @mixin set-font calc(1.5 * $line),
+    calc(1.86 * $line);
+  }
+
+  &--main {
     margin-bottom: 26px;
   }
+  &--secondary {
+    margin-bottom: 26px;
+
+    @media($tablet) {
+      @mixin set-font calc(2.15 * $line),
+      calc($line * 1.86);
+    }
+  }
   &--h2 {
-    margin-bottom: 12px;
+    margin-bottom: 18px;
   }
   &--h3 {
     @mixin set-font $line,
     calc(1.75 * $line);
-  }
-}
 
-@media($tablet) {
-  .title {
-    @mixin set-font calc(1.5 * $line),
-    calc(1.86 * $line);
-
-    &--h3 {
+    @media($tablet) {
       @mixin set-font $line,
       calc(1.5 * $line);
     }

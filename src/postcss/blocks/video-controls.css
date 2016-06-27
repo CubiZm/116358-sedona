@@ -1,6 +1,6 @@
 .video-view {
   @media($tablet) {
-    margin-bottom: -50px;
+    margin-bottom: -55px;
   }
   @media($desktop) {
     margin-bottom: -10px;
@@ -16,10 +16,10 @@
   background-color: rgba(1, 1, 1, 0.5);
 
   @media($tablet) {
-    top: -92px;
+    top: -96px;
     flex-wrap: nowrap;
     margin: 0;
-    padding: 10px 0;
+    padding: 12px 0;
   }
 
   &::after {
@@ -54,16 +54,21 @@
 .video-controls__mark {
   position: absolute;
   top: -3px;
-  left: 35px;
+  left: 37px;
   width: 10px;
   height: 10px;
   border-radius: 5px;
   background: #fff;
+
+  @media($tablet) {
+    left: 95px;
+  }
 }
 
 .video-controls__replay {
   z-index: 2;
   flex-grow: 5;
+  left: 37px;
   margin: 20px 21px;
 
   @media($tablet) {
@@ -79,7 +84,8 @@
 
   @media($tablet) {
     order: 3;
-    width: 10%;
+    width: 17%;
+    margin-left: 30px;
   }
 }
 
@@ -90,6 +96,6 @@
 
   @media($tablet) {
     order: 4;
-    width: 10%;
+    width: 17%;
   }
 }

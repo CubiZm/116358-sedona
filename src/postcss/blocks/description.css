@@ -2,10 +2,10 @@
   position: relative;
   box-sizing: border-box;
   margin: auto;
+  padding-right: 20px;
+  padding-left: 20px;
   min-width: 256px;
   text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
 
   &--main {
     padding-top: 40px;
@@ -18,6 +18,21 @@
     }
     @media($desktop) {
       padding: 65px;
+    }
+  }
+
+   &--secondary {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    max-width: 480px;
+
+    @media($tablet) {
+      padding-top: 75px;
+      padding-bottom: 75px;
+    }
+    @media($desktop) {
+      padding-top: 115px;
+      padding-bottom:75px;
     }
   }
 }
