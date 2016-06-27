@@ -25,15 +25,14 @@ var path = {
   build: {
     html: config.dest,
     img: config.dest + "img/",
-    css: config.dest + "css/",
+    styles: config.dest + "css/",
     js: config.dest + "js/",
     icons: config.dest + "icons/"
   },
   src: {
     html: config.src + "markup/*.html",
     img: config.src + "img/**/*.*",
-    postcss: config.src + "postcss/",
-    css: config.src + "postcss/style.css",
+    styles: config.src + "postcss/style.css",
     js: config.src + "js/*.js",
     icons: config.src + "icons/*.svg",
     fonts: config.src + "fonts/**/*.{woff,woff2}"
@@ -41,7 +40,7 @@ var path = {
 };
 
 gulp.task("style", function() {
-  gulp.src(path.src.css)
+  gulp.src(path.src.styles)
     .pipe(plumber())
     .pipe(postcss([
       precss(),
@@ -58,10 +57,10 @@ gulp.task("style", function() {
         sort: true
       })
     ]))
-    .pipe(gulp.dest(path.build.css))
+    .pipe(gulp.dest(path.build.styles))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest(path.build.css))
+    .pipe(gulp.dest(path.build.styles))
     .pipe(server.reload({ stream: true }));
 });
 
@@ -91,9 +90,8 @@ gulp.task("serve", function() {
     open: true,
     ui: false
   });
-  gulp.watch(path.src.postcss + "**/*.css", ["style"]);
-  gulp.watch(path.src.html, ["copy-html"]);
-  gulp.watch(path.src.html).on("change", server.reload);
+  gulp.watch(path.build.styles + "**/*.css", ["style"]);
+  gulp.watch(path.build.html).on("change", server.reload);
 });
 
 gulp.task("copy", function() {
