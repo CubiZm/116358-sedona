@@ -90,7 +90,7 @@ gulp.task("serve", function() {
     open: true,
     ui: false
   });
-  gulp.watch(path.build.styles + "**/*.css", ["style"]);
+  gulp.watch(path.build.styles + "*.css", ["style"]);
   gulp.watch(path.build.html).on("change", server.reload);
 });
 
