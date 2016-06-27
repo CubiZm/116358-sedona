@@ -32,7 +32,7 @@ var path = {
   src: {
     html: config.src + "markup/*.html",
     img: config.src + "img/**/*.*",
-    styles: config.src + "postcss/*.css",
+    styles: config.src + "postcss/**/*.css",
     js: config.src + "js/*.js",
     icons: config.src + "icons/*.svg",
     fonts: config.src + "fonts/**/*.{woff,woff2}"
@@ -90,8 +90,8 @@ gulp.task("serve", function() {
     open: true,
     ui: false
   });
-  gulp.watch(path.build.styles + "*.css", ["style"]);
-  gulp.watch(path.build.html).on("change", server.reload);
+  gulp.watch(path.src.styles, ["style"]);
+  gulp.watch(path.src.html).on("change", server.reload);
 });
 
 gulp.task("copy", function() {
