@@ -91,6 +91,7 @@ gulp.task("serve", function() {
     ui: false
   });
   gulp.watch(path.src.styles, ["style"]);
+  gulp.watch(path.src.html, ["copy-html"]);
   gulp.watch(path.src.html).on("change", server.reload);
 });
 
