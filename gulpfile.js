@@ -41,11 +41,7 @@ var path = {
 };
 
 gulp.task("style", function() {
-<<<<<<< HEAD
-  gulp.src(config.src + "postcss/style.css")
-=======
   gulp.src(path.src.precss)
->>>>>>> d4bbda5349b9ce7655bee50237e136cba4bc5e25
     .pipe(plumber())
     .pipe(postcss([
       precss(),
