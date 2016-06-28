@@ -1,14 +1,19 @@
 .opinion {
   width: 100%;
+  margin-bottom: 5px;
   @media($tablet) {
     order: 0;
     width: 50%;
     text-align: left;
     box-shadow: 21px 0px 0px -20px #e5e5e5;
   }
+  @media($desktop) {
+    text-align: center;
+  }
 }
 
 .opinion__title {
+  margin-bottom: 25px;
   @media($tablet) {
     margin-bottom: 60px;
   }

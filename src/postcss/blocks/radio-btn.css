@@ -4,11 +4,15 @@
   position: relative;
   display: flex;
   align-items:center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   width: 100%;
   text-transform: none;
   font-family: $font-family-bold;
   cursor: pointer;
+
+  @media ($tablet) {
+    margin-bottom: 25px;
+  }
 }
 
 .radio-btn__label {
@@ -30,12 +34,11 @@
 
 .radio-btn__control-indicator {
   display: inline-block;
-  margin-right: 15px;
+  margin-right: 20px;
   width: 55px;
   height: 55px;
   border-radius: 50%;
   background-color: #f2f2f2;
-  vertical-align: left;
   vertical-align: middle;
 }
 

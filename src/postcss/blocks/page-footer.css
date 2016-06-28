@@ -28,14 +28,15 @@
   text-align: center;
 
   @media($tablet) {
-    width: 33%;
     margin: 31px 0;
+    width: 33%;
   }
 }
 
 .page-footer__copyright {
-  @media($desktop) {
+    @media($desktop) {
     position: relative;
-    left: 80px;
+    right: 40px;
+    text-align: right;
   }
 }

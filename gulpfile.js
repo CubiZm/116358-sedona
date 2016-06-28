@@ -40,7 +40,7 @@ var path = {
 };
 
 gulp.task("style", function() {
-  gulp.src(path.src.styles)
+  gulp.src(config.src + "postcss/style.css")
     .pipe(plumber())
     .pipe(postcss([
       precss(),

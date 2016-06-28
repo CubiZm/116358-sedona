@@ -81,11 +81,10 @@
 .advantage__img-box {
   flex-grow: 1;
   overflow: hidden;
-  max-height: 260px;
+  height: 260px;
 
   @media($tablet) {
     order: 2;
-    max-height: 256px;
     width: 66.6%;
   }
 }

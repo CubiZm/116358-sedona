@@ -3,15 +3,14 @@
   $line;
 
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   width: 100%;
   text-transform: none;
   font-family: $font-family-bold;
   cursor: pointer;
 
   @media($tablet) {
-    width: 30%;
-    margin-left: 5%;
+    width: 40%;
   }
   @media($desktop) {
     width: 25%;
@@ -25,7 +24,7 @@
 
 .checkbox__label::before {
   display: inline-block;
-  margin-right: 15px;
+  margin-right: 20px;
   width: 55px;
   height: 55px;
   border-radius: 10%;

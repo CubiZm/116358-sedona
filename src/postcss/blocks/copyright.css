@@ -1,7 +1,8 @@
 .copyright__text,
 .copyright__link {
   display: inline-block;
+  margin: 0;
   padding: 0 5px;
   vertical-align: middle;
-  margin: 0; 
 }
+
