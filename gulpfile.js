@@ -33,6 +33,7 @@ var path = {
     html: config.src + "markup/*.html",
     img: config.src + "img/**/*.*",
     styles: config.src + "postcss/**/*.css",
+    precss: config.src + "postcss/style.css",
     js: config.src + "js/*.js",
     icons: config.src + "icons/*.svg",
     fonts: config.src + "fonts/**/*.{woff,woff2}"
@@ -40,7 +41,11 @@ var path = {
 };
 
 gulp.task("style", function() {
+<<<<<<< HEAD
   gulp.src(config.src + "postcss/style.css")
+=======
+  gulp.src(path.src.precss)
+>>>>>>> d4bbda5349b9ce7655bee50237e136cba4bc5e25
     .pipe(plumber())
     .pipe(postcss([
       precss(),
@@ -65,7 +70,7 @@ gulp.task("style", function() {
 });
 
 gulp.task("images-min", function() {
-  return gulp.src(path.build.img + "**/*.{png,jpg,gif}")
+  return gulp.src(path.build.img + "*.{png,jpg,gif}")
     .pipe(imagemin([
       imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.jpegtran({ progressive: true })
@@ -90,9 +95,8 @@ gulp.task("serve", function() {
     open: true,
     ui: false
   });
-  gulp.watch(path.src.styles, ["style"]);
-  gulp.watch(path.src.html, ["copy-html"]);
-  gulp.watch(path.src.html).on("change", server.reload);
+  gulp.watch(path.src.styles, ["style"]).on("change", server.reload);
+  gulp.watch(path.src.html, ["copy-html"]).on("change", server.reload);
 });
 
 gulp.task("copy", function() {
