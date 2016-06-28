@@ -45,7 +45,7 @@
     }
     @media($desktop) {
       padding-top: 115px;
-      padding-bottom: 75px;
+      padding-bottom: 40px;
     }
   }
 }

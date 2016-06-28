@@ -55,7 +55,10 @@
   padding: 0;
   width: 27px;
   height: 27px;
+  border: none;
+  background-color: #fff;
   font-size: 0;
+  line-height: 0;
   cursor: pointer;
 
   &--open::after {
@@ -69,7 +72,6 @@
     background-size: contain;
     content: ""; 
   }
-
   &--close {
     top: 15px;
   }
