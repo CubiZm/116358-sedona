@@ -5,20 +5,55 @@
 }
 
 .detail__title {
+  @media($tablet) {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 50%;
 
+    &::before,
+    &::after {
+      position: absolute;
+      width: 20%;
+      height: 1px;
+      background-color: #dbdbdb;
+      content: '';
+    }
+    &::before {
+      top: 50%;
+      right: 0%;
+      margin-top: -1px;
+    }
+    &::after {
+      top: 50%;
+      left: 0%;
+      margin-top: -1px;
+    }
+  }
+
+  @media ($desktop) {
+    margin-top: 5px;
+    &::before,
+    &::after {
+      width: 29%
+    }
+  }
 }
 
 .detail__input {
   @mixin set-font calc(1.5 * $line),
   calc(2.15 * $line);
+  border: none;
   margin: 20px auto;
   padding: 14px 0;
   padding-left: 0;
   width: 100%;
-  background-color: $main-color-blue;
-  color: $alternative-text-color;
+  background-color: $main-theme-color;
+  color: $base-color-white;
   text-transform: uppercase;
+
   @media($tablet) {
+    padding: 14px 16px;
     width: 50%;
   }
 }
@@ -26,13 +61,31 @@
 .detail__textarea {
   @mixin set-font calc($line * 1.25),
   calc($line * 1.75);
-  padding: 20px;
+  border: 5px solid $base-color-lightgrey;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  min-height: 130px;
   width: 100%;
+
+  @media($tablet) {
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    padding: 15px;
+  }
+    &:hover {
+    border: 5px solid $base-color-grey;
+    background-color: $base-color-grey;
+  }
+  &:focus {
+    border: 5px solid $base-color-grey;
+    background-color: $base-color-white;
+  }
 }
 
 .detail__necessarily {
   display: none;
   text-align: right;
+
   @media($tablet) {
     display: block;
     width: 50%;

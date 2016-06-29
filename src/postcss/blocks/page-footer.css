@@ -10,13 +10,17 @@
     flex-direction: row;
     margin-top: -10px;
   }
+  @media($desktop) {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
 }
 
 .page-footer__link {
   @mixin set-font calc($line * 1.5),
   calc($line * 1.5);
 
-  color: $main-text-color;
+  color: $base-color-black;
   font-family: $font-family-bold;
 }
 
@@ -28,14 +32,15 @@
   text-align: center;
 
   @media($tablet) {
+    margin: 33px 0;
     width: 33%;
-    margin: 31px 0;
   }
 }
 
 .page-footer__copyright {
   @media($desktop) {
     position: relative;
-    left: 80px;
+    right: 40px;
+    text-align: right;
   }
 }

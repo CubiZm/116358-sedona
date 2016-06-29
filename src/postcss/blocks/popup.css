@@ -1,0 +1,73 @@
+.popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup__error,
+.popup__success {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  padding: 60px 50px 30px 50px;
+  background-color: $base-color-white;
+  box-shadow: 0px 2px 8px 3px rgba(127, 122, 122, 0.12);
+  text-align: center;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.popup__error {
+  width: 300px;
+}
+
+.popup__success {
+  width: 550px;
+
+  @media($desktop) {
+    top:110%;
+  }
+}
+
+.popup__success-wrapper {
+  background-color: $base-color-white;
+}
+
+.popup__error--title,
+.popup__success--title {
+  @mixin set-font calc(2.15 * $line),
+  calc($line * 2.75);
+
+  margin-bottom: 30px;
+  padding: 0 20px;
+  font-family: $font-family-bold;
+}
+
+.popup__error--text,
+.popup__success--text {
+  @mixin set-font $line,
+  calc($line * 1.75);
+
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.popup__success--text {
+  padding: 0 20px;
+}
+
+.popup__error-input,
+.popup__success-input {
+  @mixin set-font calc(1.5 * $line),
+  calc($line * 2.15);
+
+  margin: 20px auto;
+  padding: 14px 0;
+  padding-left: 0;
+  width: 100%;
+  background-color: $main-theme-color;
+  color: $base-color-white;
+  text-transform: uppercase;
+}

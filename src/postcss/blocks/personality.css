@@ -1,13 +1,13 @@
 .personality {
+  padding-bottom: 5px;
   width: 100%;
 
   @media($tablet) {
     order: 1;
-    width: 40%;
+    width: 42%;
     box-shadow: none;
     text-align: left;
   }
-
 }
 
 .personality__title {
@@ -17,14 +17,14 @@
 }
 
 .personality__column {
+  margin-bottom: 20px;
   width: 100%;
 }
 
 .personality__input {
-  width: 100%;
+  flex-grow: 1;
 }
 
 .personality__label {
   margin-right: 20px;
 }
-

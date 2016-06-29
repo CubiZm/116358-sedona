@@ -1,5 +1,8 @@
 .map {
   margin-bottom: 10px;
+  @media($tablet){
+    margin-bottom: 0;
+  }
 }
 
 .map__button {
@@ -10,20 +13,29 @@
   padding: 14px 0;
   max-width: 280px;
   width: 100%;
-  background-color: $main-color-blue;
-  color: $alternative-text-color;
+  background-color: $main-theme-color;
+  color: $base-color-white;
 
   @media($tablet){
     max-width: 458px;
   }
+  &:hover {
+    background-color: $main-theme-color-hover;
+  }
+  &:acvite {
+    color:red;
+    background-color: $base-color-white;
+  }
 }
 
 .map__view {
-  height: 350px;
-  width: 320px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  min-height: 350px;
+  width: auto;
   background-image: url(../img/bg-map-mobile@1x.jpg);
   background-repeat:no-repeat;
+  background-size:cover;
 
   @media($tablet) {
     min-width: 768px;

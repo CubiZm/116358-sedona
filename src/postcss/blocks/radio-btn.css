@@ -1,25 +1,20 @@
 .radio-btn {
-  @mixin set-font calc($line * 1.25), $line;
-
-  position: relative;
-  display: flex;
-  align-items:center;
-  margin-bottom: 20px;
-  width: 100%;
-  text-transform: none;
-  font-family: $font-family-bold;
-  cursor: pointer;
-}
-
-.radio-btn__label {
   @mixin set-font calc($line * 1.25),
   calc($line * 1.5);
 
   position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
   text-align: left;
   text-transform: none;
   font-family: $font-family-bold;
   cursor: pointer;
+
+  @media ($tablet) {
+    margin-bottom: 25px;
+  }
 }
 
 .radio-btn__input {
@@ -30,13 +25,20 @@
 
 .radio-btn__control-indicator {
   display: inline-block;
-  margin-right: 15px;
+  margin-right: 20px;
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  background-color: #f2f2f2;
-  vertical-align: left;
+  background-color: $base-color-lightgrey;
   vertical-align: middle;
+
+  &:hover {
+    background-color: $base-color-grey;
+  }
+  &:active {
+    background-color: #e5e5e5;
+    opacity: 0.3;
+  }
 }
 
 .radio-btn__input:checked ~ .radio-btn__control-indicator::before {
@@ -46,7 +48,7 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: $second-text-color;
+  background-color: #333333;
   content: "";
   vertical-align: middle;
 }

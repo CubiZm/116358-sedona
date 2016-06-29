@@ -1,51 +1,58 @@
 .icon-social {
   position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   margin: auto;
   fill: #ffffff;
+  &:active {
+    fill: #87b5d1;
+  }
 }
 
 .logo {
-	fill: #000000;
-
+  fill: #000000;
   &:hover {
     fill: #81b3d2;
   }
-  ;
+  &:active {
+    fill: #b2b2b2;
+  }
 }
- 
-.icon-video-controls {
-	fill: #333333;
 
-	@media($tablet) {
-		fill:#ffffff;
-	}
+.icon-video-controls {
+  fill: #5c6870;
+  @media($tablet) {
+    fill: #ffffff;
+  }
+  &:hover {
+    fill: #333333;
+  }
+  &:active {
+    fill: #c1c1c1;
+  }
 }
 
 .icon-like {
-	fill: #b2b2b2;
-
-	@media($desktop) {
-		fill:#ffffff;
-	}
+  fill: #b2b2b2;
+  @media($desktop) {
+    fill: #ffffff;
+  }
 }
 
-.icon-phone{
-	position: absolute;
-    right: 0;
-    padding: 19px;
-    background-color: #e6e6e6;
-
-	@media($desktop) {
-		right: 80px;
-}
+.icon-phone {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  background-color: #e6e6e6;
 }
 
-.icon-mail{
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	padding: 20px;
-	background-color: #e6e6e6;
-
+.icon-mail {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 21px;
+  background-color: #e6e6e6;
 }

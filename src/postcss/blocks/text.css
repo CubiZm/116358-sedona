@@ -1,13 +1,18 @@
-  .text {
+.text {
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   width: 100%;
 
   &:last-of-type {
     margin-bottom: 0;
   }
   &--h1 {
-    @mixin set-font $line, calc($line * 1.75);
+    @mixin set-font $line,
+    calc($line * 1.86);
+  }
+  &--form {
+    @mixin set-font $line,
+    calc($line * 1.75);
   }
   &--number {
     @media($tablet) {

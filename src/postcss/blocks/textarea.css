@@ -4,7 +4,7 @@
 
   display: inline-block;
   border: none;
-  background-color: #f2f2f2;
+  background-color: $base-color-lightgrey;
   text-align: left;
   font-family: $font-family-bold;
 }

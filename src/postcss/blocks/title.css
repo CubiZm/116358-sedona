@@ -1,29 +1,47 @@
 .title {
-  @mixin set-font calc($line * 1.25),
-  calc($line * 1.75);
-
   margin: 0;
   width: 100%;
   font-family: $font-family-bold;
 
-  &--h1 {
+  @media($tablet) {
+    @mixin set-font calc(1.5 * $line),
+    calc(1.86 * $line);
+  }
+
+  &--main {
+    @mixin set-font calc($line * 1.25),
+    calc($line * 1.86);
+
     margin-bottom: 26px;
   }
+  &--secondary {
+    margin-bottom: 26px;
+    @mixin set-font calc($line * 1.25),
+    calc($line * 1.75);
+
+    @media($tablet) {
+      @mixin set-font calc(2.15 * $line),
+      calc($line * 1.86);
+
+      margin-bottom: 30px;
+    }
+  }
   &--h2 {
-    margin-bottom: 12px;
+    @mixin set-font calc($line * 1.25),
+    calc($line * 1.5);
+
+    margin-bottom: 14px;
+
+    @media ($desktop) {
+      box-sizing: border-box;
+      padding: 0 70px;
+    }
   }
   &--h3 {
     @mixin set-font $line,
-    calc(1.75 * $line);
-  }
-}
+    calc(1.25 * $line);
 
-@media($tablet) {
-  .title {
-    @mixin set-font calc(1.5 * $line),
-    calc(1.86 * $line);
-
-    &--h3 {
+    @media($tablet) {
       @mixin set-font $line,
       calc(1.5 * $line);
     }
