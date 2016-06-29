@@ -38,7 +38,7 @@
       }
       .main-menu__link {
         display: block;
-        padding: 14px;
+        padding: 16px;
         border-bottom: 1px solid rgba(1, 1, 1, 0.2);
         background-color: $main-theme-color;
         color: $base-color-white;
@@ -57,18 +57,23 @@
           font-family: $font-family-bold;
 
           &:hover {
+            background-color: $base-color-white;
             color: $main-theme-color;
           }
           &:active {
+            background-color: $base-color-white;
             color: #b2b2b2;
           }
           &:visited {
+            background-color: $base-color-white;
             color: #766357;
 
             &:hover {
+              background-color: $base-color-white;
               color: #604e43;
             }
             &:active {
+              background-color: $base-color-white;
               color: rgba(118, 99, 87, 0.3);
             }
           }
@@ -79,7 +84,10 @@
         }
         &:active {
           background-color: $main-theme-color-dowm;
-          color:rgba(255, 255, 255, 0.3);
+          color: rgba(255, 255, 255, 0.3);
+        }
+        &:visited {
+          color: rgba(255, 255, 255, 0.3);
         }
       }
     }

@@ -1,7 +1,4 @@
 .title {
-  @mixin set-font calc($line * 1.25),
-  calc($line * 1.75);
-
   margin: 0;
   width: 100%;
   font-family: $font-family-bold;
@@ -12,20 +9,26 @@
   }
 
   &--main {
+    @mixin set-font calc($line * 1.25),
+    calc($line * 1.86);
+
     margin-bottom: 26px;
   }
   &--secondary {
     margin-bottom: 26px;
 
     @media($tablet) {
-      margin-bottom: 30px;
       @mixin set-font calc(2.15 * $line),
       calc($line * 1.86);
+
+      margin-bottom: 30px;
     }
   }
-
   &--h2 {
-    margin-bottom: 18px;
+    @mixin set-font calc($line * 1.25),
+    calc($line * 1.5);
+
+    margin-bottom: 14px;
   }
   &--h3 {
     @mixin set-font $line,

@@ -1,5 +1,8 @@
 .map {
   margin-bottom: 10px;
+  @media($tablet){
+    margin-bottom: 0;
+  }
 }
 
 .map__button {
@@ -15,6 +18,13 @@
 
   @media($tablet){
     max-width: 458px;
+  }
+  &:hover {
+    background-color: $main-theme-color-hover;
+  }
+  &:acvite {
+    color:red;
+    background-color: $base-color-white;
   }
 }
 

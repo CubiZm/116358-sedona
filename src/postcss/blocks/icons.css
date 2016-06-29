@@ -22,9 +22,15 @@
 }
 
 .icon-video-controls {
-  fill: #333333;
+  fill: #5c6870;
   @media($tablet) {
     fill: #ffffff;
+  }
+  &:hover {
+    fill: #333333;
+  }
+  &:active {
+    fill: #c1c1c1;
   }
 }
 
@@ -41,7 +47,6 @@
   bottom: 0;
   padding: 20px;
   background-color: #e6e6e6;
-  @media($desktop) {}
 }
 
 .icon-mail {

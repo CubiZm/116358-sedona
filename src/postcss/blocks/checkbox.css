@@ -56,6 +56,14 @@
   border-radius: 10%;
   background-color: $base-color-lightgrey;
   vertical-align: middle;
+
+  &:hover {
+    background-color: $base-color-grey;
+  }
+  &:active {
+    opacity: 0.3;
+    background-color: #e5e5e5;
+  }
 }
 
 .checkbox__input:checked ~ .checkbox__control-indicator::before {
@@ -65,7 +73,7 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: url(/img/icons/icon-tick.svg) no-repeat;
+  background: url(/img/icon-tick.svg) no-repeat;
   content: "";
   vertical-align: middle;
 }

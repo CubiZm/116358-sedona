@@ -1,16 +1,32 @@
 .input {
-  padding: 20px 0px 20px 20px;
-  border: none;
+  @mixin set-font $line,
+  $line;
+
+  padding: 15px 0px 15px 20px;
+  outline: none;
+  border: 5px solid $base-color-lightgrey;
   background-color: $base-color-lightgrey;
   color: $base-color-black;
   font-family: $font-family-bold;
-  @mixin set-font $line, $line;
 
-  &:hover{
-	background-color:$base-color-grey;
+  &:hover {
+  	border: 5px solid $base-color-grey;
+    background-color: $base-color-grey;
   }
-  &:checked{
-	background-color:red;
-	border-color: $base-color-grey;
+  &:focus {
+    border: 5px solid $base-color-grey;
+    background-color: $base-color-white;
+  }
+}
+
+.input[type=submit] {
+	&:hover {
+	border: none;
+    background-color: $main-theme-color-hover;
+  }
+  &:acvite {
+    border: none;
+    color:rgba(255, 255, 255, 0.3);
+    background-color: $base-color-white;
   }
 }

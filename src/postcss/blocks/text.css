@@ -1,6 +1,6 @@
 .text {
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   width: 100%;
 
   &:last-of-type {
@@ -8,7 +8,7 @@
   }
   &--h1 {
     @mixin set-font $line,
-    calc($line * 1.75);
+    calc($line * 1.86);
   }
   &--number {
     @media($tablet) {

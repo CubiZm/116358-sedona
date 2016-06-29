@@ -17,8 +17,8 @@
   color: $base-color-white;
 
   @media($tablet) {
-    padding-right: 40px;
-    padding-left: 40px;
+    padding-right: 45px;
+    padding-left: 45px;
     width: 33.3%;
     background-image: none;
   }
@@ -31,8 +31,8 @@
     padding-bottom: 40px;
 
     @media($tablet) {
-      padding-top: 40px;
-      padding-bottom: 40px;
+      padding-top: 45px;
+      padding-bottom: 45px;
     }
   }
   &--second {
@@ -63,9 +63,7 @@
   top: 0;
   left: 0;
   z-index: 1;
-  z-index: 1;
   display: inline-block;
-  margin-bottom: -17px;
   margin-bottom: -17px;
   width: 0;
   height: 0;

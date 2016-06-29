@@ -31,7 +31,7 @@
   text-align: center;
 
   @media($tablet) {
-    margin: 31px 0;
+    margin: 33px 0;
     width: 33%;
   }
 }

@@ -1,8 +1,8 @@
 .perk {
   display: flex;
   flex-direction: column;
-  margin-top: 24px;
-  margin-bottom:14px;
+  margin-top: 25px;
+  margin-bottom:17px;
 
   @media($tablet){
     flex-direction: row;
@@ -24,7 +24,7 @@
     @mixin set-font calc($line * 1.5),
     calc($line * 1.86);
 
-    margin: 30px auto 30px auto;
+    margin: 30px auto 20px auto;
   }
 }
 
@@ -35,11 +35,11 @@
 .perk__item {
   display: flex;
   flex-wrap: wrap;
-  margin: 0px 20px;
+  margin: 0px 22px;
   padding-left: 50px;
 
   @media($tablet){
-    margin: 40px 40px;
+    margin: 30px 40px;
     padding-top: 70px;
     padding-left: 0px;
     width: 33.3%;
@@ -52,7 +52,7 @@
   &--house {
     order:1;
     background-image: url(../img/icon-house.svg);
-    background-position: 0 0;
+    background-position: -2px -1px;
     background-size: 37px 39px;
     background-repeat: no-repeat;
 
@@ -64,7 +64,7 @@
   &--gift {
     order:2;
     background-image: url(../img/icon-gift.svg);
-    background-position: 0 0;
+    background-position: 5px 0px;
     background-size: 32px 38px;
     background-repeat: no-repeat;
 

@@ -31,6 +31,14 @@
   border-radius: 50%;
   background-color: $base-color-lightgrey;
   vertical-align: middle;
+
+  &:hover {
+    background-color: $base-color-grey;
+  }
+  &:active {
+    background-color: #e5e5e5;
+    opacity: 0.3;
+  }
 }
 
 .radio-btn__input:checked ~ .radio-btn__control-indicator::before {
@@ -40,7 +48,7 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: $base-color-lightgrey;
+  background-color: #333333;
   content: "";
   vertical-align: middle;
 }
