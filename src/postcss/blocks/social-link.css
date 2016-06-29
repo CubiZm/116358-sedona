@@ -7,11 +7,12 @@
   background-color: $main-theme-color;
   vertical-align: middle;
   font-size: 0;
+  cursor:pointer;
 
   &:hover {
     background-color: $main-theme-color-hover;
   }
   &:active {
-    background-color: $main-theme-color-dowm;
+    background-color: $main-theme-color-down;
   }
 }

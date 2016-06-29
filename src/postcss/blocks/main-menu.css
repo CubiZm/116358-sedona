@@ -1,93 +1,83 @@
-    .main-menu {
-      width: 100%;
+.main-menu {
+  width: 100%;
 
-      .page-header--open & {
-        display: block;
-      }
-      .page-header--close & {
-        display: none;
+  .page-header--open & {
+    display: block;
+  }
+  .page-header--close & {
+    display: none;
 
-        @media ($tablet) {
-          display: block;
-        }
-      }
-      .main-menu__list {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        list-style-type: none;
-
-        @media ($tablet) {
-          display: flex;
-          justify-content: center;
-        }
-      }
-      .main-menu__item {
-        border-bottom: 1px solid #c5c5c5;
-
-        @media ($tablet) {
-          width: 20%;
-          border-bottom: none;
-        }
-
-        &:nth-child(2) {
-          @media ($tablet) {
-            margin-right: 20%;
-          }
-        }
-      }
-      .main-menu__link {
-        display: block;
-        padding: 16px;
-        border-bottom: 1px solid rgba(1, 1, 1, 0.2);
-        background-color: $main-theme-color;
-        color: $base-color-white;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: calc($line * 1.25);
-
-        @media ($tablet) {
-          padding: 18px;
-          border-bottom: none;
-          background-color: $base-color-white;
-          color: $base-color-black;
-          font-size: $line;
-          font-family: $font-family-bold;
-
-          &:hover {
-            background-color: $base-color-white;
-            color: $main-theme-color;
-          }
-          &:active {
-            background-color: $base-color-white;
-            color: #b2b2b2;
-          }
-          &:visited {
-            background-color: $base-color-white;
-            color: #766357;
-
-            &:hover {
-              background-color: $base-color-white;
-              color: #604e43;
-            }
-            &:active {
-              background-color: $base-color-white;
-              color: rgba(118, 99, 87, 0.3);
-            }
-          }
-        }
-
-        &:hover {
-          background-color: $main-theme-color-hover;
-        }
-        &:active {
-          background-color: $main-theme-color-dowm;
-          color: rgba(255, 255, 255, 0.3);
-        }
-        &:visited {
-          color: rgba(255, 255, 255, 0.3);
-        }
-      }
+    @media ($tablet) {
+      display: block;
     }
+  }
+}
+
+.main-menu__list {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+
+  @media ($tablet) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.main-menu__item {
+  border-bottom: 1px solid #c5c5c5;
+
+  @media ($tablet) {
+    width: 20%;
+    border-bottom: none;
+  }
+
+  &:nth-child(2) {
+    @media ($tablet) {
+      margin-right: 20%;
+    }
+  }
+}
+
+.main-menu__link {
+  display: block;
+  padding: 16px;
+  border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+  background-color: $main-theme-color;
+  color: $base-color-white;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: calc($line * 1.25);
+
+  @media ($tablet) {
+    padding: 18px;
+    border-bottom: none;
+    background-color: $base-color-white;
+    color: $base-color-black;
+    font-size: $line;
+    font-family: $font-family-bold;
+
+    &:hover {
+      color: $main-theme-color-hover;
+    }
+    &:active {
+      color: #d5d5d5;
+    }
+  }
+}
+
+.main-menu__link--active {
+  @media ($tablet) {
+    color: #766357;
+
+    &:hover {
+      color: #604e43;
+    }
+    &:active {
+      color: #f3f2f1;
+    }
+  }
+}
