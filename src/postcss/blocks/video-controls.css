@@ -9,14 +9,14 @@
 
 .video-controls {
   position: relative;
-  top: -49px;
+  top: -43px;
   display: flex;
   flex-wrap: wrap;
   margin: 0 20px;
   background-color: rgba(1, 1, 1, 0.5);
 
   @media($tablet) {
-    top: -96px;
+    top: -90px;
     flex-wrap: nowrap;
     margin: 0;
     padding: 12px 0;

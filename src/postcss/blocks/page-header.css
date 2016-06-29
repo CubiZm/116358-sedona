@@ -70,6 +70,9 @@
   min-height: 160px;
 
   @media($tablet) {
+    min-height: 290px;
+  }
+  @media($tablet) {
     min-height: 300px;
   }
 }

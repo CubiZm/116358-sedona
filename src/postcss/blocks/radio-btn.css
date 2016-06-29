@@ -1,11 +1,13 @@
 .radio-btn {
-  @mixin set-font calc($line * 1.25), $line;
+  @mixin set-font calc($line * 1.25),
+  calc($line * 1.5);
 
   position: relative;
   display: flex;
-  align-items:center;
+  align-items: center;
   margin-bottom: 15px;
   width: 100%;
+  text-align: left;
   text-transform: none;
   font-family: $font-family-bold;
   cursor: pointer;
@@ -13,17 +15,6 @@
   @media ($tablet) {
     margin-bottom: 25px;
   }
-}
-
-.radio-btn__label {
-  @mixin set-font calc($line * 1.25),
-  calc($line * 1.5);
-
-  position: relative;
-  text-align: left;
-  text-transform: none;
-  font-family: $font-family-bold;
-  cursor: pointer;
 }
 
 .radio-btn__input {

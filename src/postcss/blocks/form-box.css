@@ -1,62 +1,62 @@
-.form-box {
-  padding: 0 20px 5px 20px;
-  width: 100%;
-  border: none;
-  box-shadow: 0px -1px 0px 0px #e5e5e5;
-  text-align: center;
-  margin-left: 0;
-  margin-right: 0;
+  .form-box {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    text-align: center;
 
-  @media($tablet){
-    margin-bottom: 40px;
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
-.form-box__title {
-  @mixin set-font calc($line * 1.25),
-  calc($line * 1.75);
-
-  display: inline-block;
-  margin-top: 20px;
-  margin-bottom:20px;
-  color: $main-text-color;
-  font-family: $font-family-bold;
-
-  @media($tablet){
-    @mixin set-font calc($line * 1.50), calc($line * 1.86);
-
-    margin-bottom: 50px;
-    background-color: #ffffff;
-  }
-
-  &--center  {   
+    &:last-of-type{
+      border-bottom:none;
+    }
 
     @media($tablet) {
-      display: table;
-      padding: 0 80px;
+      margin-bottom: 20px;
+      padding-right: 0;
+      padding-left: 0;
+      border: none;
+    }
+  }
+  
+  .form-box__title {
+    @mixin set-font calc($line * 1.25),
+    calc($line * 1.75);
+
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    width: 100%;
+    color: $main-text-color;
+    font-family: $font-family-bold;
+
+    @media($tablet) {
+      @mixin set-font calc($line * 1.50),
+      calc($line * 1.86);
+    }
+
+    &--center {
       background-color: #ffffff;
-      text-align: center;
-      max-width: 280px;
+
+      @media($tablet) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    &--left {
+      @media($tablet) {
+        text-align: left;
+      }
+    }
+    &--hidden {
+      margin: 0;
+
+      @media($tablet) {
+        display: none;
+      }
+      @media($desktop) {
+        display: inline;
+      }
     }
   }
-
-  &--left {
-    @media($tablet){
-      text-align: left;
-    }
-  }
-  &--hidden {
-    margin: 0;
-
-    @media($tablet){
-      display: none;
-    }
-
-    @media($desktop){
-      display:inline;
-    }
-  }
-
-}

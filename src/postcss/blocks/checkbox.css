@@ -5,44 +5,66 @@
   position: relative;
   margin-bottom: 25px;
   width: 100%;
+  text-align: left;
   text-transform: none;
   font-family: $font-family-bold;
   cursor: pointer;
 
   @media($tablet) {
-    width: 40%;
+    margin-bottom: 35px;
+    margin-left: 30px;
+    width: 35%;
   }
   @media($desktop) {
-    width: 25%;
-    margin-left:0;
+    margin-left: 0;
+    width: auto;
+  }
+
+  &:first-of-type {
+    @media ($tablet) {
+      order: 1;
+    }
+  }
+  &:nth-of-type(2) {
+    @media ($tablet) {
+      order: 3;
+    }
+  }
+  &:nth-of-type(3) {
+    @media ($tablet) {
+      order: 2;
+    }
+  }
+  &:last-child {
+    @media ($tablet) {
+      order: 4;
+    }
   }
 }
 
-.checkbox__label {
-  text-align: left;
+.checkbox__input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
 }
 
-.checkbox__label::before {
+.checkbox__control-indicator {
   display: inline-block;
   margin-right: 20px;
   width: 55px;
   height: 55px;
   border-radius: 10%;
   background-color: #f2f2f2;
-  content: "";
   vertical-align: middle;
 }
 
-.checkbox__input {
-  display: none;
-}
-
-.checkbox__input:checked + .checkbox__label::after {
+.checkbox__input:checked ~ .checkbox__control-indicator::before {
   position: absolute;
   top: 20px;
   left: 15px;
   width: 25px;
   height: 25px;
+  border-radius: 50%;
   background: url(/img/icons/icon-tick.svg) no-repeat;
   content: "";
   vertical-align: middle;

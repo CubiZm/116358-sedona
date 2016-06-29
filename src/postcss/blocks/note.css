@@ -1,7 +1,11 @@
 .note {
   display: flex;
-  flex-wrap:wrap;
-  align-items:center;
-  margin-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 25px;
   width: 100%;
+
+  @media ($tablet) {
+    margin-top: 5px;
+  }
 }

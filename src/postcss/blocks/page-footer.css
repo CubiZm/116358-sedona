@@ -10,6 +10,9 @@
     flex-direction: row;
     margin-top: -10px;
   }
+  @media($desktop) {
+    margin-top: 0px;
+  }
 }
 
 .page-footer__link {
@@ -34,7 +37,7 @@
 }
 
 .page-footer__copyright {
-    @media($desktop) {
+  @media($desktop) {
     position: relative;
     right: 40px;
     text-align: right;

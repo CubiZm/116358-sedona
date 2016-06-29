@@ -27,15 +27,15 @@ var path = {
     img: config.dest + "img/",
     styles: config.dest + "css/",
     js: config.dest + "js/",
-    icons: config.dest + "icons/"
+    icons: config.dest + "img/icons/"
   },
   src: {
     html: config.src + "markup/*.html",
-    img: config.src + "img/**/*.*",
+    img: config.src + "img/*",
     styles: config.src + "postcss/**/*.css",
     precss: config.src + "postcss/style.css",
     js: config.src + "js/*.js",
-    icons: config.src + "icons/*.svg",
+    icons: config.src + "img/icons/*.svg",
     fonts: config.src + "fonts/**/*.{woff,woff2}"
   }
 };
@@ -117,11 +117,20 @@ gulp.task("copy-html", function() {
     .pipe(gulp.dest(config.dest));
 });
 
+gulp.task("copy-icons", function() {
+  return gulp.src([
+      path.src.icons
+    ], {
+      base: "."
+    })
+    .pipe(flatten())
+    .pipe(gulp.dest(path.build.icons));
+});
 
 gulp.task("clean", function() {
   return del(config.dest);
 });
 
 gulp.task("build", function(fn) {
-  run("clean", "copy", "copy-html", "style", "images-min", "symbols", fn);
+  run("clean", "copy", "copy-html", "copy-icons", "style", "images-min", "symbols", fn);
 });
