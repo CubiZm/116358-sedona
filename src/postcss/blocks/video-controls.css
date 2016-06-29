@@ -1,12 +1,3 @@
-.video-view {
-  @media($tablet) {
-    margin-bottom: -55px;
-  }
-  @media($desktop) {
-    margin-bottom: -10px;
-  }
-}
-
 .video-controls {
   position: relative;
   top: -43px;

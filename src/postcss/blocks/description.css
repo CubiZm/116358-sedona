@@ -33,7 +33,6 @@
     }
     @media($desktop) {
       padding-top: 115px;
-      padding-bottom: 75px;
     }
   }
   &--secondary-form {
@@ -48,8 +47,8 @@
       border-bottom: none;
     }
     @media($desktop) {
-      padding-top: 120px;
-      padding-bottom: 40px;
+      padding-top: 110px;
+      padding-bottom: 35px;
     }
   }
 }

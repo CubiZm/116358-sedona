@@ -8,4 +8,7 @@
   @media ($tablet) {
     margin-top: 5px;
   }
+  @media ($desktop) {
+    margin-top: 15px;
+  }
 }

@@ -3,7 +3,7 @@
     margin: 0 auto;
     max-width: 648px;
   }
-  	@media($tablet){
+  	@media($desktop){
   		max-width: 800px;
   	}
 }	

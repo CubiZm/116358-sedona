@@ -15,6 +15,13 @@
 
   &--video {
     margin-top: 35px;
+
+    @media($tablet) {
+      margin: 60px auto 50px auto;
+    }
+    @media($desktop) {
+      margin: 65px auto 45px auto;
+    }
   }
 }
 
@@ -61,5 +68,10 @@
   }
   &--video {
     margin-bottom: 30px;
+
+    @media($tablet) {
+      @mixin set-font calc(2.15 * $line),
+      calc($line * 2.75);
+    }
   }
 }

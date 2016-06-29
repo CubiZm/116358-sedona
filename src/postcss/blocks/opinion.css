@@ -15,8 +15,10 @@
 
 .opinion__title {
   margin-bottom: 25px;
-  @media($tablet) {
+   @media($tablet) {
     margin-bottom: 60px;
+  }
+  @media($desktop) {
     padding-left: 80px;
   }
 }

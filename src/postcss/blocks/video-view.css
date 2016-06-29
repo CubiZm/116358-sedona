@@ -1,3 +1,12 @@
+.video-view {
+  @media($tablet) {
+    margin-bottom: -55px;
+  }
+  @media($desktop) {
+    margin-bottom: 0px;
+  }
+}
+
 .video-view__img {
     width: 100%;
     height: auto;

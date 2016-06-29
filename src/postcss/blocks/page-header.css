@@ -116,6 +116,9 @@
   @media($tablet) {
     min-height: 290px;
   }
+  @media($desktop) {
+    min-height: 300px;
+  }
 }
 
 .page-header__photo-wrapper {
