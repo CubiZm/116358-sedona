@@ -10,6 +10,9 @@
     margin-top: 25px;
     margin-bottom:26px;
   }
+  @media($desktop){
+    margin-top: 5px;
+  }
 }
 
 .perk__title {
@@ -83,7 +86,7 @@
 
     @media($tablet){
       order:2;
-      background-position: center top;
+      background-position: center 5px;
       background-size: 76px 68px;
     }
   }

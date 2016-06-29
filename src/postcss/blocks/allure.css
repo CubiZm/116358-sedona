@@ -10,7 +10,11 @@
     margin: 50px auto 40px auto;
   }
   @media($desktop) {
-    margin: 70px auto 60px auto;
+    margin: 45px auto 50px auto;
+  }
+
+  &--video {
+    margin-top: 35px;
   }
 }
 
@@ -22,32 +26,40 @@
   margin-bottom: 10px;
   padding-right: 25px;
   padding-left: 25px;
+
   @media($tablet) {
     margin-bottom: 20px;
+  }
+
+  &--video {
+    margin-bottom: 0;
   }
 }
 
 .allure__title {
   margin-bottom: 18px;
-}
 
-.allure__title--h1 {
-  @mixin set-font calc($line * 1.5),
-  calc($line * 1.75);
+  &--h1 {
+    @mixin set-font calc($line * 1.5),
+    calc($line * 1.75);
 
-  @media($tablet) {
-    @mixin set-font calc(2.15 * $line),
-    calc($line * 2.75);
-     margin-bottom: 26px;
+    @media($tablet) {
+      @mixin set-font calc(2.15 * $line),
+      calc($line * 2.75);
+
+      margin-bottom: 26px;
+    }
   }
-}
+  &--h2 {
+    @mixin set-font calc($line * 1.25),
+    calc($line * 1.75);
 
-.allure__title--h2 {
-  @mixin set-font calc($line * 1.25),
-  calc($line * 1.75);
-
-  @media($tablet) {
-    @mixin set-font calc(2.15 * $line),
-    calc($line * 2.75);
+    @media($tablet) {
+      @mixin set-font calc(2.15 * $line),
+      calc($line * 2.75);
+    }
+  }
+  &--video {
+    margin-bottom: 30px;
   }
 }
