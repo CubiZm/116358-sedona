@@ -15,7 +15,7 @@
 .page-header__logo {
   display: block;
   padding-bottom: 56px;
-  background-color: #fff;
+  background-color: $base-color-white;
 
   @media ($tablet) {
     padding-bottom: 0;
@@ -43,7 +43,7 @@
   top: 15px;
   right: 15px;
   border: none;
-  background-color: #ffffff;
+  background-color: $base-color-white;
 
   @media ($tablet) {
     display: none;

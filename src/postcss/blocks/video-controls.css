@@ -29,7 +29,7 @@
     z-index: 1;
     width: 100%;
     height: 70px;
-    background-color: $sub-color-grey;
+    background-color: $base-color-grey;
     content: "";
 
     @media($tablet) {
@@ -58,7 +58,7 @@
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background: #fff;
+  background: $base-color-white;
 
   @media($tablet) {
     left: 97px;

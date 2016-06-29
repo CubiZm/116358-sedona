@@ -13,8 +13,8 @@
   flex-grow: 1;
   margin: 0;
   width: 100%;
-  background-color: $main-color-blue;
-  color: $alternative-text-color;
+  background-color: $main-theme-color;
+  color: $base-color-white;
 
   @media($tablet) {
     padding-right: 40px;
@@ -71,7 +71,7 @@
   height: 0;
   border-width: 17px 50vw 0 50vw;
   border-style: solid;
-  border-color: #ffffff transparent transparent transparent;
+  border-color: $base-color-white transparent transparent transparent;
 
   @media ($tablet) {
     display: none;
@@ -96,8 +96,8 @@
 .advantage__list {
   display: flex;
   flex-wrap: wrap;
-  background-color: $main-color-grey;
-  color: $main-text-color;
+  background-color: $base-color-grey;
+  color: $base-color-black;
 
   @media($tablet) {
     flex-wrap: nowrap;
@@ -131,4 +131,11 @@
 
 .advantage__item:last-child {
   border: none;
+}
+
+.advantage__item-title {
+  @media($tablet) {
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
 }

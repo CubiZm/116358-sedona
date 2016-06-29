@@ -19,7 +19,7 @@
   @mixin set-font calc($line * 1.5),
   calc($line * 1.5);
 
-  color: $main-text-color;
+  color: $base-color-black;
   font-family: $font-family-bold;
 }
 

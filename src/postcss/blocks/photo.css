@@ -67,7 +67,7 @@
   @media($tablet) {
     align-items: center;
     padding: 20px;
-    background-color: #f2f2f2;
+    background-color: $base-color-lightgrey;
 
     &--darker {
       background-color: #eaeaea;
@@ -79,7 +79,7 @@
     display: block;
     width: 100%;
     background-color: rgba(1, 1, 1, 0.2);
-    color: $alternative-text-color;
+    color: $base-color-white;
   }
 }
 
@@ -93,7 +93,7 @@
 
   display: flex;
   padding-top: 5px;
-  color: $main-text-color;
+  color: $base-color-black;
   font-family: $font-family-bold;
 
   @media($tablet) {
@@ -102,7 +102,7 @@
     right: 30px;
   }
   @media($desktop) {
-    color: $alternative-text-color;
+    color: $base-color-white;
   }
 }
 

@@ -29,7 +29,7 @@
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  background-color: #f2f2f2;
+  background-color: $base-color-lightgrey;
   vertical-align: middle;
 }
 
@@ -40,7 +40,7 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: $second-text-color;
+  background-color: $base-color-lightgrey;
   content: "";
   vertical-align: middle;
 }

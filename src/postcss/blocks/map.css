@@ -10,8 +10,8 @@
   padding: 14px 0;
   max-width: 280px;
   width: 100%;
-  background-color: $main-color-blue;
-  color: $alternative-text-color;
+  background-color: $main-theme-color;
+  color: $base-color-white;
 
   @media($tablet){
     max-width: 458px;

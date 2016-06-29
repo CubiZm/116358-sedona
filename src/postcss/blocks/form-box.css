@@ -4,7 +4,7 @@
     padding: 0 20px;
     width: 100%;
     border: none;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #dbdbdb;
     text-align: center;
 
     &:last-of-type{
@@ -28,7 +28,7 @@
     margin-bottom: 20px;
     padding-top: 20px;
     width: 100%;
-    color: $main-text-color;
+    color: $base-color-black;
     font-family: $font-family-bold;
 
     @media($tablet) {
@@ -37,7 +37,7 @@
     }
 
     &--center {
-      background-color: #ffffff;
+      background-color: $base-color-white;
 
       @media($tablet) {
         width: 100%;

@@ -16,7 +16,7 @@
       position: absolute;
       width: 20%;
       height: 1px;
-      background-color: #e5e5e5;
+      background-color: #dbdbdb;
       content: '';
     }
     &::before {
@@ -48,8 +48,8 @@
   padding: 14px 0;
   padding-left: 0;
   width: 100%;
-  background-color: $main-color-blue;
-  color: $alternative-text-color;
+  background-color: $main-theme-color;
+  color: $base-color-white;
   text-transform: uppercase;
 
   @media($tablet) {

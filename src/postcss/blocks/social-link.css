@@ -1,11 +1,17 @@
 .social-link {
-  display: inline-block;
   position: relative;
+  display: inline-block;
+  margin-left: 3px;
   min-width: 46px;
   height: 48px;
-  background-color: $main-color-blue;
+  background-color: $main-theme-color;
   vertical-align: middle;
   font-size: 0;
-  margin-left: 3px;
-}
 
+  &:hover {
+    background-color: $main-theme-color-hover;
+  }
+  &:active {
+    background-color: $main-theme-color-dowm;
+  }
+}

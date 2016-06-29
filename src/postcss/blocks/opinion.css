@@ -5,11 +5,11 @@
     width: 50%;
     text-align: left;
     padding-bottom: 0;
-    box-shadow: 21px 0px 0px -20px #e5e5e5;
+    box-shadow: 21px 0px 0px -20px #dbdbdb;
   }
   @media($desktop) {
     text-align: center;
-    box-shadow: 1px 0px #e5e5e5;
+    box-shadow: 1px 0px #dbdbdb;
   }
 }
 
