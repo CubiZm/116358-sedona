@@ -79,12 +79,13 @@
   }
 }
 
-.contact__input {
+.contact__input-wrapper {
+  position: relative;
   width: 100%;
 
   @media($desktop) {
     margin-left: 20px;
-    width: 60%;
+    width: 66%;
   }
 }
 
@@ -117,3 +118,13 @@
     left: 104px;
   }
 }
+
+.contact__input {
+    box-sizing: border-box;
+    position: relative;
+    height: 58px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 58px;
+
+ }

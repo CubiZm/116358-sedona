@@ -33,11 +33,12 @@
 .icon-phone{
 	position: absolute;
     right: 0;
-    padding: 19px;
+    bottom: 0;
+    padding: 20px;
     background-color: #e6e6e6;
 
 	@media($desktop) {
-		right: 80px;
+
 }
 }
 
@@ -45,7 +46,7 @@
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	padding: 20px;
+	padding: 21px;
 	background-color: #e6e6e6;
 
 }
