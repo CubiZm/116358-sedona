@@ -5,6 +5,8 @@
   margin-bottom: 30px;
   max-width: 480px;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 
   @media($tablet) {
     margin: 50px auto 40px auto;
