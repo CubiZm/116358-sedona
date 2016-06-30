@@ -5,24 +5,18 @@
 .page-header__logo-wrapper {
   position: relative;
   box-shadow: 0 -2px 5px 0px #628ea9;
-
-  @media ($tablet) {
-    position: static;
-    box-shadow: none;
-  }
-}
-
-.page-header__logo {
-  display: block;
   padding-bottom: 56px;
   background-color: $base-color-white;
 
   @media ($tablet) {
-    padding-bottom: 0;
+    position: static;
+    box-shadow: none;
+    padding-bottom:0;
   }
 }
 
-.page-header__logo-img {
+
+.page-header__logo {
   position: absolute;
   right: 0;
   left: 0;
@@ -30,6 +24,7 @@
   margin-left: auto;
   width: 102px;
   height: 83px;
+  z-index: 1;
 
   @media ($tablet) {
     top: 0;
