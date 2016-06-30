@@ -53,9 +53,9 @@
     <header class="page-header">
       <nav class="page-header__main-menu main-menu main-menu--opened">
         <ul class="main-menu__list">
-          <li class="main-menu__item"><a href="index.html" class="main-menu__link">Главная</a></li>
+          <li class="main-menu__item"><a href="index.html" class="main-menu__link main-menu__link--active">Главная</a></li>
           <li class="main-menu__item"><a href="photo.html" class="main-menu__link">Фото и видео</a></li>
-          <li class="main-menu__item"><a href="form.html" class="main-menu__link main-menu__link--active">Форма отзыва</a></li>
+          <li class="main-menu__item"><a href="form.html" class="main-menu__link">Форма отзыва</a></li>
           <li class="main-menu__item"><a href="https://htmlacademy.ru/#" class="main-menu__link">Html academy</a></li>
         </ul>
       </nav>
@@ -69,12 +69,15 @@
         </a>
         <button class="page-header__toggle" type="button">
           <svg width="23" height="22">
+          <g>
             <use xlink:href="#icon-menu" />
+            <use xlink:href="#icon-cross" class="cross-fold"/>
+          </g>
           </svg>
         </button>
       </div>
-      <div class="page-header__photo page-header__photo--secondary">
-        <img class="page-header__photo-img" src="img/text-sedona.svg" width="461" height="80" alt="Пейзаж Седоны">
+      <div class="page-header__photo page-header__photo--main">
+        <img class="page-header__photo-img" src="img/text-sedona-index.svg" width="282" height="214" alt="Добро пожаловать в Седону">
       </div>
     </header>
     <main class="page-content">
