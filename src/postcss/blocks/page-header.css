@@ -68,11 +68,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: $main-theme-color;
   background-image: url(../img/bg-back-mobile@1x.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color:$main-theme-color;
+  position: relative;
 
   @media ($retina) {
     background-image: url(../img/bg-back-mobile@2x.jpg);
@@ -122,7 +123,8 @@
   }
 }
 
-.page-header__photo-wrapper {
+.page-header__photo--main,
+.page-header__photo--secondary {
   &--main {
     padding: 0 20px;
   }
@@ -132,7 +134,12 @@
 }
 
 .page-header__photo-img {
-  width: 100%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
   @media($tablet) {
     min-width: 460px;
