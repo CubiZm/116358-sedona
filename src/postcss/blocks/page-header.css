@@ -72,6 +72,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color:$main-theme-color;
 
   @media ($retina) {
     background-image: url(../img/bg-back-mobile@2x.jpg);

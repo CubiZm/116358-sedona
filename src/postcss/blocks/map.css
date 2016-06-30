@@ -36,6 +36,7 @@
   background-image: url(../img/bg-map-mobile@1x.jpg);
   background-repeat:no-repeat;
   background-size:cover;
+  background-color: #bfe0af;
 
   @media($tablet) {
     min-width: 768px;
