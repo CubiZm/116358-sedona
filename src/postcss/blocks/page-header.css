@@ -3,7 +3,6 @@
 }
 
 .page-header__logo-wrapper {
-  position: relative;
   padding-bottom: 56px;
   background-color: $base-color-white;
   box-shadow: 0 -2px 5px 0px #628ea9;
@@ -45,12 +44,13 @@
   top: 15px;
   right: 15px;
   border: none;
-  background-color: $base-color-white;
+  background-color: transparent;
 
   @media ($tablet) {
     display: none;
   }
-
+}
+/*
   &::before {
     position: absolute;
     top: -222px;
@@ -63,7 +63,7 @@
     content: "";
   }
 }
-
+*/
 .page-header__photo {
   position: relative;
   display: flex;

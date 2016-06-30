@@ -2,7 +2,7 @@ var menuToggler = document.querySelector('.page-header__toggle');
 var pageHeader = document.querySelector('.page-header');
 
 if (pageHeader !== undefined) {
-  pageHeader.classList.add('.page-header--close');
+  pageHeader.classList.add('page-header--close');
 
   if (menuToggler !== undefined) {
     menuToggler.addEventListener('click', function(e) {
@@ -21,7 +21,7 @@ if (pageHeader !== undefined) {
       }
     });
 
-    var image = '../img/icon-map-marker.svg';
+    var image = 'img/icon-map-marker.svg';
     var beachMarker = new google.maps.Marker({
       position: {
         lat: 34.8543784,
