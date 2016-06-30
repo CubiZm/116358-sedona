@@ -2,6 +2,9 @@
   position: relative;
 }
 
+.page-header--close .cross-fold {
+  display: none;
+}
 .page-header__logo-wrapper {
   padding-bottom: 56px;
   background-color: $base-color-white;
