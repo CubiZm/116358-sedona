@@ -1,9 +1,5 @@
 .textarea {
-  @mixin set-font $line,
-  calc($line * 1.5);
 
-  display: inline-block;
-  border: none;
   background-color: $base-color-lightgrey;
   text-align: left;
   font-family: $font-family-bold;

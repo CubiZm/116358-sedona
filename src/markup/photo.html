@@ -53,8 +53,8 @@
     <header class="page-header">
       <nav class="page-header__main-menu main-menu main-menu--opened">
         <ul class="main-menu__list">
-          <li class="main-menu__item"><a href="index.html" class="main-menu__link">Главная</a></li>
-          <li class="main-menu__item"><a href="photo.html" class="main-menu__link main-menu__link--active">Фото и видео</a></li>
+          <li class="main-menu__item"><a href="index.html" class="main-menu__link main-menu__link--active">Главная</a></li>
+          <li class="main-menu__item"><a href="photo.html" class="main-menu__link">Фото и видео</a></li>
           <li class="main-menu__item"><a href="form.html" class="main-menu__link">Форма отзыва</a></li>
           <li class="main-menu__item"><a href="https://htmlacademy.ru/#" class="main-menu__link">Html academy</a></li>
         </ul>
@@ -69,14 +69,15 @@
         </a>
         <button class="page-header__toggle" type="button">
           <svg width="23" height="22">
+          <g>
             <use xlink:href="#icon-menu" />
+            <use xlink:href="#icon-cross" class="cross-fold"/>
+          </g>
           </svg>
         </button>
       </div>
-      <div class="page-header__photo page-header__photo--secondary">
-        <div class="page-header__photo-wrapper page-header__photo-wrapper--secondary">
-          <img class="page-header__photo-img" src="img/text-sedona.svg" width="461" height="80" alt="Пейзаж Седоны">
-        </div>
+      <div class="page-header__photo page-header__photo--main">
+        <img class="page-header__photo-img" src="img/text-sedona-index.svg" width="282" height="214" alt="Добро пожаловать в Седону">
       </div>
     </header>
     <main class="page-content">
@@ -109,7 +110,7 @@
               <source media="(min-width:1200px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
               <source media="(min-width:768px)" srcset="img/photo-2-tablet@1x.jpg, img/photo-2-tablet@2x.jpg 2x">
               <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="photo-2" width="280" height="280" class="photo__img">
-          </picture>
+            </picture>
           </a>
           <div class="photo__caption">
             <h3 class="title title--h3 photo__caption-title">Местная растительность</h3>
@@ -127,7 +128,7 @@
               <source media="(min-width:1200px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
               <source media="(min-width:768px)" srcset="img/photo-3-tablet@1x.jpg, img/photo-3-tablet@2x.jpg 2x">
               <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="photo-3" width="280" height="280" class="photo__img">
-          </picture>
+            </picture>
           </a>
           <div class="photo__caption photo__caption--darker">
             <h3 class="title title--h3 photo__caption-title">Дорога на север</h3>
@@ -145,7 +146,7 @@
               <source media="(min-width:1200px)" srcset="img/photo-4-desktop@1x.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
               <source media="(min-width:768px)" srcset="img/photo-4-tablet@1x.jpg, img/photo-4-tablet@2x.jpg 2x">
               <img src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="photo-4" width="280" height="280" class="photo__img">
-          </picture>
+            </picture>
           </a>
           <div class="photo__caption">
             <h3 class="title title--h3 photo__caption-title">Мост Дьявола</h3>

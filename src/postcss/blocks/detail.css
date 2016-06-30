@@ -10,6 +10,7 @@
     margin-top: 10px;
     margin-bottom: 30px;
     width: 50%;
+    vertical-align: top;
 
     &::before,
     &::after {
@@ -30,9 +31,9 @@
       margin-top: -1px;
     }
   }
-
   @media ($desktop) {
     margin-top: 5px;
+
     &::before,
     &::after {
       width: 29%
@@ -43,11 +44,12 @@
 .detail__input {
   @mixin set-font calc(1.5 * $line),
   calc(2.15 * $line);
-  border: none;
+
   margin: 20px auto;
   padding: 14px 0;
   padding-left: 0;
   width: 100%;
+  border: none;
   background-color: $main-theme-color;
   color: $base-color-white;
   text-transform: uppercase;
@@ -61,18 +63,20 @@
 .detail__textarea {
   @mixin set-font calc($line * 1.25),
   calc($line * 1.75);
-  border: 5px solid $base-color-lightgrey;
+
   margin-bottom: 30px;
   padding: 10px 20px;
   min-height: 130px;
   width: 100%;
+  border: 5px solid $base-color-lightgrey;
 
   @media($tablet) {
     box-sizing: border-box;
     margin-bottom: 40px;
     padding: 15px;
   }
-    &:hover {
+
+  &:hover {
     border: 5px solid $base-color-grey;
     background-color: $base-color-grey;
   }

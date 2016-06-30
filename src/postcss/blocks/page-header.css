@@ -2,30 +2,26 @@
   position: relative;
 }
 
+.page-header--close .cross-fold {
+  display: none;
+}
 .page-header__logo-wrapper {
-  position: relative;
+  padding-bottom: 56px;
+  background-color: $base-color-white;
   box-shadow: 0 -2px 5px 0px #628ea9;
 
   @media ($tablet) {
     position: static;
+    padding-bottom: 0;
     box-shadow: none;
   }
 }
 
 .page-header__logo {
-  display: block;
-  padding-bottom: 56px;
-  background-color: $base-color-white;
-
-  @media ($tablet) {
-    padding-bottom: 0;
-  }
-}
-
-.page-header__logo-img {
   position: absolute;
   right: 0;
   left: 0;
+  z-index: 1;
   margin-right: auto;
   margin-left: auto;
   width: 102px;
@@ -34,6 +30,12 @@
   @media ($tablet) {
     top: 0;
   }
+  @media ($desktop) {
+    width: 188px;
+  }
+}
+
+.page-header__logo-img {
   @media ($desktop) {
     width: 188px;
     height: 96px;
@@ -45,12 +47,13 @@
   top: 15px;
   right: 15px;
   border: none;
-  background-color: $base-color-white;
+  background-color: transparent;
 
   @media ($tablet) {
     display: none;
   }
-
+}
+/*
   &::before {
     position: absolute;
     top: -222px;
@@ -63,11 +66,13 @@
     content: "";
   }
 }
-
+*/
 .page-header__photo {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: $main-theme-color;
   background-image: url(../img/bg-back-mobile@1x.jpg);
   background-position: center;
   background-size: cover;
@@ -121,7 +126,8 @@
   }
 }
 
-.page-header__photo-wrapper {
+.page-header__photo--main,
+.page-header__photo--secondary {
   &--main {
     padding: 0 20px;
   }
@@ -131,7 +137,12 @@
 }
 
 .page-header__photo-img {
-  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 
   @media($tablet) {
     min-width: 460px;

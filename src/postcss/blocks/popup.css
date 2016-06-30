@@ -11,28 +11,33 @@
   top: 50%;
   left: 50%;
   z-index: 1;
-  padding: 60px 50px 30px 50px;
   background-color: $base-color-white;
   box-shadow: 0px 2px 8px 3px rgba(127, 122, 122, 0.12);
   text-align: center;
   transform: translate(-50%, -50%);
-  display: none;
 }
 
 .popup__error {
+  display: none;
+  padding: 60px 50px 30px 50px;
   width: 300px;
 }
 
 .popup__success {
-  width: 550px;
+  display: none;
 
   @media($desktop) {
-    top:110%;
+    top: 110%;
   }
 }
 
-.popup__success-wrapper {
-  background-color: $base-color-white;
+.popup__success-input-wrapper {
+  width: 100%;
+  background-color: #e5e5e5;
+}
+
+.popup__success-text {
+  padding: 25px 110px;
 }
 
 .popup__error--title,
@@ -40,7 +45,8 @@
   @mixin set-font calc(2.15 * $line),
   calc($line * 2.75);
 
-  margin-bottom: 30px;
+  margin: 20px;
+  margin-top: 0;
   padding: 0 20px;
   font-family: $font-family-bold;
 }
@@ -55,7 +61,7 @@
 }
 
 .popup__success--text {
-  padding: 0 20px;
+  width: 420px;
 }
 
 .popup__error-input,
@@ -63,11 +69,28 @@
   @mixin set-font calc(1.5 * $line),
   calc($line * 2.15);
 
-  margin: 20px auto;
   padding: 14px 0;
-  padding-left: 0;
-  width: 100%;
+  border: none;
   background-color: $main-theme-color;
   color: $base-color-white;
   text-transform: uppercase;
+
+  &:hover {
+    border: none;
+    background-color: $main-theme-color-hover;
+  }
+  &:active {
+    background-color: $main-theme-color-down;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.popup__error-input {
+  margin: 20px auto;
+  width: 270px;
+}
+
+.popup__success-input {
+  margin: 45px 90px;
+  padding: 14px 0;
 }
