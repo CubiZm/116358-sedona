@@ -21,7 +21,7 @@
 
   margin-top: 10px;
   margin-bottom:14px;
-  font-family: $font-family-bold;
+
 
   @media($tablet){
     @mixin set-font calc($line * 1.5),

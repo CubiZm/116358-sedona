@@ -9,12 +9,18 @@
   width: 100%;
   text-align: left;
   text-transform: none;
-  font-family: $font-family-bold;
+  font-weight: 700;
   cursor: pointer;
 
   @media ($tablet) {
-    margin-bottom: 25px;
+    max-width: 350px;
   }
+}
+
+.radio-btn__label {
+  position: relative;
+  display: block;
+  padding: 20px 20px 20px 75px;
 }
 
 .radio-btn__input {
@@ -24,8 +30,14 @@
 }
 
 .radio-btn__control-indicator {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
   display: inline-block;
+  margin-top: auto;
   margin-right: 20px;
+  margin-bottom: auto;
   width: 55px;
   height: 55px;
   border-radius: 50%;

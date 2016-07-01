@@ -7,7 +7,7 @@
   border: 5px solid $base-color-lightgrey;
   background-color: $base-color-lightgrey;
   color: $base-color-black;
-  font-family: $font-family-bold;
+  font-weight: 700;
 
   &:hover {
   	border: 5px solid $base-color-grey;

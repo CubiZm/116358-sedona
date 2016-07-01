@@ -1,7 +1,6 @@
 .title {
   margin: 0;
   width: 100%;
-  font-family: $font-family-bold;
 
   @media($tablet) {
     @mixin set-font calc(1.5 * $line),

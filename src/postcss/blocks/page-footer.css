@@ -21,7 +21,7 @@
   calc($line * 1.5);
 
   color: $base-color-black;
-  font-family: $font-family-bold;
+  font-weight: 700;
 }
 
 .page-footer__link,
