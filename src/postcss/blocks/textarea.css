@@ -1,6 +1,5 @@
 .textarea {
-
   background-color: $base-color-lightgrey;
   text-align: left;
-  font-family: $font-family-bold;
+  font-weight: 700;
 }

@@ -29,7 +29,7 @@
     padding-top: 20px;
     width: 100%;
     color: $base-color-black;
-    font-family: $font-family-bold;
+    font-weight: 700;
 
     @media($tablet) {
       @mixin set-font calc($line * 1.50),

@@ -3,4 +3,8 @@
 
   text-transform: uppercase;
   font-family: $font-family-regular;
+
+  @media ($desktop) {
+  	background-color: $base-color-lightgrey;
+  }
 }

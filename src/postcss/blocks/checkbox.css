@@ -3,16 +3,19 @@
   $line;
 
   position: relative;
+  display: flex;
+  align-items: center;
   margin-bottom: 25px;
   width: 100%;
   text-align: left;
   text-transform: none;
-  font-family: $font-family-bold;
+  font-weight: 700;
   cursor: pointer;
 
   @media($tablet) {
     margin-bottom: 35px;
     margin-left: 30px;
+    max-width: 250px;
     width: 35%;
   }
   @media($desktop) {
@@ -42,6 +45,12 @@
   }
 }
 
+.checkbox__label {
+  position: relative;
+  display: block;
+  padding: 20px 20px 20px 75px;
+}
+
 .checkbox__input {
   position: absolute;
   z-index: -1;
@@ -49,8 +58,14 @@
 }
 
 .checkbox__control-indicator {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
   display: inline-block;
+  margin-top: auto;
   margin-right: 20px;
+  margin-bottom: auto;
   width: 55px;
   height: 55px;
   border-radius: 10%;
@@ -61,8 +76,8 @@
     background-color: $base-color-grey;
   }
   &:active {
-    opacity: 0.3;
     background-color: #e5e5e5;
+    opacity: 0.3;
   }
 }
 
